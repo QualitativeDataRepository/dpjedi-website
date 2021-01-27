@@ -115,6 +115,11 @@
 	footer.major {
 		padding-top: 3em;
 	}
+	
+	/* grey box for accessibility */
+	div.boxed {
+	  background-color: rgba{64, 64, 64, 0.9};
+	}
 
 /* Form */
 
@@ -202,11 +207,7 @@
 				width: 100%;
 			}
 
-/* boxed */
-/* grey box for accessibility */
-.boxed {
-  background-color: rgba{64, 64, 64, 0.9};
-}
+
 /* Icon */
 
 	.icon {
