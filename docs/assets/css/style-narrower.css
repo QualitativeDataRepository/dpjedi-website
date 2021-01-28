@@ -40,6 +40,11 @@
 			font-size: 1.2em;
 			color: #fff;
 			z-index: 1;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow:  ellipsis;
+			margin-left: 35px;
+			margin-right:35px
 		}
 
 		#titleBar .toggle {
@@ -181,6 +186,23 @@
 	#main {
 		padding: 4em 0;
 	}
+
+/*correct vertical align of buttons*/
+ul.style li{
+	padding-top: 1em;
+}
+div.\36 u section {
+	padding-top: 1.3em;
+}
+
+ul.style span {
+	display: grid;
+}
+
+ul.style h3 {
+	padding-bottom: 0em;
+	line-height: 1em;
+}
 
 /* Footer */
 
