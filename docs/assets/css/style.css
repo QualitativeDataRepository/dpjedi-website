@@ -94,7 +94,7 @@
 	}
 
 	header.major {
-		padding-bottom: 2em;
+		padding-bottom: 1em;
 	}
 
 	header h2 {
@@ -118,7 +118,12 @@
 	
 	/* grey box for accessibility */
 	div.boxed {
-	  background-color: rgba(64, 64, 64, 0.9);
+	  background-color: rgba(64, 64, 64, 0.6);
+		padding-top: 0.5em;
+	}
+	
+	div.buttons {
+		margin-top:1em;
 	}
 
 /*Skip to content link via https://css-tricks.com/how-to-create-a-skip-to-content-link/ */
