@@ -12,7 +12,7 @@ layout: main
 					<a href="{{ site.baseurl }}/join.html" class="button alt">Join JEDI</a>&nbsp;&nbsp;
 				<!--	<a href="https://groups.google.com/forum/#!forum/dpjedi" target="_blank" class="button alt" style="margin-bottom: 1.5em;">View JEDI Archives</a>-->
 				</header>
-				<p><em><strong>last updated 2021-04-01</strong></em></p>
+				<p><em><strong>last updated 2021-05-03</strong></em></p>
 				<p>JEDI members are jointly developing a collection of resources for journal editors in the social sciences. We are very grateful to JEDI members who have contributed resources for this page (see below for a list) and warmly welcome further suggestions. These can be made either by posting them to the mailing list, or by directly emailing Priya Silverstein at <a href="mailto:psilvers@syr.edu">psilvers@syr.edu</a>. Corresponding links will then be added to this page.</p>
 				<p>Please check back here from time to time, as we hope this page will be updated regularly!</p>
 				<p>If you are a journal editor and are not yet a member, please <a href="https://dpjedi.org/join.html" target="_blank">join JEDI</a>.</p>
@@ -57,6 +57,10 @@ layout: main
 				<p>One way of incentivizing open science is to offer open science badges to signal and reward when underlying data, materials, or preregistrations are available. Implementing badges is <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002456" target="_blank">associated with an increasing rate of data sharing</a>, as seeing colleagues practice open science signals that new community norms have arrived. See the <a href="https://www.cos.io/initiatives/badges" target="_blank">guidance on badges</a> by the <a href="http://www.cos.io" target="_blank">Center for Open Science</a> for more information on how to implement badges at your journal. However, it is important to note that receiving a badge for sharing data and code <a href="https://osf.io/srg57/" target="_blank">does not necessarily mean that analyses are reproducible</a> -- for this we turn to pre-publication verification of analyses.</p>
 				<h3 id="pre-publication-verification-of-analyses">Pre-publication verification of analyses</h3>
 				<p>Some journals have now adopted a policy whereby data and code are not only required for publication in the journal, but must be checked before publication to ensure that the analyses are reproducible -- that the results in the manuscript match the results that are produced when someone who is not one of the authors re-runs the code on the data. This is called pre-publication “verification of analyses”, “data and code replication”, or “reproduction of analyses”. For more information on how to implement a policy like this at your journal, see the <a href="https://social-science-data-editors.github.io/guidance/" target="_blank">Data and Code Guidance by Data Editors</a> developed by Lars Vilhuber and colleagues, which is used by the <a href="https://www.aeaweb.org/journals" target="_blank">American Economic Association journals</a>, <a href="https://onlinelibrary.wiley.com/journal/15405982" target="_blank">Canadian Journal of Economics</a>, the <a href="https://academic.oup.com/restud" target="_blank">Review of Economic Studies</a>, and the <a href="https://academic.oup.com/ej" target="_blank">Economic Journal</a> as a reference.</p>
+				<h4 id="unshareable-data">Unshareable data</h4>
+				<p>When data is unshareable (e.g. when data are sensitive), synthetic data can still be shared. This allows pre-publication verification of analyses to still take place. Dan Quintana has done a lot of work promoting the sharing of synthetic datasets and providing resources to help authors do so -- see his <a href="https://www.youtube.com/watch?v=0fAR_oro1NY" target="_blank">YouTube video</a>, <a href="https://www.dsquintana.blog/creating-and-synthetic-version-of-a-real-dataset/" target="_blank">blog post</a>, and <a href="http://doi.org/10.7554/eLife.53275" target="_blank">Quintana (2020)</a>.</p>
+				<h3 id="verification-reports">Verification Reports</h3>
+				<p>Verification Reports (VRs) are an article format focusing specifically on computational reproducibility and analytic robustness. VRs meet this objective by repeating the original analyses or reporting new analyses of original data. In doing so they provide the verifiers conducting the investigation with professional credit for evaluating one of the most fundamental forms of credibility: whether the claims in previous studies are justified by their own data. Chris Chambers has introduced this format at <a href="https://www.journals.elsevier.com/cortex" target="_blank">Cortex</a> (see his introductory <a href="https://doi.org/10.1016/j.cortex.2020.04.020" target="_blank">editorial</a>). For examples of the first two VRs published by Cortex , see <a href="https://doi.org/10.1016/j.cortex.2020.03.031" target="_blank">Chalkia et al. (2020)</a> and <a href="https://doi.org/10.1016/j.cortex.2021.01.017" target="_blank">Mirman et al. (2021)</a>. If you’re interested in including VRs as an article type at your journal, Cortex’s <a href="https://www.elsevier.com/__data/promis_misc/VR_GuideForAuthors.pdf" target="_blank">author guidelines</a> provide more information on this format.</p>
 				<h3 id="registered-reports">Registered Reports</h3>
 				<p><a href="https://www.cos.io/initiatives/registered-reports" target="_blank">Registered Reports</a> is a publishing format used by over 250 journals that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology. This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings. Although Registered Reports are usually reserved for hypothesis-testing research, a version for exploratory research -- <a href="https://www.sciencedirect.com/science/article/pii/S0010945217302393?via%3Dihub" target="_blank">Exploratory Reports</a> -- is now also being offered.</p>
 				<h4 id="resources-for-editors">Resources for editors</h4>
@@ -66,6 +70,50 @@ layout: main
 				<h3 id="computational-research">Computational research</h3>
 				<p><a href="https://hdsr.mitpress.mit.edu/pub/f0obb31j/release/1?readingCollection=c6cf45bb" target="_blank">Willis and Stodden (2020)</a> highlight nine decision points for journals looking to improve the quality and rigor of computational research and suggest that journals reporting computational research aim to include “assessable reproducible research artifacts” along with published articles.</p>
 				<p>The <a href="https://ajps.org/ajps-verification-policy/" target="_blank">American Journal of Political Science Verification Policy</a> provides a role-model example of how computational research can be made to be more rigorous and error-free through additional steps in the editorial process – but it also shows how this requires resources on top of the procedures editors have become accustomed to over decades.</p>
+				
+				<h2 id="improving-the-quality-of-reviews">Improving the quality of reviews</h2>
+				<p>Although academics are expected to peer-review articles as part of their job, they often receive little (or no) formal training for this. Early career researchers are often keen to be involved in reviewing papers, but without having had many (or any) of their own papers reviewed, they don’t know what a review should look like. Here are some how-to guides from different fields that editors can share with their reviewers in order to help increase the quality of the reviews they recieve.</p>
+				<ul>
+				<li>
+				General: <a href="http://doi.org/10.2139/ssrn.2547191" target="_blank">Berk et al. (2015)</a>, <a href="https://dx.doi.org/10.2139/ssrn.3269643" target="_blank">Faff (2018)</a>, <a href="https://doi.org/10.6087/kcse.61" target="_blank">Hames (2016)</a>, <a href="https://www.theguardian.com/higher-education-network/blog/2013/sep/27/peer-review-10-tips-research-paper" target="_blank">Lucey (2013)</a>, <a href="https://doi.org/10.1086/598847" target="_blank">McPeek et al. (2009)</a>
+				</li>
+				<li>
+				Accounting: <a href="https://doi.org/10.2308/iace-50979" target="_blank">Dalton et al. (2016)</a>, <a href="https://doi.org/10.2308/jata.2004.26.s-1.143" target="_blank">Kachelmeier (2004)</a>, <a href="https://doi.org/10.2308/iace-50748" target="_blank">Oler et al. (2016)</a>
+				</li>
+				<li>
+				Computer Science: <a href="https://doi.org/10.1145/1519103.1519122" target="_blank">Cormode, 2009</a>
+				</li>
+				<li>
+				Ecology: <a href="https://doi.org/10.1086/68885" target="_blank">Scrimgeour et al. (2016)</a>
+				</li>
+				<li>
+				Economics: <a href="https://doi.org/10.1257/jep.31.1.231" target="_blank">Berk et al. (2017)</a>
+				</li>
+				<li>
+				Health: <a href="https://doi.org/10.1007/s10995-005-2423-y" target="_blank">Alexander (2005)</a>
+				</li>
+				<li>
+				Information Systems: <a href="https://doi.org/10.17705/1jais.00167" target="_blank">Hirschheim (2008)</a>
+				</li>
+				<li>
+				Management: <a href="https://doi.org/10.5465/AMR.2009.36982609" target="_blank">Carpenter (2009)</a>, <a href="https://doi.org/10.1016/0272-6963(95)94762-W" target="_blank">Lee (1995)</a>, <a href="https://doi.org/10.5465/AMR.2009.40631320" target="_blank">Lepak (2009)</a>, <a href="https://doi.org/10.1016/j.tmp.2014.01.003" target="_blank">Leung et al. (2014)</a>
+				</li>
+				<li>
+				Biomedical Science: <a href="https://doi.org/10.1111/j.1442-2042.2010.02622.x" target="_blank">Christensen et al. (2010)</a>, <a href="https://doi.org/10.1111/j.1537-2995.2009.02390.x" target="_blank">Heddle &amp; Ness (2009)</a>, <a href="https://doi.org/10.1164/rccm.200204-324OE" target="_blank">Hoppin (2002)</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4093306/" target="_blank">Mayden (2012)</a>, <a href="https://doi.org/10.1016/j.otohns.2010.02.010" target="_blank">Rosenfeld (2010)</a>,
+				</li>
+				<li>
+				Physiology: <a href="https://doi.org/10.1152/advan.00057.2002" target="_blank">Benos et al. (2003)</a>, <a href="https://doi.org/10.1152/advances.2001.25.3.167" target="_blank">Guilford (2001)</a>, <a href="https://doi.org/10.1152/advances.2000.23.1.s52" target="_blank">Seals et al. (2000)</a>
+				</li>
+				<li>
+				Political Science: <a href="https://thepoliticalmethodologist.files.wordpress.com/2016/02/tpm_v23_n1.pdf" target="_blank">Esarey (2015)</a>, <a href="https://doi.org/10.1080/15236803.2019.1616657" target="_blank">Hall et al.. (2019)</a>, <a href="https://thepoliticalmethodologist.files.wordpress.com/2016/02/tpm_v23_n1.pdf" target="_blank">Krupnikov &amp; Levine (2015)</a>, <a href="https://doi.org/10.1017/S104909651200128X" target="_blank">Miller at al. (2013)</a>, <a href="https://thepoliticalmethodologist.files.wordpress.com/2016/02/tpm_v23_n1.pdf" target="_blank">Nyhan (2015)</a>
+				</li>
+				<li>
+				Psychology: <a href="https://doi.org/10.1037/0003-066X.50.10.883" target="_blank">Epstein (1995)</a>
+				</li>
+				</ul>
+				<p>In addition to this, there are papers covering what <em>not</em> to do as a reviewer, for example humiliate the authors (<a href="https://doi.org/10.1080/17449642.2014.913341" target="_blank">Comer et al., 2014)</a> or be adversarial (<a href="https://doi.org/10.1145/1519103.1519122" target="_blank">Cormode, 2009</a>).</p>
+				<p>For a more complete bibliography organized alphabetically, see the list <a href="https://docs.google.com/document/d/1ZsxtLZBV2gcZ4UrsMg4UKy8zdCS5YHWIgTwMuOJo-y8/edit?usp=sharing" target="_blank">here</a>.</p>
+
 				<h2 id="list-of-contributors-to-this-page-alphabetical-by-first-name">List of contributors to this page (alphabetical by first name)</h2>
 				<ul class="simpleList">
 				<li>Ana Trisovic</li>
@@ -75,6 +123,7 @@ layout: main
 				<li>Colin Elman</li>
 				<li>Diana Kapiszewski</li>
 				<li>Eike Rinke</li>
+				<li>Elena Naumova</li>
 				<li>Kevin Arceneaux</li>
 				<li>Lars Vilhuber</li>
 				<li>Michael Weiss</li>
