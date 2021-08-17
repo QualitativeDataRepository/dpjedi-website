@@ -51,15 +51,50 @@ layout: main
 				<p><a href="https://science.sciencemag.org/content/348/6242/1422.full" target="_blank">Nosek et al. (2015)</a> presents an overview of the <a href="https://www.cos.io/initiatives/top-guidelines" target="_blank">Transparency and Openness Promotion (TOP) Guidelines</a> for journals, which have been used to generate the journal-level <a href="https://topfactor.org/" target="_blank">TOP Factor</a> and provide a clear view of areas in which editors can consider steps towards more open science at their journals. For an example of how to explicitly signal adherence to TOP guidelines at your journal, see this example <a href=“https://www.elsevier.com/__data/promis_misc/Cortex-TOP-author-guidelines.pdf” target="_blank">policy</a> from <a href=“https://www.journals.elsevier.com/cortex” target="_blank">Cortex</a>. A similar initiative is the <a href="https://www.dartstatement.org/2014-journal-editors-statement-jets" target="_blank">DA-RT Journal Editors’ Transparency Statement (JETS)</a>.</p>
 				<h3 id="resources-for-authors">Resources for authors</h3>
 				<p>Aczel et al. (2020) present a consensus-based <a href="https://www.nature.com/articles/s41562-019-0772-6" target="_blank">checklist</a> to improve and document the transparency of research reports in social and behavioral research along with an <a href="http://www.shinyapps.org/apps/TransparencyChecklist/" target="_blank">online application</a> that allows users to complete the checklist and generate a report that they can submit with their manuscript or post to a public repository.</p>
+				
+				
+				
 				<h3 id="data-and-code">Data and code</h3>
-				<p>A set of stable core practices has begun to emerge with regard to data management and sharing. While all are readily available, some require more effort on the part of journals. For example, requiring authors to share data via a trusted digital repository (and not e.g. via a personal website) is easier than checking the author's code.</p>
-				<p>Journals are increasingly adopting data and code availability policies. The <a href="https://rd-alliance.org/" target="_blank">Research Data Alliance</a> has developed a <a href="https://datascience.codata.org/article/10.5334/dsj-2020-005/" target="_blank">Research Data Policy Framework</a> for all journals and publishers including template policy texts which can be implemented by journals in their Information for Authors and publishing workflows. The <a href="https://www.aeaweb.org/" target="_blank">American Economic Association</a> also provides helpful <a href="https://aeadataeditor.github.io/aea-de-guidance/" target="_blank">guidance on implementation of their data and code availability policy</a> that could easily be applied to other journals and fields. </p>
-				<p>For a discussion of the impact of journal data policy strictness on the code re-execution rate (i.e., how likely the code is to run without errors) and a set of recommendations for code dissemination aimed at journals, see <a href="https://arxiv.org/abs/2103.12793" target="_blank">Trisovic et al. (2020)</a>.</p>
-				<h4 id="unshareable-data">Unshareable data</h4>
-				<p>INSERT FINAL TEXT</p>
+				<p> A set of stable core practices has begun to emerge with regard to data management and sharing. While all are readily available, some require more effort on the part of journals. For example, requiring authors to share data via a trusted digital repository (and not e.g. via a personal website) is easier than checking the author's code runs. </p>
+				<p> Journals are increasingly adopting data and code availability policies. The <a href=“https://rd-alliance.org/”>Research Data Alliance</a> has developed a <a href=“https://datascience.codata.org/article/10.5334/dsj-2020-005/”>Research Data Policy Framework</a> for all journals and publishers including template policy texts which can be implemented by journals in their Information for Authors and publishing workflows. </p>
+				<h4 id="open-data">Open data</h4>
+				<p> Mandating or encouraging authors to share data alongside their manuscripts means that reviewers (and later, readers) can: </p>
+				<ul class="simpleList">
+				<li>
+				See the structure of the data more clearly
+				</li>
+				<li>
+				Run additional analyses
+				</li>
+				<li>
+				Use the data to answer new questions
+				</li>
+				</ul>
+				<p> It is important to note that there will be cases where data cannot be shared, and that it is important to be “as open as possible, as closed as necessary”. See <a href=“https://doi.org/10.1177/2515245917747656”>Meyer (2018)</a> for an excellent guide on “ethical data sharing”.</p>
+				<h4 id="open-code">Open code</h4>
+				<p> Mandating or encouraging authors to share code alongside their manuscripts means that reviewers (and later, readers) can:</p>
+				<ul class="simpleList">
+				<li>
+				See the analyses that were conducted more clearly
+				</li>
+				<li>
+				Check whether the code runs on another (similarly structured) dataset
+				</li>
+				</ul>
+				<p>Authors can also give reviewers the opportunity to check basic code functionality by providing synthetic data. Dan Quintana has done a lot of work promoting the sharing of synthetic datasets and providing resources to help authors do so -- see his <a href=“https://www.youtube.com/watch?v=0fAR_oro1NY”>YouTube video</a>, <a href=“https://www.dsquintana.blog/creating-and-synthetic-version-of-a-real-dataset/”>blog post</a>, and <a href=“http://doi.org/10.7554/eLife.53275”>Quintana (2020)</a>.</p>				
+				<h4 id="open-data-and-code">Open data and code</h4>
+				<p>Mandating or encouraging authors to share both data and code alongside their manuscripts has all the above benefits of sharing either of these separately, but also means that reviewers (and later, readers) can check the computational reproducibility of the results (i.e., does running the code on the data produce the same results that are reported in the paper).</p>
+				<p>The <a href=“https://www.aeaweb.org/”>American Economic Association</a> provides helpful <a href=“https://aeadataeditor.github.io/aea-de-guidance/”>guidance on implementation of their data and code availability policy</a> that could easily be applied to other journals and fields.</p>
+				<p>For a discussion of the impact of journal data policy strictness on the code re-execution rate (i.e., how likely the code is to run without errors) and a set of recommendations for code dissemination aimed at journals, see <a href=“https://arxiv.org/abs/2103.12793”>Trisovic et al. (2020)</a>.</p>
+				<h4 id="pre-publication-verification-of-analyses">Pre-publication verification of analyses</h4>
+				<p>Some journals have now adopted a policy whereby data and code are not only required for publication in the journal, but must be checked before publication to ensure that the analyses are reproducible -- that the results in the manuscript match the results that are produced when someone who is not one of the authors re-runs the code on the data. This is called pre-publication “verification of analyses”, “data and code replication”, or “reproduction of analyses”.</p>
+				<p>For more information on how to implement a policy like this at your journal, see the <a href=“https://social-science-data-editors.github.io/guidance/”>Data and Code Guidance by Data Editors</a> developed by Lars Vilhuber and colleagues, which is used by the <a href=“https://www.aeaweb.org/journals”>American Economic Association journals</a>, <a href=“https://onlinelibrary.wiley.com/journal/15405982”>Canadian Journal of Economic</a>s, the <a href=“https://academic.oup.com/restud”>Review of Economic Studies</a>, and the <a href=“https://academic.oup.com/ej”>Economic Journal</a> as a reference.</p>
+				<p>Several journals in political science also require pre-publication verification. See for example <a href=“https://www.cambridge.org/core/journals/state-politics-and-policy-quarterly/information/instructions-contributors”>State Politics & Policy Quarterly</a>, <a href=“https://www.cambridge.org/core/journals/political-analysis/information/instructions-contributors”>Political Analysis</a>, and the <a href=“https://ajps.org/”>American Journal of Political Science</a>.</p>
 				<h4 id="data-citation">Data citation</h4>
 				<p>The social sciences are increasingly adopting the use of permanent identifiers, such as digital object identifiers (DOIs), for datasets, making it easier to find and cite data sources.</p>
 				<p>See the <a href=“https://doi.org/10.25490/a97f-egyk” target="_blank">Joint Declaration of Data Citation Principles</a> for a set of guiding principles for citing data that can be shared with authors or adopted as policy at your journal. <a href=“https://social-science-data-editors.github.io/guidance/” target="_blank">Social Science for Data Editors</a> also provides <a href=“https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#many-related-datasets” target="_blank">Guidance on Data Citations</a> for authors and data editors.</p>
+				<h4 id="heterogeneous-data-and-analytic-materials">Heterogeneous data and analytic materials</h4>
+				<p>While this section is framed in terms of numeric data and computer code, it is worth noting that cognate considerations arise in all circumstances where authors use a combination of data and analytic reasoning to make their findings. For example, authors can also make qualitative data and materials available for case studies that used process tracing analyses and relied on interviews and archival data.</p>
 				<h3 id="open-science-badges">Open science badges</h3>
 				<p>One way of incentivizing open science is to offer open science badges to signal and reward when underlying data, materials, or preregistrations are available. Implementing badges is <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002456" target="_blank">associated with an increasing rate of data sharing</a>, as seeing colleagues practice open science signals that new community norms have arrived. See the <a href="https://www.cos.io/initiatives/badges" target="_blank">guidance on badges</a> by the <a href="http://www.cos.io" target="_blank">Center for Open Science</a> for more information on how to implement badges at your journal. However, it is important to note that receiving a badge for sharing data and code <a href="https://osf.io/srg57/" target="_blank">does not necessarily mean that analyses are reproducible</a> -- for this we turn to pre-publication verification of analyses.</p>
 				<h3 id="pre-publication-verification-of-analyses">Pre-publication verification of analyses</h3>
