@@ -2,3 +2,5 @@
 *.swp
 *.jsxdr
 _site
+.jekyll-cache
+/docs/.jekyll-cache
