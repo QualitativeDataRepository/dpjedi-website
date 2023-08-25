@@ -4,3 +4,6 @@
 _site
 .jekyll-cache
 /docs/.jekyll-cache
+.Rproj.user
+.Rhistory
+*.Rproj
