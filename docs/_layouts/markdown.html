@@ -1,0 +1,143 @@
+---
+layout: default
+---
+<style>
+    .markdown-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .content-with-sidebar {
+        display: flex;
+        flex: 1;
+        background-color: #f4f4f4;
+    }
+
+    .sidebar {
+        width: 250px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-right: 1px solid #ddd;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+    }
+
+    .markdown-content {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .markdown-content {
+        background-color: #fff;
+    }
+
+    .sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ddd;
+}
+
+.sidebar ul ul {
+  margin-left: 20px;
+}
+
+.sidebar ul ul ul {
+  margin-left: 20px;
+}
+
+.sidebar ul li a.toc-h1 {
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #e2e2e2;
+  border-left: 4px solid #333;
+}
+
+.sidebar ul li a.toc-h2 {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  border-left: 4px solid #666;
+}
+
+.sidebar ul li a.toc-h3 {
+  font-weight: normal;
+  font-size: 12px;
+  border-left: 4px solid #999;
+}
+
+.sidebar ul li a.toc-h4 {
+  font-weight: normal;
+  font-size: 11px;
+  border-left: 4px solid #ccc;
+}
+</style>
+
+<!-- Header -->
+<header role="banner">
+    <div id="header">
+        <div class="container boxed">
+            <!-- Logo -->
+            <img src="/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png"
+                alt="Logo for JEDI: Journal Editor's Discussion Interface">
+            {% include nav.html %}
+        </div>
+    </div>
+</header>
+
+<div class="markdown-container">
+    <div class="content-with-sidebar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <h2>Table of Contents</h2>
+                {{ content | toc_only }}
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main role="main" class="markdown-content">
+            {{ content | inject_anchors }}
+        </main>
+    </div>
+</div>
+
+<!-- Smooth Scroll Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all links with hashes
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        for (const link of links) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const targetID = this.getAttribute('href');
+                const targetElement = document.querySelector(targetID);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        }
+    });
+</script>

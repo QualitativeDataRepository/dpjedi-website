@@ -3,39 +3,44 @@ layout: default
 ---
 
 <!-- Header -->
-	<header role="banner">
-			<div id="header">
-				<div class="container boxed">
+<header role="banner">
+	<div id="header">
+		<div class="container boxed">
 
-					<!-- Logo -->
-						
-				
-						<img src="/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png" alt="Logo for JEDI: Journal Editor's Discussion Interface">
+			<!-- Logo -->
 
-					{% include nav.html %}
 
-					<!-- Banner -->
-						<div id="banner">
-							<div class="container">
-								<section>
-									<header class="major">
-										<p style="font-size:300%; font-weight:700; line-height: 1.75em; margin: 0;">Welcome to JEDI</p>
-										<span class="byline" style="font-weight: 500;">
-											<p>The Journal Editors Discussion Interface (JEDI) provides the community of social science journal editors a forum in which to ask and answer questions, share information and expertise, and build a fund of collective knowledge.</p>
-										</span>
-									</header>
-								</section>
-							</div>
-						</div>
+			<img src="/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png"
+				alt="Logo for JEDI: Journal Editor's Discussion Interface">
+
+			{% include nav.html %}
+
+			<!-- Banner -->
+			<div id="banner">
+				<div class="container">
+					<section>
+						<header class="major">
+							<p style="font-size:300%; font-weight:700; line-height: 1.75em; margin: 0;">Welcome to JEDI
+							</p>
+							<span class="byline" style="font-weight: 500;">
+								<p>The Journal Editors Discussion Interface (JEDI) provides the community of social
+									science journal editors a forum in which to ask and answer questions, share
+									information and expertise, and build a fund of collective knowledge.</p>
+							</span>
+						</header>
+					</section>
 				</div>
-				<div class="buttons">
-					<a href="{{ site.baseurl }}/join.html" class="button alt">Join JEDI</a>&nbsp;&nbsp;
-				<a href="https://groups.google.com/forum/#!forum/dpjedi" target="_blank" class="button alt">Post to JEDI mailing list</a>
-		</div>
 			</div>
+		</div>
+		<div class="buttons">
+			<a href="{{ site.baseurl }}/join.html" class="button alt">Join JEDI</a>&nbsp;&nbsp;
+			<a href="https://groups.google.com/forum/#!forum/dpjedi" target="_blank" class="button alt">Post to JEDI
+				mailing list</a>
+		</div>
+	</div>
 
-	</header>
+</header>
 <main role="main">
 	{{ content }}
-	
+
 </main>

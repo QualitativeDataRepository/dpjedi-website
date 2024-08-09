@@ -1,7 +1,25 @@
 name: Horizons
+title: Data-PASS Journal Editors Discussion Interface
 description: Horizons template for Jekyll
 paginate: 10
 # baseurl: "/dpjedi-website" # the subpath of your site, e.g. /blog
 url: "http://dpjedi.org/" # the base hostname & protocol for your site
 # Google Analytics
 google_analytics: G-TT1VGTLKX5
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  toc_levels: 1..2
+toc:
+  min_level: 1
+  max_level: 2
+# Optional settings
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-toc
