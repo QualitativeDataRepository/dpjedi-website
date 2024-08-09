@@ -35,17 +35,20 @@ jobs:
           ruby-version: '3.3.4'
       
       - name: Install dependencies
-        working-directory: ./docs
         run: |
+          cd docs
           gem install bundler
           bundle install
           
       - name: Build with Jekyll
-        working-directory: ./docs
-        run: bundle exec jekyll build --source ./ --destination ./_site
+        run: |
+          cd docs
+          bundle exec jekyll build --destination ./_site
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/_site
 
   # Deployment job
   deploy:
