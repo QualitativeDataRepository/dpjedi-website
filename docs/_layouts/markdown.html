@@ -1,5 +1,6 @@
 ---
 layout: default_markdown
+toc: true
 ---
 <style>
     .markdown-container {
@@ -89,19 +90,65 @@ layout: default_markdown
 <header role="banner" class="mb-4">
     <div id="header" class="container-fluid">
         <!-- Logo -->
-        <img src="{{ '/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png' | relative_url }}" alt="Logo for JEDI: Journal Editor's Discussion Interface" class="img-fluid">
+        <img src="{{ '/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png' | relative_url }}"
+            alt="Logo for JEDI: Journal Editor's Discussion Interface" class="img-fluid">
         {% include nav.html %}
     </div>
 </header>
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
+        <!-- Collapsible Sidebar WIP -->
         <aside class="col-md-3 sidebar">
-            <nav>
-                <h2>Table of Contents</h2>
-                {{ content | toc_only }}
-            </nav>
+            <button class="btn btn-primary d-md-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                Toggle Sidebar
+            </button>
+            <div class="collapse d-md-block" id="sidebarMenu">
+                <nav>
+                    <h2>Table of Contents</h2>
+                    <div class="accordion" id="accordionExample">
+                        {% assign toc_html = content | toc_only %}
+                        {% capture toc %}
+                            {{ toc_html | replace: '<ul id="toc" class="section-nav">', '' | replace: '</ul>', '' }}
+                        {% endcapture %}
+                        
+                        {% assign toc_items = toc | split: '<li class="toc-entry' %}
+                        {% for item in toc_items %}
+                            {% if item contains 'toc-h1' %}
+                                {% assign h1_item = item | split: '</a>' | first %}
+                                {% assign h1_link = h1_item | split: 'href="' | last | split: '">' | first %}
+                                {% assign h1_text = h1_item | split: '">' | last %}
+                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ forloop.index }}">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">
+                                            {{ h1_text }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                {% assign sub_items = item | split: '<ul>' %}
+                                                {% if sub_items.size > 1 %}
+                                                    {% assign sub_list = sub_items[1] | split: '</ul>' | first %}
+                                                    {% assign h2_items = sub_list | split: '<li class="toc-entry toc-h2"' %}
+                                                    {% for h2_item in h2_items %}
+                                                        {% unless forloop.first %}
+                                                            {% assign h2_link = h2_item | split: 'href="' | last | split: '">' | first %}
+                                                            {% assign h2_text = h2_item | split: '">' | last %}
+                                                            <li><a href="{{ h2_link }}">{{ h2_text }}</a></li>
+                                                        {% endunless %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </nav>
+            </div>
         </aside>
 
         <!-- Main Content -->
@@ -110,6 +157,7 @@ layout: default_markdown
         </main>
     </div>
 </div>
+
 
 <!-- Smooth Scroll Script -->
 <script>
