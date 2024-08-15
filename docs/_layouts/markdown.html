@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default_markdown
 ---
 <style>
     .markdown-container {
@@ -14,7 +14,6 @@ layout: default
     }
 
     .sidebar {
-        width: 250px;
         padding: 20px;
         background-color: #f4f4f4;
         border-right: 1px solid #ddd;
@@ -26,85 +25,79 @@ layout: default
     .markdown-content {
         flex: 1;
         padding: 20px;
-    }
-
-    .markdown-content {
         background-color: #fff;
     }
 
     .sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.sidebar ul li {
-  margin-bottom: 10px;
-}
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
 
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 5px 10px;
-  border-radius: 4px;
-}
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
 
-.sidebar ul li a:hover {
-  background-color: #ddd;
-}
+    .sidebar ul li a:hover {
+        background-color: #ddd;
+    }
 
-.sidebar ul ul {
-  margin-left: 20px;
-}
+    .sidebar ul ul {
+        margin-left: 20px;
+    }
 
-.sidebar ul ul ul {
-  margin-left: 20px;
-}
+    .sidebar ul ul ul {
+        margin-left: 20px;
+    }
 
-.sidebar ul li a.toc-h1 {
-  font-weight: bold;
-  font-size: 16px;
-  background-color: #e2e2e2;
-  border-left: 4px solid #333;
-}
+    .sidebar ul li a.toc-h1 {
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #e2e2e2;
+        border-left: 4px solid #333;
+    }
 
-.sidebar ul li a.toc-h2 {
-  font-weight: bold;
-  font-size: 14px;
-  background-color: #f4f4f4;
-  border-left: 4px solid #666;
-}
+    .sidebar ul li a.toc-h2 {
+        font-weight: bold;
+        font-size: 14px;
+        background-color: #f4f4f4;
+        border-left: 4px solid #666;
+    }
 
-.sidebar ul li a.toc-h3 {
-  font-weight: normal;
-  font-size: 12px;
-  border-left: 4px solid #999;
-}
+    .sidebar ul li a.toc-h3 {
+        font-weight: normal;
+        font-size: 12px;
+        border-left: 4px solid #999;
+    }
 
-.sidebar ul li a.toc-h4 {
-  font-weight: normal;
-  font-size: 11px;
-  border-left: 4px solid #ccc;
-}
+    .sidebar ul li a.toc-h4 {
+        font-weight: normal;
+        font-size: 11px;
+        border-left: 4px solid #ccc;
+    }
 </style>
 
 <!-- Header -->
-<header role="banner">
-    <div id="header">
-        <div class="container boxed">
-            <!-- Logo -->
-            <img src="{{ '/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png' | relative_url }}"
-                alt="Logo for JEDI: Journal Editor's Discussion Interface">
-            {% include nav.html %}
-        </div>
+<header role="banner" class="mb-4">
+    <div id="header" class="container-fluid">
+        <!-- Logo -->
+        <img src="{{ '/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png' | relative_url }}" alt="Logo for JEDI: Journal Editor's Discussion Interface" class="img-fluid">
+        {% include nav.html %}
     </div>
 </header>
 
-<div class="markdown-container">
-    <div class="content-with-sidebar">
+<div class="container-fluid">
+    <div class="row">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="col-md-3 sidebar">
             <nav>
                 <h2>Table of Contents</h2>
                 {{ content | toc_only }}
@@ -112,7 +105,7 @@ layout: default
         </aside>
 
         <!-- Main Content -->
-        <main role="main" class="markdown-content">
+        <main role="main" class="col-md-9 markdown-content">
             {{ content | inject_anchors }}
         </main>
     </div>
