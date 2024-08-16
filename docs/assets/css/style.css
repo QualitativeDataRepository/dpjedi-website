@@ -75,10 +75,15 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #004851;
   }
 
+  .homepage-icons a, .homepage-icons a:visited {
+	color: #004851!important;
+  }
+
+  
 /* Basic */
 
 body {
-	background: #222833;
+	background: #222833!important;
 }
 
 body,
