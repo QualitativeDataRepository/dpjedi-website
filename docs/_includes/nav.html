@@ -1,12 +1,30 @@
 <!-- Nav -->
-	<nav id="nav" role="navigation">
-		<ul>
-			{% assign current = page.url | downcase | split: '/' %}
-			<li ><a href="{{ site.baseurl }}/index">Home</a></li>
-			<li ><a href="{{ site.baseurl }}/about">About</a></li>
-			<li ><a href="{{ site.baseurl }}/governance">Governance</a></li>
-			<li ><a href="{{ site.baseurl }}/mailing-list">Mailing List</a></li>
-			<li ><a href="{{ site.baseurl }}/events">Events</a></li>
-			<li ><a href="{{ site.baseurl }}/resources">Resources</a></li>
+<nav id="nav" role="navigation" class="navbar navbar-expand-lg custom-nav justify-content-center">
+	<div class="container-fluid">
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+		<ul class="navbar-nav">
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/index">Home</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/governance">Governance</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/mailing-list">Mailing List</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/events">Events</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/resources">Resources</a>
+		  </li>
 		</ul>
-	</nav>
+	  </div>
+	</div>
+  </nav>
