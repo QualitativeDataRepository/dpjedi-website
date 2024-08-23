@@ -140,6 +140,8 @@ toc: true
                         {% assign toc_html = content | toc_only %}
                         
                         {% assign toc_items = toc_html | split: '<li class="toc-entry toc-h1"' %}
+
+                        <div id="toc-log" style="display:none;">{{ toc_html }}</div>
                         
                         {% for h1_item in toc_items %}
                             {% if h1_item contains 'href' %}
