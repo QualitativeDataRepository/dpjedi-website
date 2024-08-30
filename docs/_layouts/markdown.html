@@ -129,52 +129,7 @@ toc: true
 <div class="container-fluid">
     <div class="row">
         <!-- Collapsible Sidebar -->
-        <aside class="col-md-3 sidebar">
-            <button class="btn btn-primary d-md-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                Toggle Sidebar
-            </button>
-            <div class="collapse d-md-block" id="sidebarMenu">
-                <nav>
-                    <h2>Table of Contents</h2>
-                    <div class="accordion" id="accordionExample">
-                        {% assign toc_html = content | toc_only %}
-                        
-                        {% assign toc_items = toc_html | split: '<li class="toc-entry toc-h1"' %}
-
-                        <div id="toc-log" style="display:none;">{{ toc_html }}</div>
-                        
-                        {% for h1_item in toc_items %}
-                            {% if h1_item contains 'href' %}
-                                {% assign h1_link = h1_item | split: 'href="' | last | split: '">' | first %}
-                                {% assign h1_text = h1_item | split: '">' | last | split: '</a>' | first %}
-                                
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading{{ forloop.index }}">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">
-                                            <li><a href="{{ h1_link }}">{{ h1_text }}</a></li>
-                                        </button>
-                                    </h2>
-                                    <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ul>
-                                                {% assign h2_items = h1_item | split: '<li class="toc-entry toc-h2"' %}
-                                                {% for h2_item in h2_items %}
-                                                    {% if h2_item contains 'href' %}
-                                                        {% assign h2_link = h2_item | split: 'href="' | last | split: '">' | first %}
-                                                        {% assign h2_text = h2_item | split: '">' | last | split: '</a>' | first %}
-                                                        <li><a href="{{ h2_link }}">{{ h2_text }}</a></li>
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </nav>
-            </div>
-        </aside>
+        {% include markdown_sidebar.html %}
 
         <!-- Main Content -->
         <main role="main" class="col-md-9 markdown-content">

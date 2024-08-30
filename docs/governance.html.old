@@ -9,7 +9,7 @@ layout: main
 			<section>
 				<header class="major">
 					<h1>JEDI Governance</h1>
-					<a href="{{ site.baseurl }}/join.html" class="button alt">Join JEDI</a>&nbsp;&nbsp;
+					<a href="{{ site.baseurl }}/join" class="button alt">Join JEDI</a>&nbsp;&nbsp;
 			<!--		<a href="https://groups.google.com/forum/#!forum/dpjedi" target="_blank" class="button alt">Post to JEDI</a>-->
 				</header>
 				<h2 id="sponsorship-and-hosting">Sponsorship and Hosting</h2>

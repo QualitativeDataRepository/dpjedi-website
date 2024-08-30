@@ -91,7 +91,19 @@
 			</div>
 		</div>
 	</footer>
-
+	<a href="#top" id="back-to-top" class="back-to-top">
+		&#8679;
+	</a>
+	<script>
+		document.addEventListener("scroll", function() {
+			const backToTopButton = document.getElementById("back-to-top");
+			if (window.scrollY > 300) {
+				backToTopButton.classList.add("show");
+			} else {
+				backToTopButton.classList.remove("show");
+			}
+		});
+		</script>
 </body>
 
 </html>

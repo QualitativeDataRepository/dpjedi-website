@@ -1,0 +1,71 @@
+general: []
+
+incoming-editors: []
+
+ethics:
+  - editors-publishing-in-their-own-journals
+
+diversifying-social-science-research:
+  - inclusive-language
+  - collecting-demographic-data
+  - who-is-responsible-for-advancing-diversity
+  - english-language-editing
+  - retroactive-name-changes
+  - considering-citation-disparities
+
+open-science:
+  - resources-for-authors
+  - data-and-code
+  - resources-for-open-research-plan-doc
+  - data-citation
+  - heterogeneous-data-and-analytic-materials
+  - open-science-badges
+  - verification-reports
+  - preregistration
+  - registered-reports
+  - open-peer-review
+  - open-access
+  - computational-research
+  - encouraging-authors-to-acknoledge-limitations
+  - replications-studies
+  - reporting-guidelines
+  - preprints
+
+reconsideration-of-previously-rejected-submissions: []
+
+improving-the-quality-of-reviews: []
+
+peer-reviewing-tools-guidelines: []
+
+incentivising-reviews: []
+
+reviewer-editorial-collusion: []
+
+detecting-overlap-between-submitted-existing-manuscripts: []
+
+retraction: []
+
+submission-types:
+  - publishing-scientific-criticism
+
+peer-review-innovations: []
+
+limitations-of-peer-review: []
+
+editorial-secrets:
+  - appeals
+  - cover-letters
+  - revise-and-resubmit-workflows
+
+formatting: []
+
+persitence-preservation: []
+
+list-of-contributors-to-this-page: []
+
+data-PASS: []
+
+
+# another-section:
+#   - sub-one
+#   - sub-two

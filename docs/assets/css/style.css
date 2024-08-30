@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   /* Ensure links retain original styling */
   a {
 	color: #004851;
-	text-decoration: underline !important;
+	text-decoration: underline;
   }
   
   a:hover {
@@ -79,7 +79,137 @@ h1, h2, h3, h4, h5, h6 {
 	color: #004851!important;
   }
 
-  
+/* Sidebar Overrides */
+
+#sidebar {
+    padding-right: 15px;
+}
+
+.sidebar .accordion-item {
+    border: none;
+	margin: 0;
+}
+
+@media (min-width: 1024px) {
+    #sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.accordion-header {
+    color: #555555 !important;
+}
+
+.sidebar .accordion-button, 
+.sidebar .accordion-button.no-collapse {
+    background-color: #ffffff !important;
+    color: #555555 !important;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    text-align: left;
+    padding: 10px 15px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+	margin: 0;
+}
+
+.sidebar .accordion-item:not(:last-child) .accordion-button,
+.sidebar .accordion-item:not(:last-child) .accordion-button.no-collapse {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar .accordion-button:hover, 
+.sidebar .accordion-button.no-collapse:hover {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+}
+
+.sidebar .accordion-button:not(.collapsed), 
+.sidebar .accordion-button.no-collapse.active {
+    background-color: #d6e0f5;
+    color: #1a1a1a;
+}
+
+.sidebar .accordion-button::after {
+    color: #1a1a1a;
+}
+
+.sidebar .accordion-button.no-collapse::after {
+    display: none;
+}
+
+.sidebar .accordion-button:focus, 
+.sidebar .accordion-button.no-collapse:focus {
+    box-shadow: none;
+}
+
+.sidebar .submenu-item {
+    background-color: #ffffff;
+    color: #555555 !important;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+	margin: 0;
+}
+
+.sidebar .submenu-item:last-child {
+    border-bottom: none;
+}
+
+.sidebar .submenu-item a {
+    color: #555555 !important;
+    text-decoration: none;
+}
+
+.sidebar .submenu-item:hover {
+    background-color: #f0f0f0;
+    color: #000 !important;
+}
+
+.sidebar .submenu-item a:hover {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+/* Back to top */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* display: none; */
+    width: 50px;
+    height: 50px;
+    background-color: #004851;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Basic */
 
 body {

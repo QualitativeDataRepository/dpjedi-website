@@ -2,11 +2,15 @@ name: Horizons
 title: Data-PASS Journal Editors Discussion Interface
 description: Horizons template for Jekyll
 paginate: 10
-# baseurl: "/dpjedi-website" # the subpath of your site, e.g. /blog
 url: "https://ingen0s.github.io/" # the base hostname & protocol for your site
 # Google Analytics
 google_analytics: G-TT1VGTLKX5
 baseurl: "/dpjedi-website"
+defaults:
+  - scope:
+      path: "" # applies to all files
+    values:
+      page_title: "JEDI"
 markdown: kramdown
 kramdown:
   auto_ids: true

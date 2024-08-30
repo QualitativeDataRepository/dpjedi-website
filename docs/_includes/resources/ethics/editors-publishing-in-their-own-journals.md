@@ -1,0 +1,5 @@
+#### Editors publishing in their own journals
+
+There is some controversy surrounding the question of whether editors should be allowed to publish in the journals they edit. Where this is permitted, journals should have clear processes in place to evaluate articles submitted by editors to their own journals.
+
+[Helgesson et al. (2022)](https://doi.org/10.1002/leap.1449) conducted a systematic review of the prevalence of this practice. They found large variability in self-publishing across fields, journals, and editors, but ultimately, there are some situations where levels of self-publication are very high. This is corroborated by [Bishop (2020)](http://deevybee.blogspot.com/2020/08/pepiops-prolific-editors-who-publish-in.html), who found that in some cases, the most prolific author in a journal is the editor-in-chief. Additionally, among biomedical journals where a few authors were responsible for a disproportionate number of publications, the most prolific author was part of the editorial board in over 60% of cases ([Scanff et al., 2021](https://doi.org/10.1371/journal.pbio.3001525)).

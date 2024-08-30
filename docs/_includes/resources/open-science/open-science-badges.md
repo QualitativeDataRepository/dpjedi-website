@@ -1,0 +1,3 @@
+### Open Science Badges
+
+One way of incentivizing open science is to offer open science badges to signal and reward when underlying data, materials, or preregistrations are available. Implementing badges is [associated with an increasing rate of data sharing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002456), as seeing colleagues practice open science signals that new community norms have arrived. See the [guidance on badges](https://www.cos.io/initiatives/badges) by the [Center for Open Science](http://www.cos.io) for more information on how to implement badges at your journal. However, it is important to note that [receiving a badge for sharing data and code does not necessarily mean that analyses are reproducible](https://osf.io/srg57/).
