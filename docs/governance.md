@@ -12,11 +12,17 @@ JEDI is supported by grants from the National Science Foundation (awards 2032661
 
 The five Data-PASS members currently taking the lead on organizing JEDI are:
 
-- [Databrary](https://nyu.databrary.org/){:target="_blank"}, at New York University and Pennsylvania State University
-- The [Roper Center For Public Opinion Research](https://ropercenter.cornell.edu/){:target="_blank"} at Cornell University
-- The [Institute for Quantitative Social Science (IQSS)](https://www.iq.harvard.edu/){:target="_blank"} at Harvard University
-- The [Interuniversity Consortium for Political and Social Research (ICPSR)](https://www.icpsr.umich.edu/icpsrweb/){:target="_blank"} at the University of Michigan
-- The [Qualitative Data Repository (QDR)](https://qdr.syr.edu/){:target="_blank"} at Syracuse University
+{% capture list_items %}
+[Databrary](https://nyu.databrary.org/){:target="_blank"}, at New York University and Pennsylvania State University
+The [Roper Center For Public Opinion Research](https://ropercenter.cornell.edu/){:target="_blank"} at Cornell University
+The [Institute for Quantitative Social Science (IQSS)](https://www.iq.harvard.edu/){:target="_blank"} at Harvard University
+The [Interuniversity Consortium for Political and Social Research (ICPSR)](https://www.icpsr.umich.edu/icpsrweb/){:target="_blank"} at the University of Michigan
+The [Qualitative Data Repository (QDR)](https://qdr.syr.edu/){:target="_blank"} at Syracuse University
+{% endcapture %}
+
+{% assign items_array = list_items | newline_to_br | split: '<br />' %}
+
+{% include listgroup.html items=items_array %}
 
 JEDI is hosted by QDR. Hosting entails providing technical support, managing the resources required for JEDI’s operation, and moderating the mailing list.
 
@@ -25,16 +31,22 @@ JEDI policies will be decided by a group consisting of editors of seven social s
 
 ### Steering Committee (Alphabetized by First Name)
 
-- Felix Elwert, Sociological Methods and Research, University of Wisconsin-Madison
-- Julia Bottesini, JEDI Community Manager (ex officio member)
-- Kathleen Weldon, Roper Center for Public Opinion Research, Cornell University
-- Layna Mosley, International Organization, Princeton University
-- Margaret Levenstein, Interuniversity Consortium for Political and Social Research, University of Michigan
-- Marie Connolly, Canadian Journal of Economics, Université du Québec à Montréal
-- Rick Gilmore, Databrary, Pennsylvania State University
-- Sebastian Karcher, Qualitative Data Repository, Syracuse University
-- Shaila Seshia Galvin, Journal of Peasant Studies, Geneva Graduate Institute
-- Simine Vazire, Collabra, University of Melbourne
-- Sonia Barbosa, Dataverse Project, Harvard University
-- Thomas Nelson Laird, The Review of Higher Education, Indiana University Bloomington
-- Volkan Topalli, Criminology, Georgia State University
+{% capture steering_committee %}
+Felix Elwert, Sociological Methods and Research, University of Wisconsin-Madison
+Julia Bottesini, JEDI Community Manager (ex officio member)
+Kathleen Weldon, Roper Center for Public Opinion Research, Cornell University
+Layna Mosley, International Organization, Princeton University
+Margaret Levenstein, Interuniversity Consortium for Political and Social Research, University of Michigan
+Marie Connolly, Canadian Journal of Economics, Université du Québec à Montréal
+Rick Gilmore, Databrary, Pennsylvania State University
+Sebastian Karcher, Qualitative Data Repository, Syracuse University
+Shaila Seshia Galvin, Journal of Peasant Studies, Geneva Graduate Institute
+Simine Vazire, Collabra, University of Melbourne
+Sonia Barbosa, Dataverse Project, Harvard University
+Thomas Nelson Laird, The Review of Higher Education, Indiana University Bloomington
+Volkan Topalli, Criminology, Georgia State University
+{% endcapture %}
+
+{% assign committee_array = steering_committee | newline_to_br | split: '<br />' %}
+
+{% include listgroup.html items=committee_array %}

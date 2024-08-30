@@ -3,12 +3,6 @@ title: Markdown Test Page
 permalink: /test/
 layout: markdown
 toc: true
-table_data:
-  headers: ["Column 1", "Column 2", "Column 3"]
-  rows:
-    - ["Row 1, Cell 1", "Row 1, Cell 2", "Row 1, Cell 3"]
-    - ["Row 2, Cell 1", "Row 2, Cell 2", "Row 2, Cell 3"]
-    - ["Row 3, Cell 1", "Row 3, Cell 2", "Row 3, Cell 3"]
 ---
 
 # {{ page.title }}
@@ -20,7 +14,20 @@ table_data:
 <!-- Include the table -->
 <!-- <pre>{{ page.table_data | jsonify }}</pre> -->
 <!-- {{ page.table_data | inspect }} -->
-{% include table.html table=page.table_data %}
+{% capture table_headers %}
+Column 1, Column 2, Column 3
+{% endcapture %}
+
+{% capture table_rows %}
+Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3
+Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3
+Row 3, Cell 1 | Row 3, Cell 2 | Row 3, Cell 3
+{% endcapture %}
+
+{% assign headers_array = table_headers | split: ', ' %}
+{% assign rows_array = table_rows | newline_to_br | split: '<br />' %}
+
+{% include table.html headers=headers_array rows=rows_array %}
 
 Publishers often offer guidelines and associated resources relating to editorial practices. While typically provided for editors of the journals that they publish, these resources may also be more generally helpful. For some examples, see:
 

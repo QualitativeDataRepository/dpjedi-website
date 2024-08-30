@@ -38,11 +38,12 @@ post: true
 
             <div class="row">
                 {% if page.sidebar %}
-                <!-- Collapsible Sidebar -->
+                <!-- Sidebar -->
                 {% include markdown_sidebar.html %}
-                {% endif %}
+                
+                {% endif %} 
                 <!-- Main Content -->
-                <main role="main" class="col-md-9 markdown-content">
+                <main role="main" class="{% if page.sidebar %}col-md-9{% else %}col-md-12{% endif %} markdown-content">
                     {{ content | inject_anchors }}
                 </main>
             </div>

@@ -29,8 +29,20 @@ JEDI’s organizers anticipate that at least some discussion on JEDI will focus 
 
 For example, editors might seek guidance on the following types of issues:
 
-- Locating or developing template language for authors’ guidelines on citation and the use of digital object identifiers (DOIs)
+{% capture list_items %}
+Locating or developing template language for authors’ guidelines on citation and the use of digital object identifiers (DOIs)
+Best practice for citing dynamic data
+The relative ease or difficulty of incorporating a new practice, such as pre-publication verification, pre-registration of research designs, and pre-analysis plans
+Pre-publication verification when sensitive data underpin a manuscript
+Second-order risks that arise from improved transparency, for example, how journals should take notice of appraisals of published work including replications
+{% endcapture %}
+
+{% assign items_array = list_items | newline_to_br | split: '<br />' %}
+
+{% include listgroup.html items=items_array %}
+
+<!-- - Locating or developing template language for authors’ guidelines on citation and the use of digital object identifiers (DOIs)
 - Best practice for citing dynamic data
 - The relative ease or difficulty of incorporating a new practice, such as pre-publication verification, pre-registration of research designs, and pre-analysis plans
 - Pre-publication verification when sensitive data underpin a manuscript
-- Second-order risks that arise from improved transparency, for example, how journals should take notice of appraisals of published work including replications
+- Second-order risks that arise from improved transparency, for example, how journals should take notice of appraisals of published work including replications -->

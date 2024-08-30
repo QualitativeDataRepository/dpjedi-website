@@ -1,0 +1,22 @@
+<div class="list-group">
+    {% for item in include.items %}
+        {% assign trimmed_item = item | strip %}
+        {% unless trimmed_item == "" %}
+            {% assign event_parts = trimmed_item | split: '|' %}
+            {% assign event_date = event_parts[0] %}
+            {% assign event_title_and_link = event_parts[1] %}
+            {% assign event_title = event_title_and_link | split: '[' | first | strip %}
+            {% assign event_link_text = event_title_and_link | split: '[' | last | split: ']' | first %}
+            {% assign event_link = event_title_and_link | split: '(' | last | split: ')' | first %}
+            
+            <a href="{{ event_link }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 flex-column flex-md-row">
+                    <h5 class="mb-1">{{ event_title }}</h5>
+                    <small class="text-muted date-align mt-2 mt-md-0">{{ event_date }}</small> <!-- Added margin top on mobile -->
+                </div>
+                <p class="mb-1">{{ event_link_text }}</p>
+                <small>Click to see details</small>
+            </a>
+        {% endunless %}
+    {% endfor %}
+</div>

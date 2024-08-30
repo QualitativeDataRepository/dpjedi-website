@@ -1,29 +1,11 @@
-## Wishlists and Workflows: Integrating Research Transparency into Editorial and Publishing Processes
+{% capture list_items %}
+Wednesday, August 28, 2019, Washington, DC | Wishlists and Workflows: Integrating Research Transparency into Editorial and Publishing Processes [Agenda and slides]({{ site.baseurl }}/events/wishlists-and-workflows)
+Wednesday, August 29, 2018, Boston, MA | Technical Solutions to Advance Evaluation and Replication in the Social Sciences: What’s New, What's Next [Agenda and slides]({{ site.baseurl }}/events/technical-solutions)
+Wednesday, August 30, 2017, San Francisco, CA | Data under Constraint: Tools and Strategies for Facilitating Transparency [Agenda and slides]({{ site.baseurl }}/events/data-under-constraint)
+Wednesday, June 14, 2017, Harvard University, Cambridge, MA | Evolving Practices for Data Management and Sharing [Agenda and slides]({{ site.baseurl }}/events/evolving-practices)
+Wednesday, August 31, 2016, Philadelphia, PA | Clarifying Data Citation and Sharing: Some Practical Information for Journals [Agenda and slides]({{ site.baseurl }}/events/clarifying-data-citation)
+{% endcapture %}
 
-*Wednesday, August 28, 2019, Washington, DC*
+{% assign items_array = list_items | newline_to_br | split: '<br />' %}
 
-*[Agenda and slides]({{ site.baseurl }}/events/wishlists-and-workflows from this workshop.*
-
-## Technical Solutions to Advance Evaluation and Replication in the Social Sciences: What’s New, What's Next
-
-*Wednesday, August 29, 2018, Boston, MA*
-
-*[Agenda and slides]({{ site.baseurl }}/events/technical-solutions) from this workshop.*
-
-## Data under Constraint: Tools and Strategies for Facilitating Transparency
-
-*Wednesday, August 30, 2017, San Francisco, CA*
-
-*[Agenda and slides]({{ site.baseurl }}/events/data-under-constraint) from this workshop.*
-
-## Evolving Practices for Data Management and Sharing
-
-*Wednesday, June 14, 2017, Harvard University, Cambridge, MA*
-
-*[Agenda and slides]({{ site.baseurl }}/events/evolving-practices) from this workshop.*
-
-## Clarifying Data Citation and Sharing: Some Practical Information for Journals
-
-*Wednesday, August 31, 2016, Philadelphia, PA*
-
-*[Agenda and slides]({{ site.baseurl }}/events/clarifying-data-citation from this workshop.*
+{% include listgroup-custom.html items=items_array %}

@@ -8,6 +8,13 @@
 
 /* Bootstrap ovverides */
 
+/* Events Listgroup */
+
+.date-align {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
 /* Override Bootstrap's heading styles */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'futura-pt', sans-serif!important; /* Ensure this matches your original font */
