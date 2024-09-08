@@ -1,4 +1,4 @@
-## List of contributors to this page (alphabetical by first name) {#list-of-contributors-to-this-page-alphabetical-by-first-name}
+## List of contributors to this page (alphabetical by first name) {#list-of-contributors-to-this-page}
 
 - [Abel Brodeur](https://uniweb.uottawa.ca/members/759)
 - [Alison Ledgerwood](http://www.alisonledgerwood.com/)

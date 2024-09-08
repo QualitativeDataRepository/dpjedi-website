@@ -18,7 +18,7 @@ post: false
 {% endcapture %}
 {{ table_of_contents | markdownify }} -->
 
-{% assign sections = "general,incoming-editors,ethics,diversifying-social-science-research,open-science,reconsideration-of-previously-rejected-submissions,improving-the-quality-of-reviews,peer-reviewing-tools-guidelines,incentivising-reviews,reviewer-editorial-collusion,detecting-overlap-between-submitted-existing-manuscripts,retraction,submission-types,peer-review-innovations,limitations-of-peer-review,editorial-secrets,formatting,persitence-preservation,list-of-contributors-to-this-page" | split: ',' %}
+{% assign sections = "general,incoming-editors,ethics,diversifying-social-science-research,open-science,reconsideration-of-previously-rejected-submissions,improving-the-quality-of-reviews,peer-reviewing-tools-guidelines,incentivising-reviews,reviewer-editorial-collusion,detecting-overlap-between-submitted-existing-manuscripts,retraction,submission-types,peer-review-innovations,limitations-of-peer-review,editorial-secrets,formatting,persistence-preservation,list-of-contributors-to-this-page" | split: ',' %}
 
 {% for section in sections %}
 {% capture section_content %}
