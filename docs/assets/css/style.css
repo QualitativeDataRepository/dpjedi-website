@@ -8,6 +8,10 @@
 
 /* Bootstrap ovverides */
 
+/*  Listgroup */
+
+
+
 /* Events Listgroup */
 
 .date-align {
@@ -17,7 +21,7 @@
 
 /* Override Bootstrap's heading styles */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'futura-pt', sans-serif!important; /* Ensure this matches your original font */
+	font-family: 'futura-pt', sans-serif!important;
 	color: inherit!important;
 	font-weight: 700!important;
 	line-height: 1.75em!important;
@@ -26,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Override Bootstrap's default body font */
   body, input, select, textarea {
-	font-family: 'futura-pt', sans-serif!important; /* Your original font */
+	font-family: 'futura-pt', sans-serif!important;
 	font-size: 13pt!important;
 	font-weight: 300!important;
 	line-height: 1.75em!important;

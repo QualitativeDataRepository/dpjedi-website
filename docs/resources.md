@@ -26,7 +26,7 @@ post: false
 {% endcapture %}
 {{ section_content | markdownify }}
 
-{% assign sub_sections = site.data.subsections[section] %}
+{% assign sub_sections = site.data.table-of-contents[section] %}
 {% if sub_sections %}
 {% for sub_section in sub_sections %}
 {% capture sub_content %}

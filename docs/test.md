@@ -24,6 +24,16 @@ Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3
 Row 3, Cell 1 | Row 3, Cell 2 | Row 3, Cell 3
 {% endcapture %}
 
+Here is a video that might interest you:
+
+## Custom Video Embed with Width and Height
+
+1. Here's a video with custom dimensions:
+{% include video.html video_url="https://www.youtube.com/embed/jdGl1PjboHs?si=H8ulaANCCHpSb-PH" width="800px" height="450px" caption="Custom size video" %}
+
+2. Another example:
+{% include video.html video_url="https://www.youtube.com/embed/jdGl1PjboHs?si=H8ulaANCCHpSb-PH" width="600px" height="340px" caption="Different size video example." %}
+
 {% assign headers_array = table_headers | split: ', ' %}
 {% assign rows_array = table_rows | newline_to_br | split: '<br />' %}
 
