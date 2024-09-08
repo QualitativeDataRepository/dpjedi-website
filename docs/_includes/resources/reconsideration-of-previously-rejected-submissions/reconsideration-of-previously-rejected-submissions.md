@@ -1,1 +1,3 @@
-### Reconsideration of Previo
+## Reconsideration of previously rejected submissions {#reconsideration-of-previously-rejected-submissions}
+
+It is important to have a policy on how to handle appeals to reconsider previously rejected submissions. However, many journals do not currently have detailed, reproducible, or established appeal policies in operation ([Dambha & Jones, 2017](https://doi.org/10.1002/leap.1107){:target="_blank"}). For an example of a reproducible and established appeal policy, see the [*Infant and Child Development*](https://onlinelibrary.wiley.com/journal/15227219){:target="_blank"} section on [Decision Appeals](https://onlinelibrary.wiley.com/page/journal/15227219/homepage/forauthors.html){:target="_blank"}.

@@ -2,7 +2,7 @@
     <div id="sidebarMenu">
         <nav>
             <div class="accordion" id="accordionExample">
-                {% for section in site.data.table-of-contents %}
+                {% for section in site.data.resources.table-of-contents %}
                 {% assign anchors = section[1] %}
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading{{ forloop.index }}">

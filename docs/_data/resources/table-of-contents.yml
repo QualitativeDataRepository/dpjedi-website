@@ -16,6 +16,11 @@ diversifying-social-science-research:
 open-science:
   - resources-for-authors
   - data-and-code
+  - data-ethics
+  - open-data
+  - open-code
+  - open-data-and-code
+  - pre-publication-verification-of-analyses
   - resources-for-open-research-plan-doc
   - data-citation
   - heterogeneous-data-and-analytic-materials
@@ -26,7 +31,7 @@ open-science:
   - open-peer-review
   - open-access
   - computational-research
-  - encouraging-authors-to-acknoledge-limitations
+  - encouraging-authors-to-acknowledge-limitations
   - replications-studies
   - reporting-guidelines
   - preprints

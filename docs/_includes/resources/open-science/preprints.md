@@ -1,0 +1,3 @@
+### Preprints {#preprints}
+
+Preprints are a publicly available version of any type of scientific manuscript/research output preceding formal publication ([Parsons et al., 2022](https://forrt.org/glossary/%5Bhttps://doi.org/10.1038/s41562-021-01269-4){:target="_blank"}). Journals can support preprints by including links to preprint versions of the paper in the final published version, providing integrated workflows that enable authors to easily post a preprint when they submit their work to a journal (e.g., see [SciPost](https://scipost.org/){:target="_blank"}), supporting peer review organized around preprint platforms, or even making posting of preprints mandatory before review.
