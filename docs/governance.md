@@ -20,9 +20,7 @@ The [Interuniversity Consortium for Political and Social Research (ICPSR)](https
 The [Qualitative Data Repository (QDR)](https://qdr.syr.edu/){:target="_blank"} at Syracuse University
 {% endcapture %}
 
-{% assign items_array = list_items | newline_to_br | split: '<br />' %}
-
-{% include listgroup.html items=items_array %}
+{% include listgroup.html items=list_items %}
 
 JEDI is hosted by QDR. Hosting entails providing technical support, managing the resources required for JEDI’s operation, and moderating the mailing list.
 
@@ -47,6 +45,5 @@ Thomas Nelson Laird, The Review of Higher Education, Indiana University Blooming
 Volkan Topalli, Criminology, Georgia State University
 {% endcapture %}
 
-{% assign committee_array = steering_committee | newline_to_br | split: '<br />' %}
 
-{% include listgroup.html items=committee_array %}
+{% include listgroup.html items=steering_committee %}

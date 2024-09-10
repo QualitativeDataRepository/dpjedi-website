@@ -1,5 +1,7 @@
+{% assign items_array = include.items | newline_to_br | split: '<br />' %}
+
 <div class="list-group">
-    {% for item in include.items %}
+    {% for item in items_array %}
         {% assign trimmed_item = item | strip %}
         {% unless trimmed_item == "" %}
             {% assign event_parts = trimmed_item | split: '|' %}

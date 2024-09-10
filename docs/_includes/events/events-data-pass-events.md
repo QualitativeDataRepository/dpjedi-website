@@ -6,6 +6,5 @@ Wednesday, June 14, 2017, Harvard University, Cambridge, MA | Evolving Practices
 Wednesday, August 31, 2016, Philadelphia, PA | Clarifying Data Citation and Sharing: Some Practical Information for Journals [Agenda and slides]({{ site.baseurl }}/events/clarifying-data-citation)
 {% endcapture %}
 
-{% assign items_array = list_items | newline_to_br | split: '<br />' %}
 
-{% include listgroup-custom.html items=items_array %}
+{% include listgroup-custom.html items=list_items %}

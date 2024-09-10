@@ -11,9 +11,6 @@ toc: true
 
 ### Sample Table
 
-<!-- Include the table -->
-<!-- <pre>{{ page.table_data | jsonify }}</pre> -->
-<!-- {{ page.table_data | inspect }} -->
 {% capture table_headers %}
 Column 1, Column 2, Column 3
 {% endcapture %}
@@ -23,6 +20,8 @@ Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3
 Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3
 Row 3, Cell 1 | Row 3, Cell 2 | Row 3, Cell 3
 {% endcapture %}
+
+{% include table.html table_headers=table_headers table_rows=table_rows %}
 
 Here is a video that might interest you:
 
@@ -34,10 +33,7 @@ Here is a video that might interest you:
 2. Another example:
 {% include video.html video_url="https://www.youtube.com/embed/jdGl1PjboHs?si=H8ulaANCCHpSb-PH" width="600px" height="340px" caption="Different size video example." %}
 
-{% assign headers_array = table_headers | split: ', ' %}
-{% assign rows_array = table_rows | newline_to_br | split: '<br />' %}
 
-{% include table.html headers=headers_array rows=rows_array %}
 
 Publishers often offer guidelines and associated resources relating to editorial practices. While typically provided for editors of the journals that they publish, these resources may also be more generally helpful. For some examples, see:
 

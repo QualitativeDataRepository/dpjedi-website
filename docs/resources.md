@@ -1,7 +1,6 @@
 ---
 title: Data-PASS Journal Editors Discussion Interface
 layout: jedi
-toc: true
 page_title: "Resources"
 sidebar: true
 join: true

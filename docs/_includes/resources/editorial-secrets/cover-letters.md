@@ -4,6 +4,3 @@ How important is it to include a cover letter with a manuscript submission? It s
 
 This [infographic](https://6558cf98-9c4b-43ec-87d8-2c78ea81faf2.filesusr.com/ugd/75feef_fcb38cd631e04b6c8312f6886b5bacdd.pdf) is a helpful guide to authors. If this corresponds well to what your journal expects from a cover letter, you may consider sharing it with authors in your submission guidelines.
 
-### Revise & Resubmit Workflows {#revise-and-resubmit-workflows}
-
-Most journals leave it up to authors to determine what to include in a response to a revise & resubmit. Some authors write a very brief response, mostly referring reviewers back to the revised manuscript for a full re-review, whereas others write detailed breakdowns replying to each comment, copying excerpts from the revised manuscript with corresponding page numbers. While it is fine to leave this up to author discretion, if there is a preferred format you would like to receive the response in, you could consider creating a template for authors to fill out or at least share helpful guidelines. Moin Syed has outlined one workflow/format in a [blog post](http://getsyeducated.blogspot.com/2020/08/a-workflow-for-dealing-with-dread-of.html).

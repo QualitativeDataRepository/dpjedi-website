@@ -1,13 +1,16 @@
+{% assign headers_array = include.table_headers | split: ', ' %}
+{% assign rows_array = include.table_rows | newline_to_br | split: '<br />' %}
+
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            {% for header in include.headers %}
+            {% for header in headers_array %}
                 <th scope="col">{{ header | markdownify }}</th>
             {% endfor %}
         </tr>
     </thead>
     <tbody>
-        {% for row in include.rows %}
+        {% for row in rows_array %}
             <tr>
                 {% assign cells = row | split: '|' %}
                 {% for cell in cells %}

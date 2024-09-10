@@ -6,6 +6,4 @@ Friday, May 20, 2022 | May the force be with you: Resources to help journal edit
 Friday, November 20, 2020 | As Open as Possible, As Closed as Necessary: Empowering Transparency in Publications Based on Sensitive Research Data [Agenda, slides, and recordings]({{ site.baseurl }}/events/as-open-as-possible)
 {% endcapture %}
 
-{% assign items_array = list_items | newline_to_br | split: '<br />' %}
-
-{% include listgroup-custom.html items=items_array %}
+{% include listgroup-custom.html items=list_items %}

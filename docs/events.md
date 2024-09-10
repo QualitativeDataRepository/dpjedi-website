@@ -1,6 +1,7 @@
 ---
 title: Data-PASS Journal Editors Discussion Interface
-layout: main
+layout: jedi
+page_title: "JEDI Events"
 ---
 
 <style>
@@ -16,11 +17,6 @@ layout: main
 <div class="container">
 <section>
 
-<header class="major">
-  <h1>JEDI Events</h1>
-  <!-- <a href="{{ site.baseurl }}/join" class="button alt">Join JEDI</a>&nbsp;&nbsp; -->
-  <!-- <a href="https://groups.google.com/forum/#!forum/dpjedi" class="button alt" target="_blank">Post to JEDI</a> -->
-</header>
 
 {% capture events-intro %}
 {% include /events/events-intro.md%}
