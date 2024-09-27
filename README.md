@@ -117,6 +117,24 @@ Friday, September 15, 2023, New York, NY | Exploring Data Transparency in Modern
 {% include listgroup-custom.html items=list_items %}
 ```
 
+### Image Card
+
+The Image Card component allows you to display an image alongside a description, with support for links embedded in the description. Here’s how you can use the Image Card component in your markdown files:
+
+	1.	Use the | character to separate the image URL, title, description, and an optional link.
+	2.	Ensure links are included in markdown or HTML format in the description for proper rendering.
+
+```
+{% capture panelists %}
+{{ site.baseurl }}/assets/images/event2023/speaker1.png | Speaker Name | This is a description of the speaker. [Learn more](https://example.com)
+{{ site.baseurl }}/assets/images/event2023/speaker2.png | Another Speaker | Description about this speaker. [More Info](https://example.com)
+{% endcapture %}
+
+{% include card.html items=panelists %}
+```
+
+This will render each card with an image, title, and description, allowing for clickable links inside the description.
+
 ### Sidebar
 - activated in frontmatter
 
