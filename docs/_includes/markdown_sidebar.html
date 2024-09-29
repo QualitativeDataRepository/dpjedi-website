@@ -1,65 +1,78 @@
 <aside class="col-md-3 sidebar" id="sidebar">
-  <div id="sidebarMenu">
-    <nav>
-      <div class="accordion" id="accordionExample">
-        {% for section in site.data.resources.table-of-contents %} {% assign
-        anchors = section[1] %}
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading{{ forloop.index }}">
-            {% assign section_name = section[0] | replace: '-', ' ' %} {% assign
-            section_name_words = section_name | split: ' ' %} {% capture
-            section_name_capitalized %} {% for word in section_name_words %} {{
-            word | capitalize }} {% endfor %} {% endcapture %} {% if
-            anchors.size > 0 %}
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse{{ forloop.index }}"
-              aria-expanded="false"
-              aria-controls="collapse{{ forloop.index }}"
-            >
-              {{ section_name_capitalized }}
-            </button>
-            {% else %}
-            <a
-              href="#{{ section[0] }}"
-              class="d-block w-100 text-start accordion-button no-collapse"
-            >
-              {{ section_name_capitalized }}
-            </a>
-            {% endif %}
-          </h2>
-          {% if anchors.size > 0 %}
-          <div
-            id="collapse{{ forloop.index }}"
-            class="accordion-collapse collapse"
-            aria-labelledby="heading{{ forloop.index }}"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <div class="submenu-item">
-                <a href="#{{ section[0] }}" class="d-block w-100 text-start"
-                  >{{ section_name_capitalized }}</a
-                >
-              </div>
-              {% for anchor in anchors %} {% assign anchor_name = anchor |
-              replace: '-', ' ' %} {% assign anchor_name_words = anchor_name |
-              split: ' ' %} {% capture anchor_name_capitalized %} {% for word in
-              anchor_name_words %} {{ word | capitalize }} {% endfor %} {%
-              endcapture %}
-              <div class="submenu-item">
-                <a href="#{{ anchor }}" class="d-block w-100 text-start"
-                  >{{ anchor_name_capitalized }}</a
-                >
-              </div>
+    <div id="sidebarMenu">
+      <nav>
+        <div class="accordion" id="accordionExample">
+          {% for section in site.data.resources.table-of-contents %}
+          {% assign anchors = section[1] %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{ forloop.index }}">
+              {% assign section_name = section[0] | replace: '-', ' ' %}
+              {% assign section_name_words = section_name | split: ' ' %}
+              {% capture section_name_capitalized %}
+              {% for word in section_name_words %}
+              {{ word | capitalize }}
               {% endfor %}
+              {% endcapture %}
+              
+              {% if anchors.size > 0 %}
+              <!-- Capture the first link to set it as button data -->
+              {% assign first_anchor = section[0] %}
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse{{ forloop.index }}"
+                aria-expanded="false"
+                aria-controls="collapse{{ forloop.index }}"
+                data-href="#{{ first_anchor }}"
+              >
+                {{ section_name_capitalized }}
+              </button>
+              {% else %}
+              <a
+                href="#{{ section[0] }}"
+                class="d-block w-100 text-start accordion-button no-collapse"
+              >
+                {{ section_name_capitalized }}
+              </a>
+              {% endif %}
+            </h2>
+  
+            {% if anchors.size > 0 %}
+            <div
+              id="collapse{{ forloop.index }}"
+              class="accordion-collapse collapse"
+              aria-labelledby="heading{{ forloop.index }}"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <div class="submenu-item">
+                  <a href="#{{ section[0] }}" class="d-block w-100 text-start">
+                    {{ section_name_capitalized }}
+                  </a>
+                </div>
+  
+                {% for anchor in anchors %}
+                {% assign anchor_name = anchor | replace: '-', ' ' %}
+                {% assign anchor_name_words = anchor_name | split: ' ' %}
+                {% capture anchor_name_capitalized %}
+                {% for word in anchor_name_words %}
+                {{ word | capitalize }}
+                {% endfor %}
+                {% endcapture %}
+                <div class="submenu-item">
+                  <a href="#{{ anchor }}" class="d-block w-100 text-start">
+                    {{ anchor_name_capitalized }}
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
             </div>
+            {% endif %}
           </div>
-          {% endif %}
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
-    </nav>
-  </div>
-</aside>
+      </nav>
+    </div>
+  </aside>
+  

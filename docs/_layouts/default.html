@@ -186,6 +186,7 @@
     </footer>
     <a href="#top" id="back-to-top" class="back-to-top"> &#8679; </a>
     <script>
+
       document.addEventListener("scroll", function () {
         const backToTopButton = document.getElementById("back-to-top");
         if (window.scrollY > 300) {
@@ -195,92 +196,101 @@
         }
       });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
-        const accordionButtons = document.querySelectorAll(".accordion-button");
+	  document.addEventListener("DOMContentLoaded", function () {
+    const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+    const allAccordionItems = document.querySelectorAll(".accordion-collapse");
 
-        function removeActiveClasses() {
-          sidebarLinks.forEach((link) => link.classList.remove("active"));
-          accordionButtons.forEach((button) =>
-            button.classList.remove("active")
-          );
-        }
+    // Remove 'active' classes from links and accordion buttons
+    function removeActiveClasses() {
+        sidebarLinks.forEach((link) => link.classList.remove("active"));
+        accordionButtons.forEach((button) => button.classList.remove("active"));
+    }
 
-        function setActiveLink() {
-          let currentSection = "";
+    // Collapse all accordion items
+    function collapseAllAccordions() {
+        allAccordionItems.forEach((accordion) => {
+            accordion.classList.remove("show"); // Collapse the accordion
+            accordion.previousElementSibling.setAttribute("aria-expanded", "false"); // Update aria-expanded
+        });
+    }
 
-          sidebarLinks.forEach((link) => {
+    // Check if the clicked link is a main menu link or submenu link
+    function isMainMenuItem(link) {
+        return link.closest('.accordion-collapse') === null; // It's a main menu item if it's not inside an accordion-collapse
+    }
+
+    function setActiveLink() {
+        let currentSection = "";
+
+        sidebarLinks.forEach((link) => {
             const section = document.querySelector(link.getAttribute("href"));
 
             if (section) {
-              const sectionTop =
-                section.getBoundingClientRect().top + window.scrollY;
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY;
 
-              if (
-                window.scrollY >= sectionTop - 100 &&
-                window.scrollY < sectionTop + section.offsetHeight
-              ) {
-                currentSection = link.getAttribute("href");
-              }
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + section.offsetHeight) {
+                    currentSection = link.getAttribute("href");
+                }
             }
-          });
+        });
 
-          if (currentSection) {
+        if (currentSection) {
             removeActiveClasses();
-            const activeLink = document.querySelector(
-              `#sidebarMenu a[href="${currentSection}"]`
-            );
+            const activeLink = document.querySelector(`#sidebarMenu a[href="${currentSection}"]`);
             const activeButton = document.querySelector(
-              `.accordion-button[data-bs-target="#collapse${currentSection.substring(
-                1
-              )}"]`
+                `.accordion-button[data-bs-target="#collapse${currentSection.substring(1)}"]`
             );
 
             if (activeLink) {
-              activeLink.classList.add("active");
+                activeLink.classList.add("active");
             }
 
             if (activeButton) {
-              activeButton.classList.add("active");
+                activeButton.classList.add("active");
             }
-          }
         }
+    }
 
-        accordionButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const targetId = button
-              .getAttribute("data-bs-target")
-              .replace("#collapse", "");
-            const firstSubItem = document.querySelector(
-              `#collapse${targetId} a`
-            );
-            const firstAnchor = document.querySelector(
-              firstSubItem.getAttribute("href")
-            );
+    // Add click event listener to sidebar links
+    sidebarLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            // Only collapse if it's a main menu item
+            if (isMainMenuItem(link)) {
+                collapseAllAccordions(); // Collapse all open accordions when a main menu link is clicked
+            }
+        });
+    });
+
+    // Add click event listener to accordion buttons
+    accordionButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const targetId = button.getAttribute("data-bs-target").replace("#collapse", "");
+            const firstSubItem = document.querySelector(`#collapse${targetId} a`);
+            const firstAnchor = document.querySelector(firstSubItem.getAttribute("href"));
 
             if (firstSubItem && firstAnchor) {
-              setTimeout(function () {
-                firstAnchor.scrollIntoView({ behavior: "smooth" });
+                setTimeout(function () {
+                    firstAnchor.scrollIntoView({ behavior: "smooth" });
 
-                window.history.pushState(
-                  null,
-                  null,
-                  firstSubItem.getAttribute("href")
-                );
+                    window.history.pushState(null, null, firstSubItem.getAttribute("href"));
 
-                removeActiveClasses();
-                button.classList.add("active");
-                firstSubItem.classList.add("active");
+                    removeActiveClasses();
+                    button.classList.add("active");
+                    firstSubItem.classList.add("active");
 
-                setActiveLink();
-              }, 300);
+                    setActiveLink();
+                }, 300);
             }
-          });
         });
+    });
 
-        window.addEventListener("scroll", setActiveLink);
-        setActiveLink();
-      });
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink();
+});
+
+
+
     </script>
   </body>
 </html>

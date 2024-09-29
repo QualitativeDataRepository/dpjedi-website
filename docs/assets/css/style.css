@@ -10,6 +10,20 @@
 
 /* SidebarMenu */
 
+/* Highlight the active accordion button */
+.accordion-button:not(.collapsed) {
+    font-weight: 800;
+    color: #004851 !important;
+    font-size: 1.15rem;
+    background-color: #e9ecef !important;
+}
+
+/* Style active links */
+/* #sidebarMenu a.active {
+    font-weight: bold;
+    color: #004851;
+} */
+
 #sidebarMenu a.active,
 .accordion-button.active {
     font-weight: 800;
@@ -17,6 +31,14 @@
 	font-size: 1.15rem;
 	background-color: #e9ecef!important;
 }
+
+.accordion-header.active {
+	font-weight: 800;
+	color: #004851 !important;
+	font-size: 1.15rem;
+	background-color: #e9ecef !important;
+  }
+  
 
 /*  Listgroup */
 
