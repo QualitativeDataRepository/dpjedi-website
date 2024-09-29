@@ -8,3 +8,4 @@ docs/.jekyll-cache
 *.Rproj
 .DS_Store
 docs/README.md
+.history/
