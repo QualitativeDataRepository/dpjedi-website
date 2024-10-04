@@ -9,6 +9,9 @@ toc: true
 
 ## General
 
+---
+---
+
 ### Sample Table
 
 {% capture table_headers %}
