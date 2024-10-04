@@ -851,6 +851,7 @@ input[type="button"].small,
 	font-weight: 600;
 }
 
+
 #nav>ul>li:first-child {
 	margin-left: 0;
 }
@@ -1034,3 +1035,15 @@ input[type="button"].small,
 #footer a {
 	color: inherit;
 }
+
+/* Fix for mobile dropdown text overlap */
+
+
+
+/* .dropdown-menu .dropdown-item {
+	padding: 10px 20px!important;
+	line-height: 1.5!important;
+	white-space: normal!important;
+	display: flex!important;
+	align-items: center!important;
+  } */
