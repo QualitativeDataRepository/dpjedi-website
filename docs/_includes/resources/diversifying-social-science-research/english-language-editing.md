@@ -1,3 +1,0 @@
-### English language editing {#english-language-editing}
-
-If your journal publishes in English, you can consider offering an additional free editing service for manuscripts submitted by those for whom English is a second language. For example, see the [International Section guidelines](https://onlinelibrary.wiley.com/page/journal/14756811/homepage/forauthors.html){:target="_blank"} at [*Personal Relationships*](https://onlinelibrary.wiley.com/journal/14756811){:target="_blank"} and this article about [how the International Section is contributing to elevating international scholarship](https://view.publitas.com/iarr/rrn-printernationalscholarship-november2021/page/1){:target="_blank"}.

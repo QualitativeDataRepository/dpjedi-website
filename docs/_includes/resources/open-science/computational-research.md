@@ -1,5 +1,0 @@
-### Computational research {#computational-research}
-
-[Willis and Stodden (2020)](https://hdsr.mitpress.mit.edu/pub/f0obb31j/release/1?readingCollection=c6cf45bb){:target="_blank"} highlight nine decision points for journals looking to improve the quality and rigor of computational research and suggest that journals reporting computational research aim to include “assessable reproducible research artifacts” along with published articles.
-
-The [*American Journal of Political Science* Verification Policy](https://ajps.org/ajps-verification-policy/){:target="_blank"} provides a role-model example of how computational research can be made more rigorous and error-free through additional steps in the editorial process – but it also shows how this requires resources on top of the procedures editors have become accustomed to over decades.

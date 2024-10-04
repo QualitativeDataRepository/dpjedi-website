@@ -12,26 +12,12 @@ post: false
 {% endcapture %}
 {{ resources_intro | markdownify }}
 
-<!-- {% capture table_of_contents %}
-{% include resources/table-of-contents.md %}
-{% endcapture %}
-{{ table_of_contents | markdownify }} -->
-
-{% assign sections = "general,incoming-editors,ethics,diversifying-social-science-research,open-science,reconsideration-of-previously-rejected-submissions,improving-the-quality-of-reviews,peer-reviewing-tools-guidelines,incentivising-reviews,reviewer-editorial-collusion,detecting-overlap-between-submitted-existing-manuscripts,retraction,submission-types,peer-review-innovations,limitations-of-peer-review,editorial-secrets,formatting,persistence-preservation,list-of-contributors-to-this-page" | split: ',' %}
+{% assign sections = site.data.resources.table-of-contents %}
 
 {% for section in sections %}
+{% assign section_file = section[0] %}
 {% capture section_content %}
-{% include resources/{{ section }}/{{ section }}.md %}
+{% include resources/{{ section_file }}.md %}
 {% endcapture %}
 {{ section_content | markdownify }}
-
-{% assign sub_sections = site.data.resources.table-of-contents[section] %}
-{% if sub_sections %}
-{% for sub_section in sub_sections %}
-{% capture sub_content %}
-{% include resources/{{ section }}/{{ sub_section }}.md %}
-{% endcapture %}
-{{ sub_content | markdownify }}
-{% endfor %}
-{% endif %}
 {% endfor %}

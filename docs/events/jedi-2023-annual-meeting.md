@@ -11,22 +11,24 @@ post: false
 
 The Journal Editors Discussion Interface is pleased to announce its **2023 Annual Meeting** events:
 
-- ### [Panel 1: Experiences with Correcting the Scientific Record](#panel1)
+## [Panel 1: Experiences with Correcting the Scientific Record](#panel-1)
   Join a group of experts as they delve into the practical aspects of rectifying or withdrawing publications, offering valuable experiences and perspectives on the motivations and complexities involved.
 
-{% include video.html video_url="https://www.youtube.com/embed/72jHzR432hQ?si=H8ulaANCCHpSb-PH" width="600px" height="340px" caption="Different size video example." %}
+{% include video.html video_url="https://www.youtube.com/embed/72jHzR432hQ?si=H8ulaANCCHpSb-PH" width="600px" height="340px" caption="" %}
 
-- ### [Panel 2: Transparency & Innovation in Peer Review](#panel2)
+## [Panel 2: Transparency & Innovation in Peer Review](#panel-2)
   Explore the evolving landscape of peer review with the panelists as they discuss challenges and opportunities related to transparency, open reviewer identities, and new ways to provide post-publication evaluations of scholarly manuscripts.
 
-  {% include video.html video_url="https://www.youtube.com/embed/KL8trP0mVJ4?si=H8ulaANCCHpSb-PH" width="600px" height="340px" caption="Different size video example." %}
+
+  {% include video.html video_url="https://www.youtube.com/embed/KL8trP0mVJ4?si=H8ulaANCCHpSb-PH" width="600px" height="340px" caption="" %}
 
 ---
 
-## [Panel 1: Experiences with Correcting the Scientific Record](https://www.youtube.com/watch?v=72jHzR432hQ)
+## [Panel 1: Experiences with Correcting the Scientific Record](https://www.youtube.com/watch?v=72jHzR432hQ) {#panel-1}
 **Panel duration:** 90 minutes  
 **Date:** November 15 / 16  
 **Start times:** 9am Melbourne (Nov 16), 11am Auckland (Nov 16), 2pm US Pacific (Nov 15), 5pm US Eastern (Nov 15) [See in other time zones](https://savvytime.com/converter/australia-melbourne-to-new-zealand-auckland-ca-los-angeles-il-chicago-ny-new-york-city/nov-16-2023/9am)
+
 
 ### Panelists
 
@@ -41,10 +43,11 @@ The Journal Editors Discussion Interface is pleased to announce its **2023 Annua
 
 ---
 
-## [Panel 2: Transparency in Peer Review](https://www.youtube.com/watch?v=KL8trP0mVJ4)
+## [Panel 2: Transparency in Peer Review](https://www.youtube.com/watch?v=KL8trP0mVJ4) {#panel-2}
 **Panel duration:** 90 minutes  
 **Date:** November 15 / 16  
 **Start times:** 8am US Pacific, 11am US Eastern, 1pm São Paulo, 4pm London, 5pm Amsterdam (Nov 16) [See in other time zones](https://savvytime.com/converter/ca-los-angeles-to-ny-new-york-city-brazil-sao-paulo-united-kingdom-london-netherlands-amsterdam/nov-16-2023/8am)
+
 
 ### Panelists
 
