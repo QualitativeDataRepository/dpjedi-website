@@ -5,6 +5,7 @@ paginate: 10
 url: "https://ingen0s.github.io/" # the base hostname & protocol for your site
 # Google Analytics
 google_analytics: G-TT1VGTLKX5
+live_base_url: "https://github.com/ingen0s/dpjedi-website"
 baseurl: "/dpjedi-website"
 defaults:
   - scope:

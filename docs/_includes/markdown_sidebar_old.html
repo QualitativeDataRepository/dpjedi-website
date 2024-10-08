@@ -1,0 +1,140 @@
+<aside class="col-md-3 sidebar" id="sidebar">
+    <div id="sidebarMenu">
+      <nav>
+        <div class="accordion" id="accordionExample">
+          {% for section in site.data.resources.table-of-contents %}
+          {% assign anchors = section[1] %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{ forloop.index }}" aria-rowindex="{{ forloop.index }}">
+              {% assign section_name = section[0] | replace: '-', ' ' %}
+              {% assign section_name_words = section_name | split: ' ' %}
+              {% capture section_name_capitalized %}
+              {% for word in section_name_words %}
+              {{ word | capitalize }}
+              {% endfor %}
+              {% endcapture %}
+              
+              {% if anchors.size > 0 %}
+              
+              {% assign first_anchor = section[0] %}
+              {% if anchors.size > 0 %}
+              <!-- <a href="{{ site.baseurl }}/resources/{{ first_anchor }}"> -->
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse{{ forloop.index }}"
+                aria-expanded="false"
+                aria-controls="collapse{{ forloop.index }}"
+                data-href="{{ site.baseurl }}/resources/{{ first_anchor }}"
+              >
+              {% else %}
+              <!-- <a href="{{ site.baseurl }}/resources/{{ first_anchor }}"> -->
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse{{ forloop.index }}"
+                aria-expanded="false"
+                aria-controls="collapse{{ forloop.index }}"
+                data-href="#{{ first_anchor }}"
+                
+              >
+              
+              {% endif %}
+                {{ section_name_capitalized }} 1
+              </button>
+              <!-- </a> -->
+              {% else %}
+              <a
+                href="{{ site.baseurl }}/resources/{{ section[0] }}"
+                class="d-block w-100 text-start accordion-button no-collapse"
+              >
+                {{ section_name_capitalized }} 2
+              </a>
+              {% endif %}
+            </h2>
+  
+            {% if anchors.size > 0 %}
+            <div
+              id="collapse{{ forloop.index }}"
+              class="accordion-collapse collapse"
+              aria-labelledby="heading{{ forloop.index }}"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <div class="submenu-item">
+                  <a href="{{ site.baseurl }}/resources/{{ section[0] }}" class="d-block w-100 text-start">
+                    {{ section_name_capitalized }} 3
+                  </a>
+                </div>
+  
+                {% for anchor in anchors %}
+                {% assign anchor_name = anchor | replace: '-', ' ' %}
+                {% assign anchor_name_words = anchor_name | split: ' ' %}
+                {% capture anchor_name_capitalized %}
+                {% for word in anchor_name_words %}
+                {{ word | capitalize }}
+                {% endfor %}
+                {% endcapture %}
+                <div class="submenu-item">
+                  <a href="{{ site.baseurl }}/resources/{{ section[0] }}/#{{ anchor }}" class="d-block w-100 text-start">
+                    {{ anchor_name_capitalized }} 4
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </nav>
+    </div>
+  </aside>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Function to scroll and activate the correct sidebar link based on the URL
+      function activateSidebarLink() {
+        const hash = window.location.hash; // Get the hash from the URL
+        const sidebarMenu = document.getElementById("sidebarMenu");
+        let activeLink = null;
+  
+        if (hash) {
+          // Find the corresponding anchor link in the sidebar
+          activeLink = sidebarMenu.querySelector(`a[href$="${hash}"]`);
+        } else {
+          // Default to the first item if no hash is present
+          activeLink = sidebarMenu.querySelector("a");
+        }
+  
+        if (activeLink) {
+          // Remove the active class from any previously active links
+          const allLinks = sidebarMenu.querySelectorAll("a");
+          allLinks.forEach(link => link.classList.remove("active"));
+  
+          // Add the active class to the current link
+          activeLink.classList.add("active");
+  
+          // Scroll the sidebar to ensure the active link is visible
+          activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+  
+          // Expand the accordion section containing the active link
+          const accordionItem = activeLink.closest(".accordion-collapse");
+          if (accordionItem) {
+            const accordionButton = accordionItem.previousElementSibling;
+            accordionItem.classList.add("show"); // Expand the accordion
+            accordionButton.classList.remove("collapsed");
+            accordionButton.setAttribute("aria-expanded", "true");
+          }
+        }
+      }
+  
+      // Call the function to activate the sidebar link based on the URL on page load
+      activateSidebarLink();
+  
+      // Re-run the function when the URL's hash changes (e.g., when the user clicks on a new anchor link)
+      window.addEventListener("hashchange", activateSidebarLink);
+    });
+  </script>
+  

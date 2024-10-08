@@ -30,8 +30,8 @@
 			<ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
 			  {% assign sections = site.data.resources.table-of-contents %}
 			  {% for section in sections %}
-			  <li class="">
-				<a class="" href="#{{ section[0] | replace: ' ', '-' | downcase }}">{{ section[0] | replace: '-', ' ' | capitalize }}</a>
+			  <li class="dropdown-submenu">
+				<a class="dropdown-item" href="#{{ section[0] | replace: ' ', '-' | downcase }}">{{ section[0] | replace: '-', ' ' | capitalize }}</a>
 			  </li>
 			{% endfor %}
 			</ul>

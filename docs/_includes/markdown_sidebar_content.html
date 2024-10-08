@@ -1,0 +1,18 @@
+{% assign data = include.items %}
+
+<div id="markdown-content"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('markdown-content').innerHTML = marked("{{ data }}");
+    })
+</script>
+
+<!-- <script>
+  // Fetch the markdown file
+  fetch('{{ site.live_base_url }}resources/{{ items }}.md')
+    .then(response => response.text())
+    .then(md => {
+      // Parse markdown to HTML using marked.js
+      document.getElementById('markdown-content').innerHTML = marked(md);
+    });
+</script> -->
