@@ -243,8 +243,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     z-index: 1000;
     transition: opacity 0.3s, visibility 0.3s;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
 }
 
 .back-to-top:hover {

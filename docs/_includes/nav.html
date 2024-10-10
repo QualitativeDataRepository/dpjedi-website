@@ -31,7 +31,7 @@
 			  {% assign sections = site.data.resources.table-of-contents %}
 			  {% for section in sections %}
 			  <li class="dropdown-submenu">
-				<a class="dropdown-item" href="#{{ section[0] | replace: ' ', '-' | downcase }}">{{ section[0] | replace: '-', ' ' | capitalize }}</a>
+				<a class="dropdown-item" href="{{ site.baseurl }}/resources/#{{ section[0] | replace: ' ', '-' | downcase }}">{{ section[0] | replace: '-', ' ' | capitalize }}</a>
 			  </li>
 			{% endfor %}
 			</ul>

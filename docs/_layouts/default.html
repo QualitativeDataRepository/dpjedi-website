@@ -116,11 +116,7 @@
   </footer>
   <a href="#top" id="back-to-top" class="back-to-top"> &#8679; </a>
   <script>
-
-    document.addEventListener("scroll", function () {
-      const backToTopButton = document.getElementById("back-to-top");
-    });
-    document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   // Function to remove 'active' classes from links and accordion buttons
   function removeActiveClasses() {
     const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
@@ -175,6 +171,21 @@
     if (activeButton) {
       activeButton.classList.add("active");
     }
+
+    // Update the href of the back-to-top button
+    const backToTopButton = document.getElementById("back-to-top");
+    if (backToTopButton) {
+      let backToTopId = sectionId; // Default to current sectionId
+      // Check if the active link is a submenu item
+      if (activeLink && activeLink.closest('.submenu-anchor')) {
+        // Get the parent section ID
+        const parentCollapse = activeLink.closest('.accordion-collapse');
+        if (parentCollapse) {
+          backToTopId = parentCollapse.getAttribute('data-parent-section');
+        }
+      }
+      backToTopButton.setAttribute("href", `#${backToTopId}`);
+    }
   }
 
   // Function to smoothly scroll to a section
@@ -188,31 +199,13 @@
     }
   }
 
-  // Handle clicks on accordion buttons
-  const accordionButtons = document.querySelectorAll(".accordion-button[data-section-id]");
-  accordionButtons.forEach((button) => {
-    button.addEventListener("click", function (event) {
-      // Removed event.preventDefault();
-      const sectionId = button.getAttribute("data-section-id");
-      if (sectionId) {
-        // Display the first section of the accordion
-        displaySection(sectionId);
-        // Scroll to the section
-        scrollToSection(sectionId);
-        // Set the active link and button
-        setActiveLink(sectionId);
-        // Update the URL hash
-        window.history.pushState(null, null, `#${sectionId}`);
-      }
-    });
-  });
-
   // Handle clicks on non-accordion main menu items
   const mainMenuLinks = document.querySelectorAll('.accordion-button.no-collapse');
   mainMenuLinks.forEach((link) => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const sectionId = this.getAttribute('href').substring(1);
+      disableAllSections(); // Hide all sections
       displaySection(sectionId);
       scrollToSection(sectionId);
       setActiveLink(sectionId);
@@ -236,17 +229,30 @@
         parentSectionId = sectionId;
       }
 
-      // Display the parent section
+      disableAllSections(); // Hide all sections
       displaySection(parentSectionId);
-
-      // Scroll to the specific anchor within the parent section
       scrollToSection(sectionId);
-
-      // Set the active link
       setActiveLink(sectionId);
 
       // Update the URL hash to the submenu item's anchor
       window.history.pushState(null, null, `#${sectionId}`);
+    });
+  });
+
+  // Listen for the collapse shown and hidden events
+  const accordionCollapses = document.querySelectorAll('.accordion-collapse');
+  accordionCollapses.forEach((collapse) => {
+    const parentSectionId = collapse.getAttribute('data-parent-section');
+    // When the accordion is shown, display the content section
+    collapse.addEventListener('shown.bs.collapse', function () {
+      displaySection(parentSectionId);
+    });
+    // When the accordion is hidden, hide the content section
+    collapse.addEventListener('hidden.bs.collapse', function () {
+      const section = document.getElementById(parentSectionId);
+      if (section) {
+        section.style.display = 'none';
+      }
     });
   });
 
@@ -257,21 +263,20 @@
       // Try to find the element with the ID of initialHash
       const targetElement = document.getElementById(initialHash);
       if (targetElement) {
-        // Find the parent content section
         const parentSection = targetElement.closest('#contentWrapper > div');
         if (parentSection) {
+          disableAllSections(); // Hide all sections
           displaySection(parentSection.id);
-          // Scroll to the specific anchor within the parent section after a brief delay
           setTimeout(function () {
             scrollToSection(initialHash);
-          }, 100); // Adjust the delay as needed
-          // Set the active link
+          }, 100);
           setActiveLink(initialHash);
         } else {
           console.log('Parent section not found for initial hash:', initialHash);
           // Fallback: display the first section
           const firstSection = document.querySelector('#contentWrapper > div');
           if (firstSection) {
+            disableAllSections();
             displaySection(firstSection.id);
             setActiveLink(firstSection.id);
           }
@@ -281,6 +286,7 @@
         // Fallback: display the first section
         const firstSection = document.querySelector('#contentWrapper > div');
         if (firstSection) {
+          disableAllSections();
           displaySection(firstSection.id);
           setActiveLink(firstSection.id);
         }
@@ -289,6 +295,7 @@
       // If no hash, display the first section
       const firstSection = document.querySelector('#contentWrapper > div');
       if (firstSection) {
+        disableAllSections();
         displaySection(firstSection.id);
         setActiveLink(firstSection.id);
       }
@@ -302,21 +309,20 @@
       // Try to find the element with the ID of newHash
       const targetElement = document.getElementById(newHash);
       if (targetElement) {
-        // Find the parent content section
         const parentSection = targetElement.closest('#contentWrapper > div');
         if (parentSection) {
+          disableAllSections(); // Hide all sections
           displaySection(parentSection.id);
-          // Scroll to the specific anchor within the parent section after a brief delay
           setTimeout(function () {
             scrollToSection(newHash);
-          }, 100); // Adjust the delay as needed
-          // Set the active link
+          }, 100);
           setActiveLink(newHash);
         } else {
           console.log('Parent section not found for hash:', newHash);
           // Fallback: display the first section
           const firstSection = document.querySelector('#contentWrapper > div');
           if (firstSection) {
+            disableAllSections();
             displaySection(firstSection.id);
             setActiveLink(firstSection.id);
           }
@@ -326,6 +332,7 @@
         // Fallback: display the first section
         const firstSection = document.querySelector('#contentWrapper > div');
         if (firstSection) {
+          disableAllSections();
           displaySection(firstSection.id);
           setActiveLink(firstSection.id);
         }

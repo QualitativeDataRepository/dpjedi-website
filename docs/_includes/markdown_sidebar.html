@@ -32,7 +32,7 @@
             aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample" data-parent-section="{{ section[0] }}">
             <div class="accordion-body">
               <div class="submenu-item submenu-anchor">
-                <a href="#{{ section[0] }}" class="d-block w-100 text-start">{{ section_name_capitalized }}</a>
+                <a href="#{{ section[0] }}" class="d-block text-start">{{ section_name_capitalized }}</a>
               </div>
               {% for anchor in anchors %}
               {% assign anchor_name = anchor | replace: '-', ' ' %}
@@ -43,7 +43,7 @@
                 {% endfor %}
               {% endcapture %}
               <div class="submenu-item submenu-anchor">
-                <a href="#{{ anchor }}" class="d-block w-100 text-start">{{ anchor_name_capitalized }}</a>
+                <a href="#{{ anchor }}" class="d-block text-start">{{ anchor_name_capitalized }}</a>
               </div>
               {% endfor %}
             </div>
