@@ -116,7 +116,7 @@
   </footer>
   <a href="#top" id="back-to-top" class="back-to-top"> &#8679; </a>
   <script>
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Function to remove 'active' classes from links and accordion buttons
   function removeActiveClasses() {
     const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
@@ -147,10 +147,16 @@
   // Function to set the active link and button based on the current section
   function setActiveLink(sectionId) {
     removeActiveClasses();
-    // Set active link
-    const activeLink = document.querySelector(`#sidebarMenu a[href="#${sectionId}"]`);
+    let activeLink = document.querySelector(`#sidebarMenu a[href="#${sectionId}"]`);
+    let isSubmenuItem = false;
+
     if (activeLink) {
       activeLink.classList.add("active");
+      // Check if the active link is a submenu item
+      if (activeLink.closest('.submenu-anchor')) {
+        isSubmenuItem = true;
+      }
+
       // Scroll the active link into view within the sidebar menu
       activeLink.scrollIntoView({
         behavior: 'smooth',
@@ -166,19 +172,32 @@
         });
       }
     }
+
     // Set active accordion button if applicable
     const activeButton = document.querySelector(`.accordion-button[data-section-id="${sectionId}"]`);
     if (activeButton) {
       activeButton.classList.add("active");
+
+      // If it's an accordion without a submenu item active, activate the first submenu item
+      if (!isSubmenuItem) {
+        const parentCollapse = activeButton.nextElementSibling; // The collapse element
+        if (parentCollapse) {
+          const firstSubmenuLink = parentCollapse.querySelector('.submenu-anchor a');
+          if (firstSubmenuLink) {
+            firstSubmenuLink.classList.add("active");
+            isSubmenuItem = true; // Update flag
+            activeLink = firstSubmenuLink; // Update activeLink for back-to-top
+          }
+        }
+      }
     }
 
     // Update the href of the back-to-top button
     const backToTopButton = document.getElementById("back-to-top");
     if (backToTopButton) {
       let backToTopId = sectionId; // Default to current sectionId
-      // Check if the active link is a submenu item
+      // If the active link is a submenu item, set back-to-top to parent section
       if (activeLink && activeLink.closest('.submenu-anchor')) {
-        // Get the parent section ID
         const parentCollapse = activeLink.closest('.accordion-collapse');
         if (parentCollapse) {
           backToTopId = parentCollapse.getAttribute('data-parent-section');
@@ -198,6 +217,9 @@
       });
     }
   }
+
+  // Remove the click handler for accordion buttons
+  // Let Bootstrap handle the toggle behavior
 
   // Handle clicks on non-accordion main menu items
   const mainMenuLinks = document.querySelectorAll('.accordion-button.no-collapse');
@@ -239,21 +261,20 @@
     });
   });
 
-  // Listen for the collapse shown and hidden events
+  // Listen for the collapse shown event
   const accordionCollapses = document.querySelectorAll('.accordion-collapse');
   accordionCollapses.forEach((collapse) => {
     const parentSectionId = collapse.getAttribute('data-parent-section');
-    // When the accordion is shown, display the content section
+
+    // When the accordion is shown, display the content section and set active link
     collapse.addEventListener('shown.bs.collapse', function () {
       displaySection(parentSectionId);
+      setActiveLink(parentSectionId);
+      window.history.pushState(null, null, `#${parentSectionId}`);
     });
-    // When the accordion is hidden, hide the content section
-    collapse.addEventListener('hidden.bs.collapse', function () {
-      const section = document.getElementById(parentSectionId);
-      if (section) {
-        //section.style.display = 'none';
-      }
-    });
+
+    // Remove the 'hidden.bs.collapse' event listener
+    // So that collapsing the accordion does not hide the content section
   });
 
   // Handle page load with hash in URL
