@@ -211,14 +211,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to smoothly scroll to a section
   function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+  const section = document.getElementById(sectionId);
+  if (section) {
+    // Check if the device is mobile
+    const isMobile = window.innerWidth <= 767; // Adjust the breakpoint as needed
+    let yOffset = 0;
+    if (isMobile) {
+      yOffset = -50; // Adjust this value to match the height of your header or desired offset
     }
+
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    });
   }
+}
 
   // Remove the click handler for accordion buttons
   // Let Bootstrap handle the toggle behavior
