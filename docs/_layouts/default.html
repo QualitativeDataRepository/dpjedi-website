@@ -117,6 +117,9 @@
   <a href="#top" id="back-to-top" class="back-to-top"> &#8679; </a>
   <script>
 document.addEventListener("DOMContentLoaded", function () {
+  // Get the back-to-top button
+  const backToTopButton = document.getElementById("back-to-top");
+
   // Function to remove 'active' classes from links and accordion buttons
   function removeActiveClasses() {
     const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
@@ -193,7 +196,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Update the href of the back-to-top button
-    const backToTopButton = document.getElementById("back-to-top");
     if (backToTopButton) {
       let backToTopId = sectionId; // Default to current sectionId
       // If the active link is a submenu item, set back-to-top to parent section
@@ -273,9 +275,29 @@ document.addEventListener("DOMContentLoaded", function () {
       window.history.pushState(null, null, `#${parentSectionId}`);
     });
 
-    // Remove the 'hidden.bs.collapse' event listener
+    // We have removed the 'hidden.bs.collapse' event listener
     // So that collapsing the accordion does not hide the content section
   });
+
+  // Function to handle scroll events
+  function handleScroll() {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const viewportHeight = window.innerHeight;
+
+    if (scrollPosition > viewportHeight) {
+      // User has scrolled more than 100vh
+      backToTopButton.classList.add("show");
+    } else {
+      // User has scrolled less than 100vh
+      backToTopButton.classList.remove("show");
+    }
+  }
+
+  // Add the scroll event listener
+  window.addEventListener("scroll", handleScroll);
+
+  // Call the function on page load in case the user is already scrolled down
+  handleScroll();
 
   // Handle page load with hash in URL
   function handleInitialHash() {
@@ -323,6 +345,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Initialize on page load
+  handleInitialHash();
+
   // Listen to hash changes (e.g., when using back/forward buttons)
   window.addEventListener('hashchange', function () {
     const newHash = window.location.hash.substring(1);
@@ -360,9 +385,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
-  // Initialize on page load
-  handleInitialHash();
 });
   </script>
 
