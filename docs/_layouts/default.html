@@ -155,6 +155,13 @@
     const activeLink = document.querySelector(`#sidebarMenu a[href="#${sectionId}"]`);
     if (activeLink) {
       activeLink.classList.add("active");
+      // Scroll the active link into view within the sidebar menu
+      activeLink.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'nearest'
+      });
+
       // If the link is inside an accordion, ensure the accordion is open
       const parentCollapse = activeLink.closest('.accordion-collapse');
       if (parentCollapse && !parentCollapse.classList.contains('show')) {
@@ -185,11 +192,14 @@
   const accordionButtons = document.querySelectorAll(".accordion-button[data-section-id]");
   accordionButtons.forEach((button) => {
     button.addEventListener("click", function (event) {
-      event.preventDefault();
+      // Removed event.preventDefault();
       const sectionId = button.getAttribute("data-section-id");
       if (sectionId) {
+        // Display the first section of the accordion
         displaySection(sectionId);
+        // Scroll to the section
         scrollToSection(sectionId);
+        // Set the active link and button
         setActiveLink(sectionId);
         // Update the URL hash
         window.history.pushState(null, null, `#${sectionId}`);
@@ -226,8 +236,13 @@
         parentSectionId = sectionId;
       }
 
+      // Display the parent section
       displaySection(parentSectionId);
+
+      // Scroll to the specific anchor within the parent section
       scrollToSection(sectionId);
+
+      // Set the active link
       setActiveLink(sectionId);
 
       // Update the URL hash to the submenu item's anchor
@@ -242,12 +257,15 @@
       // Try to find the element with the ID of initialHash
       const targetElement = document.getElementById(initialHash);
       if (targetElement) {
+        // Find the parent content section
         const parentSection = targetElement.closest('#contentWrapper > div');
         if (parentSection) {
           displaySection(parentSection.id);
+          // Scroll to the specific anchor within the parent section after a brief delay
           setTimeout(function () {
             scrollToSection(initialHash);
-          }, 100);
+          }, 100); // Adjust the delay as needed
+          // Set the active link
           setActiveLink(initialHash);
         } else {
           console.log('Parent section not found for initial hash:', initialHash);
@@ -284,12 +302,15 @@
       // Try to find the element with the ID of newHash
       const targetElement = document.getElementById(newHash);
       if (targetElement) {
+        // Find the parent content section
         const parentSection = targetElement.closest('#contentWrapper > div');
         if (parentSection) {
           displaySection(parentSection.id);
+          // Scroll to the specific anchor within the parent section after a brief delay
           setTimeout(function () {
             scrollToSection(newHash);
-          }, 100);
+          }, 100); // Adjust the delay as needed
+          // Set the active link
           setActiveLink(newHash);
         } else {
           console.log('Parent section not found for hash:', newHash);
@@ -312,7 +333,7 @@
     }
   });
 
-  // Initialize
+  // Initialize on page load
   handleInitialHash();
 });
   </script>
