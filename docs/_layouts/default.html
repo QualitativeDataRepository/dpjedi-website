@@ -121,248 +121,202 @@
       const backToTopButton = document.getElementById("back-to-top");
     });
     document.addEventListener("DOMContentLoaded", function () {
+  // Function to remove 'active' classes from links and accordion buttons
+  function removeActiveClasses() {
+    const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+    sidebarLinks.forEach((link) => link.classList.remove("active"));
+    accordionButtons.forEach((button) => button.classList.remove("active"));
+  }
 
-
-      function setMenuItem() {
-        const path = window.location.pathname;
-        console.log('path:', path)
-      }
-
-      // Smooth scroll to the anchor if there's a hash in the URL
-      function scrollToAnchor() {
-        const hash = window.location.hash;
-
-        console.log('hash:', hash)
-
-        if (hash) {
-          const target = document.querySelector(hash);
-
-          if (target) {
-            setTimeout(function () {
-              target.scrollIntoView({ behavior: "smooth" });
-            }, 100);
-          }
-        } else {
-
-          const firstH2 = document.querySelector("h2[id]");
-          console.log("firstH2", firstH2)
-          if (firstH2) {
-            setTimeout(function () {
-              firstH2.scrollIntoView({ behavior: "smooth" });
-              if (firstH2.id !== "heading1") {
-                window.history.pushState(null, null, `#${firstH2.id}`);
-              } else {
-
-              }
-            }, 100);
-          }
-        }
-      }
-
-      setMenuItem();
-      scrollToAnchor();
-
-
-      window.addEventListener("hashchange", scrollToAnchor);
-
-      if (window.location.hash) {
-        const anchor = document.querySelector(window.location.hash);
-        if (anchor) {
-
-          anchor.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-
-      const sidebarLinks = document.querySelectorAll("#sidebarMenu a");
-      const accordionButtons = document.querySelectorAll(".accordion-button");
-      const allAccordionItems = document.querySelectorAll(".accordion-collapse");
-
-      // Remove 'active' classes from links and accordion buttons
-      function removeActiveClasses() {
-        sidebarLinks.forEach((link) => link.classList.remove("active"));
-        accordionButtons.forEach((button) => button.classList.remove("active"));
-      }
-
-      // Collapse all accordion items
-      function collapseAllAccordions() {
-        allAccordionItems.forEach((accordion) => {
-          //console.log("accordion: ", accordion)
-          accordion.classList.remove("show"); // Collapse the accordion
-          accordion.previousElementSibling.setAttribute("aria-expanded", "false"); // Update aria-expanded
-        });
-      }
-
-      // function getPathName() {
-
-      //     const path = window.location.pathname;
-      //     let id = path.split('/')[3];
-      //     console.log('getPathName id: ', id)
-      //     return id
-
-      // }
-
-      // const id = getPathName()
-
-      // const slug = "{{ page.slug }}"
-
-      // function activateAccordion(id) {
-      //   console.log("activateAccordion id:: ", id)
-      //   const target = document.querySelector(`#${id}`);
-      //   console.log('target: ', target)
-      //   target.scrollIntoView({ behavior: "smooth" });
-      //   allAccordionItems.forEach((acccordion) => {
-      //     console.log('acccordion: ', acccordion)
-      //   })
-      // }
-
-      // activateAccordion(slug)
-
-      // Check if the clicked link is a main menu link or submenu link
-      function isMainMenuItem(link) {
-        return true
-        // return link.closest('.accordion-collapse') === null; // It's a main menu item if it's not inside an accordion-collapse
-      }
-
-      function setActiveLink() {
-        let currentSection = "";
-
-        sidebarLinks.forEach((link) => {
-          const section = document.querySelector(link.getAttribute("href"));
-
-          if (section) {
-            const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-
-            if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + section.offsetHeight) {
-              currentSection = link.getAttribute("href");
-            }
-          }
-        });
-
-        if (currentSection) {
-          removeActiveClasses();
-          const activeLink = document.querySelector(`#sidebarMenu a[href="${currentSection}"]`);
-          const activeButton = document.querySelector(
-            `.accordion-button[data-bs-target="#collapse${currentSection.substring(1)}"]`
-          );
-
-          if (activeLink) {
-            activeLink.classList.add("active");
-          }
-
-          if (activeButton) {
-            activeButton.classList.add("active");
-          }
-        }
-      }
-
-      // Add click event listener to sidebar links
-      sidebarLinks.forEach((link) => {
-        link.addEventListener("click", function (event) {
-          // Only collapse if it's a main menu item
-          // if (isMainMenuItem(link)) {
-          //   collapseAllAccordions(); // Collapse all open accordions when a main menu link is clicked
-          // }
-        });
-      });
-
-      // Add click event listener to accordion buttons
-      accordionButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-          const targetId = button.getAttribute("data-bs-target").replace("#collapse", "");
-          const firstSubItem = document.querySelector(`#collapse${targetId} a`);
-          const firstAnchor = document.querySelector(firstSubItem.getAttribute("href"));
-          console.log("firstAnchor: ", firstAnchor)
-          if (firstSubItem && firstAnchor) {
-            setTimeout(function () {
-              firstAnchor.scrollIntoView({ behavior: "smooth" });
-
-              window.history.pushState(null, null, firstSubItem.getAttribute("href"));
-
-              removeActiveClasses();
-              button.classList.add("active");
-              firstSubItem.classList.add("active");
-
-              setActiveLink();
-            }, 300);
-          }
-        });
-      });
-
-      window.addEventListener("scroll", setActiveLink);
-      setActiveLink();
+  // Function to disable all content sections
+  function disableAllSections() {
+    const sections = document.querySelectorAll('#contentWrapper > div');
+    sections.forEach(function (section) {
+      section.style.display = 'none'; // Hide all sections
     });
+  }
 
-    document.addEventListener("DOMContentLoaded", function () {
+  // Function to display the selected section by its ID
+  function displaySection(sectionId) {
+    disableAllSections(); // Hide all sections first
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+      selectedSection.style.display = 'block'; // Show the selected section
+    } else {
+      console.log('Section not found: ' + sectionId);
+    }
+  }
 
-      let subMenuAnchorClick = false
-
-      subMenuAnchor.addEventListener('click', function (event) {
-        subMenuAnchorClick = true
-      })
-
-      // Function to hide all sections and display only the one with the matching id
-      function displaySection(sectionId) {
-
-        if (!subMenuAnchorClick) {
-          // Hide all sections
-          const sections = document.querySelectorAll('#contentWrapper > div');
-          sections.forEach(function (section) {
-            section.style.display = 'none';
-          });
-        }
-
-        // Find and display the section with the matching id
-        const selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-          selectedSection.style.display = 'block';
-        } else {
-          console.log('Section not found: ' + sectionId);  // Log if the section is not found
-        }
-      }
-
-      // Get all anchor tags that are linked to sections
-      const anchors = document.querySelectorAll('a[href^="#"]');
-
-      // Check if there's a hash in the URL on page load
-      let hash = window.location.hash;
-      hash = hash.substring(1); // Remove the # from the hash value
-
-      // Log the hash for debugging
-      console.log("Current hash on load: ", hash);
-
-      // Handle click events on anchor tags
-      anchors.forEach(function (anchor) {
-        anchor.addEventListener('click', function (event) {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Extract the section id from the href attribute (remove the #)
-          const sectionId = this.getAttribute('href').substring(1);
-
-          // Update the URL hash without reloading the page
-          window.history.pushState(null, null, `#${sectionId}`);
-
-          // Display the corresponding section
-          displaySection(sectionId);
+  // Function to set the active link and button based on the current section
+  function setActiveLink(sectionId) {
+    removeActiveClasses();
+    // Set active link
+    const activeLink = document.querySelector(`#sidebarMenu a[href="#${sectionId}"]`);
+    if (activeLink) {
+      activeLink.classList.add("active");
+      // If the link is inside an accordion, ensure the accordion is open
+      const parentCollapse = activeLink.closest('.accordion-collapse');
+      if (parentCollapse && !parentCollapse.classList.contains('show')) {
+        const collapseInstance = new bootstrap.Collapse(parentCollapse, {
+          toggle: true
         });
-      });
+      }
+    }
+    // Set active accordion button if applicable
+    const activeButton = document.querySelector(`.accordion-button[data-section-id="${sectionId}"]`);
+    if (activeButton) {
+      activeButton.classList.add("active");
+    }
+  }
 
-      // If a hash exists in the URL, display the corresponding section
-      if (hash !== "") {
-        displaySection(hash);
+  // Function to smoothly scroll to a section
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
+  // Handle clicks on accordion buttons
+  const accordionButtons = document.querySelectorAll(".accordion-button[data-section-id]");
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      const sectionId = button.getAttribute("data-section-id");
+      if (sectionId) {
+        displaySection(sectionId);
+        scrollToSection(sectionId);
+        setActiveLink(sectionId);
+        // Update the URL hash
+        window.history.pushState(null, null, `#${sectionId}`);
+      }
+    });
+  });
+
+  // Handle clicks on non-accordion main menu items
+  const mainMenuLinks = document.querySelectorAll('.accordion-button.no-collapse');
+  mainMenuLinks.forEach((link) => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      const sectionId = this.getAttribute('href').substring(1);
+      displaySection(sectionId);
+      scrollToSection(sectionId);
+      setActiveLink(sectionId);
+      window.history.pushState(null, null, `#${sectionId}`);
+    });
+  });
+
+  // Handle clicks on submenu anchors
+  const submenuAnchors = document.querySelectorAll('#sidebarMenu .submenu-anchor a');
+  submenuAnchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function (event) {
+      event.preventDefault();
+      const sectionId = this.getAttribute('href').substring(1);
+
+      // Get the parent section ID
+      const parentCollapse = this.closest('.accordion-collapse');
+      let parentSectionId;
+      if (parentCollapse) {
+        parentSectionId = parentCollapse.getAttribute('data-parent-section');
       } else {
-        // If no hash is present, display the first section by default
-        if (anchors.length > 0) {
-          const firstSectionId = anchors[0].getAttribute('href').substring(1);
-          displaySection(firstSectionId);
+        parentSectionId = sectionId;
+      }
+
+      displaySection(parentSectionId);
+      scrollToSection(sectionId);
+      setActiveLink(sectionId);
+
+      // Update the URL hash to the submenu item's anchor
+      window.history.pushState(null, null, `#${sectionId}`);
+    });
+  });
+
+  // Handle page load with hash in URL
+  function handleInitialHash() {
+    const initialHash = window.location.hash.substring(1);
+    if (initialHash) {
+      // Try to find the element with the ID of initialHash
+      const targetElement = document.getElementById(initialHash);
+      if (targetElement) {
+        const parentSection = targetElement.closest('#contentWrapper > div');
+        if (parentSection) {
+          displaySection(parentSection.id);
+          setTimeout(function () {
+            scrollToSection(initialHash);
+          }, 100);
+          setActiveLink(initialHash);
+        } else {
+          console.log('Parent section not found for initial hash:', initialHash);
+          // Fallback: display the first section
+          const firstSection = document.querySelector('#contentWrapper > div');
+          if (firstSection) {
+            displaySection(firstSection.id);
+            setActiveLink(firstSection.id);
+          }
+        }
+      } else {
+        console.log('Element not found for initial hash:', initialHash);
+        // Fallback: display the first section
+        const firstSection = document.querySelector('#contentWrapper > div');
+        if (firstSection) {
+          displaySection(firstSection.id);
+          setActiveLink(firstSection.id);
         }
       }
-    });
+    } else {
+      // If no hash, display the first section
+      const firstSection = document.querySelector('#contentWrapper > div');
+      if (firstSection) {
+        displaySection(firstSection.id);
+        setActiveLink(firstSection.id);
+      }
+    }
+  }
+
+  // Listen to hash changes (e.g., when using back/forward buttons)
+  window.addEventListener('hashchange', function () {
+    const newHash = window.location.hash.substring(1);
+    if (newHash) {
+      // Try to find the element with the ID of newHash
+      const targetElement = document.getElementById(newHash);
+      if (targetElement) {
+        const parentSection = targetElement.closest('#contentWrapper > div');
+        if (parentSection) {
+          displaySection(parentSection.id);
+          setTimeout(function () {
+            scrollToSection(newHash);
+          }, 100);
+          setActiveLink(newHash);
+        } else {
+          console.log('Parent section not found for hash:', newHash);
+          // Fallback: display the first section
+          const firstSection = document.querySelector('#contentWrapper > div');
+          if (firstSection) {
+            displaySection(firstSection.id);
+            setActiveLink(firstSection.id);
+          }
+        }
+      } else {
+        console.log('Element not found for hash:', newHash);
+        // Fallback: display the first section
+        const firstSection = document.querySelector('#contentWrapper > div');
+        if (firstSection) {
+          displaySection(firstSection.id);
+          setActiveLink(firstSection.id);
+        }
+      }
+    }
+  });
+
+  // Initialize
+  handleInitialHash();
+});
   </script>
 
-
-
-  <script src="{{ site.baseurl }}/assets/js/marked.min.js"></script>
 </body>
 
 </html>
