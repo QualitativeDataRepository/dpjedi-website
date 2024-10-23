@@ -23,7 +23,7 @@ hr {
 }
 
 /* Mobile-only styles */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 	#nav.scrolled {
 		background-color: #343a40;
 		padding: 10px 0;
@@ -96,7 +96,7 @@ hr {
 
 /* Mobile Navbar Toggler Fixed Positioning at Top Left */
 /* Mobile-only styles */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
 	#nav.scrolled {
 		background-color: #343a40;
