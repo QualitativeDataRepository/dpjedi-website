@@ -1,4 +1,4 @@
-## General
+## General {#general}
 
 Publishers often offer guidelines and associated resources relating to editorial practices. While typically provided for editors of the journals that they publish, these resources may also be more generally helpful. For some examples see:
 

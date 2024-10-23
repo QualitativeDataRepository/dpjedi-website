@@ -1,0 +1,147 @@
+@import url("font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900");
+
+/* General Styles */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Bootstrap overrides */
+hr {
+  border: 0 !important;
+  height: 1px !important;
+  width: 100% !important;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
+}
+
+/* Override Bootstrap's heading styles */
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'futura-pt', sans-serif !important;
+  color: inherit !important;
+  font-weight: 700 !important;
+  line-height: 1em !important;
+  margin-bottom: 0em !important;
+  font-size: 2.2em ;
+}
+
+h2 {
+  font-size: 1.8em;
+} */
+
+/* Override Bootstrap's default body font */
+body, input, select, textarea {
+  font-family: 'futura-pt', sans-serif !important;
+  font-size: 14pt !important;
+  font-weight: 300 !important;
+  line-height: 1.75em !important;
+  color: #555555 !important;
+}
+
+/* Specificity adjustments for text elements */
+p, ul, ol, dl, table, blockquote {
+  margin: 0 0 1em 0 !important;
+}
+
+/* Ensure links retain original styling */
+a {
+  color: #004851;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #ffffff;
+}
+
+/* Button styles to match original design */
+.btn-jedi-primary {
+  background: #004851;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5em 2em;
+  border-radius: 40px;
+  min-width: 10em;
+  font-size: 1.3em;
+}
+.btn-jedi-primary:hover {
+    background-color: #000000!important;
+
+  }
+
+.btn-jedi-secondary {
+  background: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5em 2em;
+  border-radius: 40px;
+  min-width: 10em;
+  margin-left: 1em;
+  font-size: 1.3em;
+}
+
+  /* Mobile-only styles */
+  @media (max-width: 768px) {
+
+    .btn-jedi-primary {
+        background: #004851;
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0.5em 2em;
+        border-radius: 40px;
+        min-width: 80%;
+        font-size: 1.3em;
+      }
+      
+      .btn-jedi-secondary {
+        margin-top: 1em;
+        background: #555555;
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0.5em 2em;
+        border-radius: 40px;
+        min-width: 80%;
+        margin-left: 0em;
+        font-size: 1.3em;
+      }
+
+  }
+
+.btn-jedi-primary:hover, .btn-jedi-secondary:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Banner styling */
+#banner {
+  background: rgba(64, 64, 64, 0.6);
+  /* padding: 3em 0; */
+}
+
+.welcome-text {
+  font-weight: 700;
+  line-height: 1.75em;
+  margin: 0;
+  color: #f8f9fa;
+}
+
+.byline-text {
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+/* Grey box for accessibility */
+.boxed {
+  background-color: rgba(64, 64, 64, 0.6);
+  padding-top: 0.5em;
+}
+
+/* General styles */
+/* body {
+  background: #222833 !important;
+} */

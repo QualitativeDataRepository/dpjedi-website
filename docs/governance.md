@@ -4,7 +4,7 @@ layout: jedi
 page_title: "JEDI Governance"
 sidebar: false
 join: true
-post: true
+post: false
 ---
 
 ## Sponsorship and Hosting

@@ -8,7 +8,7 @@ post: false
 ---
 
 <!-- {% capture resources_intro %}
-{% include resources/resources-intro.md %}
+{% include resources/introduction.md %}
 {% endcapture %}
 {{ resources_intro | markdownify }} -->
 

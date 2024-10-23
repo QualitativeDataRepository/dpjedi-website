@@ -34,7 +34,7 @@ post: true
     </style>
 </head> -->
 
-<div class="container">
+<div class="container-fluid g-0">
     <div class="row">
         <div class="col-md-8">
 {% capture markdown_part1 %}

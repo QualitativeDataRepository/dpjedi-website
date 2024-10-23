@@ -3,57 +3,74 @@ title: Data-PASS Journal Editors Discussion Interface
 layout: landing
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/override.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
 <!-- Main -->
-<div id="main" class="wrapper style1">
-    <section class="container">
-        <header class="major">
-            <h1>Data-PASS JEDI</h1>
-            <!-- <span class="byline">Bringing together journal editors and data professionals</span> -->
-        </header>
-        <div class="row">
 
-            <!-- Content -->
-            <div class="homepage-icons col-md-6">
-                <section>
-                    <ul class="style">
-                        <li>
-                            <a href="{{ site.baseurl }}/about">
-                                <span class="fa fa-info"></span>
-                                <h2>About</h2>
-                            </a>
-                            <span>What is JEDI? Who should join? What is JEDI’s focus?</span>
-                        </li>
-                        <li>
-                            <a href="{{ site.baseurl }}/mailing-list">
-                                <span class="fa fa-envelope"></span>
-                                <h2>Mailing list</h2>
-                            </a>
-                            <span>Learn about the JEDI mailing list</span>
-                        </li>
-                    </ul>
-                </section>
+<main id="main" style="background-color: #f8f9fa; color: #004851;">
+    <div class="container-lg py-5">
+    <section class="w-100 px-4">
+      <header class="major text-center mb-4">
+        <h1>Data-PASS JEDI</h1>
+        <!-- <span class="byline">Bringing together journal editors and data professionals</span> -->
+      </header>
+      <div class="row g-4">
+        <!-- Content -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #004851;">
+            <div class="card-body text-center">
+              <a href="{{ site.baseurl }}/about" class="text-decoration-none" style="color: #004851;">
+                <div class="mb-3">
+                  <i class="fa fa-info fa-2x"></i>
+                </div>
+                <h2 class="card-title h4">About</h2>
+              </a>
+              <p class="card-text">What is JEDI? Who should join? What is JEDI’s focus?</p>
             </div>
-            <div class="homepage-icons col-md-6">
-                <section>
-                    <ul class="style">
-                        <li>
-                            <a href="{{ site.baseurl }}/governance">
-                                <span class="fa fa-bookmark"></span>
-                                <h2>Governance</h2>
-                            </a>
-                            <span>Who manages JEDI and how is it governed?</span>
-                        </li>
-                        <li>
-                            <a href="{{ site.baseurl }}/resources">
-                                <span class="fa fa-archive"></span>
-                                <h2>Resources</h2>
-                            </a>
-                            <span>Browse JEDI resources</span>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-
+          </div>
         </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #004851;">
+            <div class="card-body text-center">
+              <a href="{{ site.baseurl }}/mailing-list" class="text-decoration-none" style="color: #004851;">
+                <div class="mb-3">
+                  <i class="fa fa-envelope fa-2x"></i>
+                </div>
+                <h2 class="card-title h4">Mailing list</h2>
+              </a>
+              <p class="card-text">Learn about the JEDI mailing list</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #004851;">
+            <div class="card-body text-center">
+              <a href="{{ site.baseurl }}/governance" class="text-decoration-none" style="color: #004851;">
+                <div class="mb-3">
+                  <i class="fa fa-bookmark fa-2x"></i>
+                </div>
+                <h2 class="card-title h4">Governance</h2>
+              </a>
+              <p class="card-text">Who manages JEDI and how is it governed?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #004851;">
+            <div class="card-body text-center">
+              <a href="{{ site.baseurl }}/resources" class="text-decoration-none" style="color: #004851;">
+                <div class="mb-3">
+                  <i class="fa fa-archive fa-2x"></i>
+                </div>
+                <h2 class="card-title h4">Resources</h2>
+              </a>
+              <p class="card-text">Browse JEDI resources</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 </div>
+  </main>
+

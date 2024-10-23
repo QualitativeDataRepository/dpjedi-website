@@ -1,3 +1,5 @@
+<div id="introduction"></div>
+
 *Last updated 2023-11-30*
 
 **Note:** we are thrilled to share [**A Guide for Social Science Journal Editors on Easing into Open Science**](https://osf.io/hstcx/){:target="_blank" title="A Guide for Social Science Journal Editors on Easing into Open Science"}, a curated collection of resources for journal editors on how to get started with implementing open science practices at their journal. This project was led by JEDI Associate Director (and previous Community Manager) Dr. Priya Silverstein with the help of many JEDI members and other scholars. The guide draws heavily from multiple sources, including this resources page. Please help spread the word on this wonderful resource, and thank you to everyone who contributed, either directly or through their excellent resource suggestions over the years.

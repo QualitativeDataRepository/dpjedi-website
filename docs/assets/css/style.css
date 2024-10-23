@@ -8,19 +8,191 @@
 
 /* Bootstrap ovverides */
 hr {
-	border: 0!important;
-	height: 1px!important;
-	width: 100%!important;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))!important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 100% !important;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
+}
+
+/* Navbar Styling (Added to ensure visibility against the image background) */
+/* Navbar default styles */
+#nav {
+	transition: background-color 0.3s ease, padding 0.3s ease;
+	background-color: transparent;
+	padding: 20px 0;
+}
+
+/* Mobile-only styles */
+@media (max-width: 768px) {
+	#nav.scrolled {
+		background-color: #343a40;
+		padding: 10px 0;
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
 	}
+
+	/* Style the logo when scrolled */
+	#nav.scrolled .navbar-brand img {
+		display: block;
+	}
+}
+
+/* Navbar Links */
+#nav .nav-link, #nav .resources-link {
+	color: #ffffff;
+	font-weight: 600;
+	transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Links Hover Effect */
+#nav .nav-link:hover {
+	color: #ffc107;
+}
+
+/* Dropdown Menu Background */
+#nav .dropdown-menu {
+	background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* Dropdown Items */
+#nav .dropdown-item {
+	font-weight: 400;
+	color: #ffffff;
+}
+
+#nav .dropdown-item:focus {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+#nav .dropdown-item:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/* Navbar Toggler Button */
+.navbar-toggler {
+	z-index: 2000;
+	border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#nav .navbar-toggler:focus,
+.navbar-toggler-icon:focus {
+	box-shadow: 4px 4px 6px rgba(255, 255, 255, .6);
+	/* outline-offset: 2px; */
+}
+
+#nav .nav-link:focus {
+	outline: 1px solid rgba(255, 255, 255, .6);
+	outline-offset: 2px;
+}
+
+/* Mobile Navbar Toggler Fixed Positioning at Top Left */
+/* Mobile-only styles */
+@media (max-width: 768px) {
+
+	#nav.scrolled {
+		background-color: #343a40;
+		padding: 10px 0;
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+	}
+
+	/* Style the logo when scrolled */
+	#nav.scrolled .navbar-brand img {
+		display: block;
+	}
+
+	/* Ensure navbar visibility and prevent clipping */
+	#nav {
+		background-color: #222833;
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		height: auto;
+		min-height: 60px;
+		z-index: 999;
+		overflow: visible;
+	}
+
+	.navbar-toggler {
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		z-index: 1000;
+	}
+
+	#navbarNav {
+		background-color: #222833;
+		max-height: 100vh;
+		padding-top: 60px;
+		width: 90vw;
+	}
+
+	#nav .nav-link, #nav .resources-link {
+		text-align: center;
+		width: 80%;
+		/* center nav-link */
+		margin: 0 auto;
+
+	}
+
+	/* Dropdown menu adjustments */
+	.dropdown-menu {
+		position: absolute;
+		background-color: #222833;
+		overflow-y: auto;
+		max-height: 50vh;
+		margin-top: 0;
+		width: 90vw;
+	}
+
+	.dropdown-item {
+		color: #ffffff;
+		/* Visible dropdown items */
+	}
+
+	/* Ensure overflow is not causing clipping issues on smaller devices */
+	.navbar-collapse {
+		overflow: visible;
+		max-height: 100vh;
+		position: relative;
+	}
+
+	/* Dropdown toggle link styling for visibility */
+	.dropdown-toggle {
+		color: #ffffff;
+	}
+
+	.dropdown-toggle::after {
+		color: #ffffff;
+		/* Ensure caret icon visibility */
+	}
+}
+
+
 /* SidebarMenu */
 
 /* Highlight the active accordion button */
 .accordion-button:not(.collapsed) {
-    font-weight: 800;
-    color: #004851 !important;
-    font-size: 1.15rem;
-    background-color: #e9ecef !important;
+	font-weight: 800;
+	color: #004851 !important;
+	font-size: 1.15rem;
+	background-color: #e9ecef !important;
+}
+
+#sidebar {
+	width: 100%;
 }
 
 /* Style active links */
@@ -31,10 +203,10 @@ hr {
 
 #sidebarMenu a.active,
 .accordion-button.active {
-    font-weight: 800;
-    color: #004851!important;
+	font-weight: 800;
+	color: #004851 !important;
 	font-size: 1.15rem;
-	background-color: #e9ecef!important;
+	background-color: #e9ecef !important;
 }
 
 .accordion-header.active {
@@ -42,8 +214,8 @@ hr {
 	color: #004851 !important;
 	font-size: 1.15rem;
 	background-color: #e9ecef !important;
-  }
-  
+}
+
 
 /*  Listgroup */
 
@@ -52,63 +224,76 @@ hr {
 /* Events Listgroup */
 
 .date-align {
-    margin-left: auto;
-    white-space: nowrap;
+	margin-left: auto;
+	white-space: nowrap;
 }
 
 /* Override Bootstrap's heading styles */
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'futura-pt', sans-serif!important;
-	color: inherit!important;
-	font-weight: 700!important;
-	line-height: 1.75em!important;
-	margin-bottom: 0em!important;
-  }
-  
-  /* Override Bootstrap's default body font */
-  body, input, select, textarea {
-	font-family: 'futura-pt', sans-serif!important;
-	font-size: 13pt!important;
-	font-weight: 300!important;
-	line-height: 1.75em!important;
-	color: #555555!important;
-  }
-  
-  /* Specificity adjustments for text elements */
-  p, ul, ol, dl, table, blockquote {
-	margin: 0 0 1em 0!important;
-  }
-  
-  /* Ensure links retain original styling */
-  a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'futura-pt', sans-serif !important;
+	color: inherit !important;
+	font-weight: 700 !important;
+	line-height: 1.75em !important;
+	margin-bottom: 0em !important;
+}
+
+/* Override Bootstrap's default body font */
+body,
+input,
+select,
+textarea {
+	font-family: 'futura-pt', sans-serif !important;
+	font-size: 16pt !important;
+	font-weight: 300 !important;
+	line-height: 1.75em !important;
+	color: #555555 !important;
+}
+
+/* Specificity adjustments for text elements */
+p,
+ul,
+ol,
+dl,
+table,
+blockquote {
+	margin: 0 0 1em 0 !important;
+}
+
+/* Ensure links retain original styling */
+a {
 	color: #004851;
 	text-decoration: underline;
-  }
-  
-  a:hover {
-	text-decoration: none!important;
-  }
-  
-  /* Adjust form elements to match original styles */
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  textarea {
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+/* Adjust form elements to match original styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
 	border: solid 1px #888888;
 	color: inherit;
 	padding: 0.75em;
 	width: 100%;
-  }
-  
-  input[type="text"]:focus,
-  input[type="password"]:focus,
-  input[type="email"]:focus,
-  textarea:focus {
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
 	border-color: #004851;
-  }
-  
-  /* Button styles to match original design */
-  .button {
+}
+
+/* Button styles to match original design */
+.button {
 	background: #004851;
 	border-radius: 40px;
 	border: 0;
@@ -117,151 +302,152 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.4em;
 	font-weight: 600;
 	min-width: 10em;
-  }
-  
-  .button:hover {
-	background-color: #004851;
-  }
+}
 
-  .homepage-icons a, .homepage-icons a:visited {
-	color: #004851!important;
-  }
+.button:hover {
+	background-color: #004851;
+}
+
+.homepage-icons a,
+.homepage-icons a:visited {
+	color: #004851 !important;
+}
 
 /* Sidebar Overrides */
 
 #sidebar {
-    padding-right: 15px;
+	padding-right: 15px;
 }
 
 .sidebar .accordion-item {
-    border: none;
+	border: none;
 	margin: 0;
 }
 
 @media (min-width: 1024px) {
-    #sidebar {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        overflow-y: auto;
-    }
+	#sidebar {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		overflow-y: auto;
+	}
 }
 
 .accordion-header {
-    color: #555555 !important;
+	color: #555555 !important;
 }
 
-.sidebar .accordion-button, 
+.sidebar .accordion-button,
 .sidebar .accordion-button.no-collapse {
-    background-color: #ffffff !important;
-    color: #555555 !important;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    text-align: left;
-    padding: 10px 15px;
-    width: 100%;
-    border-bottom: 1px solid #e0e0e0;
+	background-color: #ffffff !important;
+	color: #555555 !important;
+	font-weight: bold;
+	font-size: 1rem;
+	border: none;
+	text-align: left;
+	padding: 10px 15px;
+	width: 100%;
+	border-bottom: 1px solid #e0e0e0;
 	margin: 0;
 }
 
 .sidebar .accordion-item:not(:last-child) .accordion-button,
 .sidebar .accordion-item:not(:last-child) .accordion-button.no-collapse {
-    border-bottom: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
 }
 
-.sidebar .accordion-button:hover, 
+.sidebar .accordion-button:hover,
 .sidebar .accordion-button.no-collapse:hover {
-    background-color: #f0f0f0 !important;
-    color: #000 !important;
+	background-color: #f0f0f0 !important;
+	color: #000 !important;
 }
 
-.sidebar .accordion-button:not(.collapsed), 
+.sidebar .accordion-button:not(.collapsed),
 .sidebar .accordion-button.no-collapse.active {
-    background-color: #d6e0f5;
-    color: #1a1a1a;
+	background-color: #d6e0f5;
+	color: #1a1a1a;
 }
 
 .sidebar .accordion-button::after {
-    color: #1a1a1a;
+	color: #1a1a1a;
 }
 
 .sidebar .accordion-button.no-collapse::after {
-    display: none;
+	display: none;
 }
 
-.sidebar .accordion-button:focus, 
+.sidebar .accordion-button:focus,
 .sidebar .accordion-button.no-collapse:focus {
-    box-shadow: none;
+	box-shadow: none;
 }
 
 .sidebar .submenu-item {
-    background-color: #ffffff;
-    color: #555555 !important;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 10px 15px;
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+	background-color: #ffffff;
+	color: #555555 !important;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 10px 15px;
+	width: 100%;
+	text-align: left;
+	border-bottom: 1px solid #e0e0e0;
 	margin: 0;
 }
 
 .sidebar .submenu-item:last-child {
-    border-bottom: none;
+	border-bottom: none;
 }
 
 .sidebar .submenu-item a {
-    color: #555555 !important;
-    text-decoration: none;
+	color: #555555 !important;
+	text-decoration: none;
 }
 
 .sidebar .submenu-item:hover {
-    background-color: #f0f0f0;
-    color: #000 !important;
+	background-color: #f0f0f0;
+	color: #000 !important;
 }
 
 .sidebar .submenu-item a:hover {
-    color: #000 !important;
-    text-decoration: none;
+	color: #000 !important;
+	text-decoration: none;
 }
 
 /* Back to top */
 
 .back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    /* display: none; */
-    width: 50px;
-    height: 50px;
-    background-color: #004851;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-    border-radius: 50%;
-    z-index: 1000;
-    transition: opacity 0.3s, visibility 0.3s;
-    opacity: 0;
-    visibility: hidden;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	/* display: none; */
+	width: 50px;
+	height: 50px;
+	background-color: #004851;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 24px;
+	border-radius: 50%;
+	z-index: 1000;
+	transition: opacity 0.3s, visibility 0.3s;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .back-to-top:hover {
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
 }
 
 .back-to-top.show {
-    opacity: 1;
-    visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 
 /* Basic */
 
 body {
-	background: #222833!important;
+	background: #222833 !important;
 }
 
 body,
@@ -270,7 +456,7 @@ select,
 textarea {
 	color: #555555;
 	font-family: futura-pt, sans-serif;
-	font-size: 13pt;
+	font-size: 16pt;
 	font-weight: 300;
 	line-height: 1.75em;
 }
@@ -378,7 +564,7 @@ header.major {
 header h1 {
 	margin: 0;
 	padding: 0;
-	font-size: 3em;
+	font-size: 2.3em;
 	font-weight: 600;
 }
 
@@ -819,7 +1005,7 @@ input[type="button"].small,
 
 #header>* {
 	position: relative;
-	z-index: 1;
+	/* z-index: 1; */
 }
 
 .homepage #header {
@@ -876,48 +1062,52 @@ input[type="button"].small,
 
 /* Base Styles */
 #nav .navbar-nav .nav-item {
-    border-radius: 10px 10px 0 0;
-    display: inline-block;
-    margin-left: 0.5em;
-    padding: 0.5em 1em;
+	border-radius: 10px 10px 0 0;
+	display: inline-block;
+	margin-left: 0.5em;
+	padding: 0.5em 1em;
 }
 
 #nav .navbar-nav .nav-link {
-    font-family: 'futura-pt', sans-serif;
-    font-size: 1.3rem; /* Default size */
-    font-weight: 600;
-    color: #FFF;
-    text-decoration: none;
+	font-family: 'futura-pt', sans-serif;
+	font-size: 1.3rem;
+	/* Default size */
+	font-weight: 600;
+	color: #FFF;
+	text-decoration: none;
 }
 
 #nav .navbar-nav .nav-item:first-child {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 #nav .navbar-nav .nav-link:hover {
-    color: #fff;
+	color: #fff;
 }
 
 #nav .navbar-nav .nav-item.active {
-    background: #004851;
+	background: #004851;
 }
 
 #nav .navbar-nav .nav-item.active .nav-link {
-    color: white;
+	color: white;
 }
 
 /* Responsive Font Size */
 @media (max-width: 1024px) {
-    #nav .navbar-nav .nav-link {
-        font-size: 1.2rem; /* Smaller font size for tablets */
-    }
+	#nav .navbar-nav .nav-link {
+		font-size: 1.2rem;
+		/* Smaller font size for tablets */
+	}
 }
 
 @media (max-width: 576px) {
-    #nav .navbar-nav .nav-link {
-        font-size: 1rem; /* Smaller font size for mobile devices */
-    }
+	#nav .navbar-nav .nav-link {
+		font-size: 1rem;
+		/* Smaller font size for mobile devices */
+	}
 }
+
 /* Dropotron */
 
 .dropotron {
@@ -951,10 +1141,10 @@ input[type="button"].small,
 
 /* Banner */
 
-#banner {
+/* #banner {
 	text-align: center;
 	padding: 4em 0 0 0;
-}
+} */
 
 #banner .major h2 {
 	font-size: 3.5em;
@@ -983,6 +1173,7 @@ input[type="button"].small,
 	text-align: center;
 }
 
+/* 
 #main {
 	padding: 2em 0;
 }
@@ -1005,7 +1196,7 @@ input[type="button"].small,
 
 #main .sidebar> :first-child {
 	margin-bottom: 3em;
-}
+} */
 
 /* Footer */
 
