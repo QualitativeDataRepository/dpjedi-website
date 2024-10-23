@@ -191,6 +191,8 @@ hr {
 	background-color: #e9ecef !important;
 }
 
+
+
 #sidebar {
 	width: 100%;
 }
@@ -214,6 +216,18 @@ hr {
 	color: #004851 !important;
 	font-size: 1.15rem;
 	background-color: #e9ecef !important;
+}
+
+.submenu-item a.active {
+	font-weight: 800;
+	color: #004851 !important;
+	font-size: 1.15rem;
+	background-color: #e9ecef !important;
+}
+
+.sidebar .submenu-item a.active {
+    background-color: #e9ecef !important; /* Set desired active background color */
+    color: #004851 !important; /* Set desired text color */
 }
 
 
