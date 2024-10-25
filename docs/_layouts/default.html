@@ -580,6 +580,72 @@
             }
           }
         });
+
+ // Select all submenu links and non-accordion main menu items
+ const submenuLinks = document.querySelectorAll(".submenu-item a, .no-collapse");
+
+// Add click event listener to each link
+submenuLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    // Prevent default behavior to avoid unnecessary jumps
+    event.preventDefault();
+
+    // Remove 'active' class from all submenu links
+    submenuLinks.forEach((l) => {
+      l.classList.remove("active");
+      if (l.closest(".submenu-item")) {
+        l.closest(".submenu-item").classList.remove("active");
+      }
+    });
+
+    // Add 'active' class to the clicked link and parent
+    this.classList.add("active");
+
+    if (this.closest(".submenu-item")) {
+      this.closest(".submenu-item").classList.add("active");
+    }
+
+    // Update the URL hash without scrolling
+    history.replaceState(null, null, this.getAttribute("href"));
+  });
+});
+
+function scrollActiveLinkIntoView() {
+  const activeLink = document.querySelector('.submenu-item .active, .no-collapse.active');
+  if (activeLink) {
+    activeLink.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'nearest'
+    });
+  }
+}
+
+
+  scrollActiveLinkIntoView();
+
+
+// Scroll the active link into view when it changes
+submenuLinks.forEach((link) => {
+  link.addEventListener('click', function () {
+    scrollActiveLinkIntoView();
+  });
+});
+
+
+// Activate the corresponding link if there's a hash in the URL on page load
+const initialHash = window.location.hash;
+if (initialHash) {
+  const activeLink = document.querySelector(`a[href="${initialHash}"]`);
+  if (activeLink) {
+    activeLink.classList.add("active");
+    const parentItem = activeLink.closest(".submenu-item");
+    if (parentItem) {
+      parentItem.classList.add("active");
+    }
+  }
+}
+
       });
     </script>
   </body>

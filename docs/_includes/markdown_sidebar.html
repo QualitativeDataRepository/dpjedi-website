@@ -28,11 +28,11 @@
           </h2>
           {% if anchors.size > 0 %}
           <!-- Accordion content remains the same -->
-          <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse"
+          <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse px-0"
             aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample" data-parent-section="{{ section[0] }}">
-            <div class="accordion-body">
+            <div class="accordion-body px-0">
               <div class="submenu-item submenu-anchor">
-                <a href="#{{ section[0] }}" class="d-block text-start">{{ section_name_capitalized }}</a>
+                <a href="#{{ section[0] }}" class="d-block accordion-button text-start">{{ section_name_capitalized }}</a>
               </div>
               {% for anchor in anchors %}
               {% assign anchor_name = anchor | replace: '-', ' ' %}
@@ -43,7 +43,7 @@
                 {% endfor %}
               {% endcapture %}
               <div class="submenu-item submenu-anchor">
-                <a href="#{{ anchor }}" class="d-block text-start">{{ anchor_name_capitalized }}</a>
+                <a href="#{{ anchor }}" class="d-block w-100 accordion-button text-start">{{ anchor_name_capitalized }}</a>
               </div>
               {% endfor %}
             </div>

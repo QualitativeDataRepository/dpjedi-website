@@ -45,6 +45,7 @@ hr {
 	color: #ffffff;
 	font-weight: 600;
 	transition: color 0.3s ease-in-out;
+	text-decoration: none !important;
 }
 
 /* Navbar Links Hover Effect */
@@ -144,6 +145,7 @@ hr {
 		width: 80%;
 		/* center nav-link */
 		margin: 0 auto;
+		text-decoration: none !important;
 
 	}
 
@@ -206,9 +208,9 @@ hr {
 #sidebarMenu a.active,
 .accordion-button.active {
 	font-weight: 800;
-	color: #004851 !important;
+	color: #e9ecef !important;
 	font-size: 1.15rem;
-	background-color: #e9ecef !important;
+	background-color: #004851 !important;
 }
 
 .accordion-header.active {
@@ -218,16 +220,27 @@ hr {
 	background-color: #e9ecef !important;
 }
 
+.submenu-item {
+	
+	width: 100%;
+  }
+
+.submenu-item.active {
+	background-color: #004851 !important;
+	width: 100%;
+  }
+
 .submenu-item a.active {
+	width: 100%;
 	font-weight: 800;
 	color: #004851 !important;
 	font-size: 1.15rem;
-	background-color: #e9ecef !important;
+	/* background-color: #e9ecef !important; */
 }
 
 .sidebar .submenu-item a.active {
-    background-color: #e9ecef !important; /* Set desired active background color */
-    color: #004851 !important; /* Set desired text color */
+    /* background-color: #e9ecef !important; */
+    color: #004851 !important;
 }
 
 
@@ -372,13 +385,13 @@ textarea:focus {
 
 .sidebar .accordion-button:hover,
 .sidebar .accordion-button.no-collapse:hover {
-	background-color: #f0f0f0 !important;
+	/* background-color: #f0f0f0 !important; */
 	color: #000 !important;
 }
 
 .sidebar .accordion-button:not(.collapsed),
 .sidebar .accordion-button.no-collapse.active {
-	background-color: #d6e0f5;
+	/* background-color: #d6e0f5; */
 	color: #1a1a1a;
 }
 
@@ -417,12 +430,13 @@ textarea:focus {
 }
 
 .sidebar .submenu-item:hover {
-	background-color: #f0f0f0;
-	color: #000 !important;
+	background-color: #004851;
+	color: #fff !important;
 }
 
 .sidebar .submenu-item a:hover {
-	color: #000 !important;
+	background-color: #004851!important;
+	color: #fff !important;
 	text-decoration: none;
 }
 
@@ -1252,3 +1266,11 @@ input[type="button"].small,
 	display: flex!important;
 	align-items: center!important;
   } */
+
+  /* Make the sidebar sticky, so it remains visible when scrolling */
+.sidebar {
+	position: sticky;
+	top: 0; /* Adjust to specify how far from the top of the viewport the sidebar should be */
+	max-height: 100vh; /* Limit the sidebar height to the viewport */
+	overflow-y: auto; /* Add scroll to sidebar if content is larger than viewport */
+  }
