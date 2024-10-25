@@ -14,14 +14,14 @@
               {% endfor %}
             {% endcapture %}
             {% if anchors.size > 0 %}
-            <button  style="line-height: 1.5!important;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse{{ forloop.index }}" data-section-id="{{ section[0] }}" aria-expanded="false"
               aria-controls="collapse{{ forloop.index }}">
               {{ section_name_capitalized }}
             </button>
             {% else %}
             <!-- Non-accordion main menu item -->
-            <a href="#{{ section[0] }}"  style="line-height: 1.5!important;" class="d-block w-100 text-start accordion-button no-collapse">
+            <a href="#{{ section[0] }}"  class="d-block w-100 text-start accordion-button no-collapse">
               {{ section_name_capitalized }}
             </a>
             {% endif %}

@@ -364,6 +364,10 @@ textarea:focus {
 	color: #555555 !important;
 }
 
+.sidebar .accordion-button{
+	line-height: 1;
+}
+
 .sidebar .accordion-button,
 .sidebar .accordion-button.no-collapse {
 	background-color: #ffffff !important;

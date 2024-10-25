@@ -54,7 +54,7 @@ For more information on how to implement a policy like this at your journal, see
 
 Several journals in political science also require pre-publication verification. See for example [State Politics & Policy Quarterly](https://www.cambridge.org/core/journals/state-politics-and-policy-quarterly/information/instructions-contributors){:target="_blank"}, [Political Analysis](https://www.cambridge.org/core/journals/political-analysis/information/instructions-contributors){:target="_blank"}, and the [American Journal of Political Science](https://ajps.org/){:target="_blank"}.
 
-### Resources for open research planning & documentation {#resources-open-research-plan-doc}
+### Resources for open research planning & documentation {#resources-for-open-research-plan-doc}
 
 Many platforms can aid researchers in making their entire workflows open and transparent. Here are a few examples:
 
