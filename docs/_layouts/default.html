@@ -670,6 +670,35 @@
             }
           }
         }
+        
+
+        const headings = document.querySelectorAll("#contentWrapper h2, #contentWrapper h3");
+
+        // Function to update the URL hash
+        function updateURLHash(id) {
+          if (history.pushState) {
+            history.pushState(null, null, `#${id}`);
+          } else {
+            window.location.hash = id; // Fallback for older browsers
+          }
+        }
+
+        // Intersection observer to detect which heading is in view
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                updateURLHash(entry.target.id); // Update URL hash with the heading ID
+              }
+            });
+          },
+          { rootMargin: "0px 0px -80% 0px", threshold: 1.0 }
+        );
+
+        // Observe each heading
+        headings.forEach((heading) => {
+          observer.observe(heading);
+        });
       });
     </script>
   </body>
