@@ -41,7 +41,8 @@ hr {
 }
 
 /* Navbar Links */
-#nav .nav-link, #nav .resources-link {
+#nav .nav-link,
+#nav .resources-link {
 	color: #ffffff;
 	font-weight: 600;
 	transition: color 0.3s ease-in-out;
@@ -95,6 +96,12 @@ hr {
 	outline-offset: 2px;
 }
 
+.highlight {
+	background-color: #004851;
+	color: #ffffff !important;
+	transition: background-color 0.5s ease;
+}
+
 /* Mobile Navbar Toggler Fixed Positioning at Top Left */
 /* Mobile-only styles */
 @media (max-width: 991px) {
@@ -140,7 +147,8 @@ hr {
 		width: 90vw;
 	}
 
-	#nav .nav-link, #nav .resources-link {
+	#nav .nav-link,
+	#nav .resources-link {
 		text-align: center;
 		width: 80%;
 		/* center nav-link */
@@ -192,7 +200,7 @@ hr {
 /* Highlight the active accordion button */
 .accordion-button:not(.collapsed) {
 	font-weight: 800;
-	color: #004851 ;
+	color: #004851;
 	font-size: 1.15rem;
 	/* background-color: #e9ecef !important; */
 }
@@ -231,14 +239,14 @@ hr {
 }
 
 .submenu-item {
-	
+
 	width: 100%;
-  }
+}
 
 .submenu-item.active {
 	background-color: #004851 !important;
 	width: 100%;
-  }
+}
 
 .submenu-item a.active {
 	width: 100%;
@@ -249,8 +257,8 @@ hr {
 }
 
 .sidebar .submenu-item a.active {
-    /* background-color: #e9ecef !important; */
-    color: #004851 !important;
+	/* background-color: #e9ecef !important; */
+	color: #004851 !important;
 }
 
 
@@ -374,7 +382,7 @@ textarea:focus {
 	color: #555555 !important;
 }
 
-.sidebar .accordion-button{
+.sidebar .accordion-button {
 	line-height: 1;
 }
 
@@ -408,8 +416,8 @@ textarea:focus {
 /* .sidebar .accordion-button:not(.collapsed),
 .sidebar .accordion-button.no-collapse.active {
 	/* background-color: #d6e0f5; */
-	/* color: #1a1a1a;
-} */ 
+/* color: #1a1a1a;
+} */
 
 
 .sidebar .accordion-button::after {
@@ -424,9 +432,11 @@ textarea:focus {
 .sidebar .accordion-button.no-collapse:focus {
 	box-shadow: none;
 }
+
 .sidebar .accordion-button:not(.collapsed) {
-	box-shadow: none!important;
+	box-shadow: none !important;
 }
+
 .sidebar .submenu-item {
 	background-color: #ffffff;
 	/* color: #555555 !important; */
@@ -1292,12 +1302,13 @@ input[type="button"].small,
 	align-items: center!important;
   } */
 
-  /* Make the sidebar sticky, so it remains visible when scrolling */
+/* Make the sidebar sticky, so it remains visible when scrolling */
 .sidebar {
 	position: sticky;
-	top: 0; /* Adjust to specify how far from the top of the viewport the sidebar should be */
-	max-height: 100vh; /* Limit the sidebar height to the viewport */
-	overflow-y: auto; /* Add scroll to sidebar if content is larger than viewport */
-  }
-
-  
+	top: 0;
+	/* Adjust to specify how far from the top of the viewport the sidebar should be */
+	max-height: 100vh;
+	/* Limit the sidebar height to the viewport */
+	overflow-y: auto;
+	/* Add scroll to sidebar if content is larger than viewport */
+}
