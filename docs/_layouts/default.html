@@ -286,6 +286,11 @@
         // Function to set the active link and button based on the current section
         function setActiveLink(sectionId) {
           removeActiveClasses();
+
+          document.querySelectorAll(".highlight").forEach((element) => {
+            element.classList.remove("highlight");
+          });
+
           let activeLink = document.querySelector(
             `#sidebarMenu a[href="#${sectionId}"]`
           );
@@ -632,21 +637,23 @@
         });
 
         function scrollActiveLinkIntoView() {
-          const activeLink = document.querySelector('.submenu-item .active, .no-collapse.active');
+          const activeLink = document.querySelector(
+            ".submenu-item .active, .no-collapse.active"
+          );
           if (activeLink) {
             activeLink.scrollIntoView({
-              behavior: 'smooth',
-              block: 'nearest',
-              inline: 'nearest'
+              behavior: "smooth",
+              block: "nearest",
+              inline: "nearest",
             });
           }
         }
 
-          scrollActiveLinkIntoView();
+        scrollActiveLinkIntoView();
 
         // Scroll the active link into view when it changes
         submenuLinks.forEach((link) => {
-          link.addEventListener('click', function () {
+          link.addEventListener("click", function () {
             scrollActiveLinkIntoView();
           });
         });

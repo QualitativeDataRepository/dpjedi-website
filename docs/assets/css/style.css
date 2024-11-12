@@ -442,7 +442,7 @@ textarea:focus {
 	/* color: #555555 !important; */
 	font-weight: bold;
 	font-size: 1rem;
-	padding: 10px 15px;
+	/* padding: 10px 15px; */
 	width: 100%;
 	text-align: left;
 	border-bottom: 0px solid #e0e0e0;
