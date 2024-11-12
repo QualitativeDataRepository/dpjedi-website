@@ -185,12 +185,16 @@ hr {
 
 /* SidebarMenu */
 
+.accordion-button {
+	background-color: transparent !important;
+}
+
 /* Highlight the active accordion button */
 .accordion-button:not(.collapsed) {
 	font-weight: 800;
-	color: #004851 !important;
+	color: #004851 ;
 	font-size: 1.15rem;
-	background-color: #e9ecef !important;
+	/* background-color: #e9ecef !important; */
 }
 
 
@@ -218,6 +222,12 @@ hr {
 	color: #004851 !important;
 	font-size: 1.15rem;
 	background-color: #e9ecef !important;
+}
+
+#sidebarMenu a:hover,
+.accordion-button:hover {
+	background-color: #004851 !important;
+	color: #e9ecef !important;
 }
 
 .submenu-item {
@@ -368,36 +378,39 @@ textarea:focus {
 	line-height: 1;
 }
 
+
+
 .sidebar .accordion-button,
 .sidebar .accordion-button.no-collapse {
-	background-color: #ffffff !important;
-	color: #555555 !important;
+	/* background-color: #ffffff !important; */
+	/* color: #555555 !important; */
 	font-weight: bold;
 	font-size: 1rem;
 	border: none;
 	text-align: left;
-	padding: 10px 15px;
+	/* padding: 10px 15px; */
 	width: 100%;
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 0px solid #e0e0e0;
 	margin: 0;
 }
 
 .sidebar .accordion-item:not(:last-child) .accordion-button,
 .sidebar .accordion-item:not(:last-child) .accordion-button.no-collapse {
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 0px solid #e0e0e0;
 }
 
 .sidebar .accordion-button:hover,
 .sidebar .accordion-button.no-collapse:hover {
 	/* background-color: #f0f0f0 !important; */
-	color: #000 !important;
+	color: #e9ecef !important;
 }
 
-.sidebar .accordion-button:not(.collapsed),
+/* .sidebar .accordion-button:not(.collapsed),
 .sidebar .accordion-button.no-collapse.active {
 	/* background-color: #d6e0f5; */
-	color: #1a1a1a;
-}
+	/* color: #1a1a1a;
+} */ 
+
 
 .sidebar .accordion-button::after {
 	color: #1a1a1a;
@@ -411,35 +424,43 @@ textarea:focus {
 .sidebar .accordion-button.no-collapse:focus {
 	box-shadow: none;
 }
-
+.sidebar .accordion-button:not(.collapsed) {
+	box-shadow: none!important;
+}
 .sidebar .submenu-item {
 	background-color: #ffffff;
-	color: #555555 !important;
+	/* color: #555555 !important; */
 	font-weight: bold;
 	font-size: 1rem;
 	padding: 10px 15px;
 	width: 100%;
 	text-align: left;
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 0px solid #e0e0e0;
 	margin: 0;
 }
+
 
 .sidebar .submenu-item:last-child {
 	border-bottom: none;
 }
 
 .sidebar .submenu-item a {
-	color: #555555 !important;
+	/* color: #fff ; */
 	text-decoration: none;
 }
 
-.sidebar .submenu-item:hover {
-	background-color: #004851;
-	color: #fff !important;
+.sidebar .submenu-item a:hover {
+	color: #ffffff !important;
+	text-decoration: none;
 }
 
+/* .sidebar .submenu-item:hover {
+	background-color: #004851;
+	color: #fff !important;
+} */
+
 .sidebar .submenu-item a:hover {
-	background-color: #004851!important;
+	/* background-color: #004851!important; */
 	color: #fff !important;
 	text-decoration: none;
 }
@@ -1278,3 +1299,5 @@ input[type="button"].small,
 	max-height: 100vh; /* Limit the sidebar height to the viewport */
 	overflow-y: auto; /* Add scroll to sidebar if content is larger than viewport */
   }
+
+  
