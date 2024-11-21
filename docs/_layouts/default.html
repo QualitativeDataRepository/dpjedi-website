@@ -295,16 +295,16 @@
             }
 
             // Highlight the heading
-            const targetHeading = document.getElementById(sectionId);
-            if (targetHeading) {
-              const heading = targetHeading.matches("h1, h2, h3, h4, h5, h6")
-                ? targetHeading
-                : targetHeading.querySelector("h2, h3");
-              if (heading) {
-                heading.classList.add("highlight");
-                // setTimeout(() => heading.classList.remove("highlight"), 2000);
-              }
-            }
+            // const targetHeading = document.getElementById(sectionId);
+            // if (targetHeading) {
+            //   const heading = targetHeading.matches("h1, h2, h3, h4, h5, h6")
+            //     ? targetHeading
+            //     : targetHeading.querySelector("h2, h3");
+            //   if (heading) {
+            //     heading.classList.add("highlight");
+            //     // setTimeout(() => heading.classList.remove("highlight"), 2000);
+            //   }
+            // }
           }
 
           // Set active accordion button if applicable
@@ -477,8 +477,18 @@
               this.closest(".submenu-item").classList.add("active");
             }
 
+            // Prevent auto highlight when clicking a submenu item
+            observer.disconnect();
+
             history.replaceState(null, null, this.getAttribute("href"));
             scrollActiveLinkIntoView();
+
+            // Reconnect the observer after a short delay
+            setTimeout(() => {
+              headings.forEach((heading) => {
+                observer.observe(heading);
+              });
+            }, 1000);
           });
         });
 

@@ -221,14 +221,14 @@ hr {
 .accordion-button.active {
 	font-weight: 800;
 	color: #e9ecef !important;
-	font-size: 1.15rem;
+	/* font-size: 1.15rem; */
 	background-color: #004851 !important;
 }
 
 .accordion-header.active {
 	font-weight: 800;
 	color: #004851 !important;
-	font-size: 1.15rem;
+	/* font-size: 1.15rem; */
 	background-color: #e9ecef !important;
 }
 
@@ -250,9 +250,9 @@ hr {
 
 .submenu-item a.active {
 	width: 100%;
-	font-weight: 800;
+	font-weight: 300;
 	color: #004851 !important;
-	font-size: 1.15rem;
+	/* font-size: 1.15rem; */
 	/* background-color: #e9ecef !important; */
 }
 
@@ -390,13 +390,10 @@ textarea:focus {
 
 .sidebar .accordion-button,
 .sidebar .accordion-button.no-collapse {
-	/* background-color: #ffffff !important; */
-	/* color: #555555 !important; */
 	font-weight: bold;
 	font-size: 1rem;
 	border: none;
 	text-align: left;
-	/* padding: 10px 15px; */
 	width: 100%;
 	border-bottom: 0px solid #e0e0e0;
 	margin: 0;
@@ -409,19 +406,24 @@ textarea:focus {
 
 .sidebar .accordion-button:hover,
 .sidebar .accordion-button.no-collapse:hover {
-	/* background-color: #f0f0f0 !important; */
 	color: #e9ecef !important;
 }
 
-/* .sidebar .accordion-button:not(.collapsed),
-.sidebar .accordion-button.no-collapse.active {
-	/* background-color: #d6e0f5; */
-/* color: #1a1a1a;
-} */
 
+.sidebar .accordion-header .accordion-button.active {
+	color: #ffffff!important;
+}
+
+.sidebar .accordion-header .accordion-button::after {
+	color: #ffffff!important;
+}
+
+.sidebar .accordion-button {
+	color: #004851 !important;
+}
 
 .sidebar .accordion-button::after {
-	color: #1a1a1a;
+	color: #004851;
 }
 
 .sidebar .accordion-button.no-collapse::after {
@@ -440,7 +442,7 @@ textarea:focus {
 .sidebar .submenu-item {
 	background-color: #ffffff;
 	/* color: #555555 !important; */
-	font-weight: bold;
+	/* font-weight: 400 !important; */
 	font-size: 1rem;
 	/* padding: 10px 15px; */
 	width: 100%;
@@ -457,6 +459,7 @@ textarea:focus {
 .sidebar .submenu-item a {
 	/* color: #fff ; */
 	text-decoration: none;
+	font-weight: 500 !important;
 }
 
 .sidebar .submenu-item a:hover {
@@ -1236,30 +1239,6 @@ input[type="button"].small,
 	text-align: center;
 }
 
-/* 
-#main {
-	padding: 2em 0;
-}
-
-#main .sidebar .major {
-	padding-bottom: 2em;
-}
-
-#main .sidebar .major h2 {
-	font-size: 1.8em;
-}
-
-#main .sidebar .default li {
-	border-color: #cdcdcd;
-}
-
-#main .sidebar .default a {
-	color: #464646;
-}
-
-#main .sidebar> :first-child {
-	margin-bottom: 3em;
-} */
 
 /* Footer */
 
@@ -1290,17 +1269,6 @@ input[type="button"].small,
 	color: inherit;
 }
 
-/* Fix for mobile dropdown text overlap */
-
-
-
-/* .dropdown-menu .dropdown-item {
-	padding: 10px 20px!important;
-	line-height: 1.5!important;
-	white-space: normal!important;
-	display: flex!important;
-	align-items: center!important;
-  } */
 
 /* Make the sidebar sticky, so it remains visible when scrolling */
 .sidebar {
