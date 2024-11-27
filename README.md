@@ -12,13 +12,15 @@ Feel free to reach out to the Agile team for any updates, questions or concerns!
 
 ## Installation, Build, Clean and Livereload Server Commands
 
+Please note that depending on your environment you may need ```sudo```
+
 ```bundle install```
 
-```sudo bundle exec jekyll clean```
+```bundle exec jekyll clean```
 
-```sudo bundle exec jekyll build --verbose```
+```bundle exec jekyll build --verbose```
 
-```sudo bundle exec jekyll serve --trace --livereload```
+```bundle exec jekyll serve --trace --livereload```
 
 
 # Notes
@@ -26,6 +28,51 @@ Feel free to reach out to the Agile team for any updates, questions or concerns!
 Please refer to the /test route to see examples of components on one page.
 
 - Internal URIs have been made 'simple', so there is no longer a need to add .html to the end
+
+
+## Project Folder Structure Notes
+
+### Main build folder
+
+```/docs```
+
+### Table of Contents Data Resource
+
+```docs/_data/resources/table-of-contents.yml``` 
+
+### Main Components
+
+```docs/_includes``` root folder
+
+### Pages Markdown by folder in Main Component root
+
+#### Events
+
+```docs/_includes/events```
+
+#### Mailing List
+
+```docs/_includes/mailing-list```
+
+#### Resources Page
+
+```docs/_includes/resources```
+
+These filesname should match the names used in ```docs/_data/resources/table-of-contents.yml``` 
+
+## New Sidebar top level page
+
+To make a new sidebar page:
+
+1. Duplicate the resources.md page then verbose rename it ( eg. faq.md )
+2. Create the same name folder in ```_data```
+    - add a table-of-contents.yml (or duplicate from resources)
+    - follow the same structure as the resources toc .yml
+    - ( eg. _data/faq/table-of-contents.yml)
+3. Back in the cloned resources.md page, modify ```{% assign sections = site.data.resources.table-of-contents %}``` to point to the new table of contents page ( eg. ```{% assign sections = site.data.faq.table-of-contents %}```)
+4. Create a folder with that newly named page in ```_includes```
+    - add .md files matching the table of content yml here
+    - eg. ```_includes/faq/intro.md```
 
 ## YAML Frontmatter options
 

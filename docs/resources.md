@@ -7,11 +7,6 @@ join: true
 post: false
 ---
 
-<!-- {% capture resources_intro %}
-{% include resources/introduction.md %}
-{% endcapture %}
-{{ resources_intro | markdownify }} -->
-
 {% assign sections = site.data.resources.table-of-contents %}
 
 <div id="contentWrapper">
