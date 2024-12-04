@@ -2,11 +2,11 @@ name: Horizons
 title: Data-PASS Journal Editors Discussion Interface
 description: Horizons template for Jekyll
 paginate: 10
-url: "https://ingen0s.github.io/" # the base hostname & protocol for your site
+url: "https://dpjedi.org" # the base hostname & protocol for your site
 # Google Analytics
 google_analytics: G-TT1VGTLKX5
-live_base_url: "https://github.com/ingen0s/dpjedi-website"
-baseurl: "/dpjedi-website"
+live_base_url: "https://github.com/QualitativeDataRepository/dpjedi-website"
+# baseurl: "/dpjedi-website"
 defaults:
   - scope:
       path: "" # applies to all files
