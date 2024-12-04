@@ -1,0 +1,44 @@
+---
+layout: main
+page_title: "JEDI"
+sidebar: false
+join: true
+post: true
+---
+
+
+<!-- Main Content Specific to JEDI -->
+<div id="main" class="{% if page.sidebar %}col-md-12{% else %}col-12{% endif %} wrapper style1 px-1 py-4">
+  <div class="container-lg">
+    <section>
+      <header class="major">
+        <h1>{{ page.page_title }}</h1>
+
+        {% if page.join %}
+        <a href="{{ site.baseurl }}/join" class="btn btn-jedi-primary mt-3">Join JEDI</a>
+        {% endif %} &nbsp;&nbsp; {% if page.post %}
+        <a
+          href="https://groups.google.com/forum/#!forum/dpjedi"
+          target="_blank"
+          class="btn btn-jedi-secondary mt-3"
+          >Post to JEDI</a
+        >
+        {% endif %}
+      </header>
+
+      <div class="row mt-4">
+        {% if page.sidebar %}
+        <!-- Sidebar -->
+        <aside class="col-md-3">
+          {% include markdown_sidebar.html %}
+        </aside>
+        {% endif %}
+
+        <!-- Main Content -->
+        <main role="main" class="{% if page.sidebar %}col-md-9{% else %}col-md-12{% endif %} markdown-content">
+          {{ content | inject_anchors }}
+        </main>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{% assign items_array = include.items | newline_to_br | split: '<br />' %}
+<div>
+    {% for item in items_array %}
+    {% assign trimmed_item = item | strip %}
+    {% unless trimmed_item == "" %}
+    {% assign item_parts = trimmed_item | split: '|' %}
+    <div class="mb-3" style="border: none;">
+        <div class="row g-0">
+            <div class="col-md-3">
+                <img src="{{ item_parts[0] }}" class="img-fluid rounded-start" alt="Image" style="max-width: 250px;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item_parts[1] }}</h5>
+                    <p class="card-text">{{ item_parts[2] | markdownify }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endunless %}
+    {% endfor %}
+</div>

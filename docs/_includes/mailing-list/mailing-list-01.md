@@ -1,0 +1,2 @@
+## Mailing List Guidelines
+To help provide the best possible experience for all mailing list members, we ask that everyone be aware of and follow the rules, guidelines, and suggestions outlined below. **By joining the JEDI mailing list, you agree that you have read and will follow these rules and guidelines. If you do not accept these rules and guidelines, please do not join the JEDI mailing list.** Please note that in order to encourage fruitful dialogue, JEDI reserves the right to suspend or terminate membership of individuals who violate these terms.

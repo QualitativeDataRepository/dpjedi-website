@@ -1,12 +1,45 @@
 <!-- Nav -->
-	<nav id="nav" role="navigation">
-		<ul>
-			{% assign current = page.url | downcase | split: '/' %}
-			<li ><a href="{{ site.baseurl }}/index.html">Home</a></li>
-			<li ><a href="{{ site.baseurl }}/about.html">About</a></li>
-			<li ><a href="{{ site.baseurl }}/governance.html">Governance</a></li>
-			<li ><a href="{{ site.baseurl }}/mailing-list.html">Mailing List</a></li>
-			<li ><a href="{{ site.baseurl }}/events.html">Events</a></li>
-			<li ><a href="{{ site.baseurl }}/resources.html">Resources</a></li>
+<nav id="nav" role="navigation" aria-label="Main navigation" class="navbar navbar-expand-lg custom-nav justify-content-between">
+	<div class="container-fluid g-0">
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+			  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNav">
+		<ul class="navbar-nav">
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/index" aria-current="page">Home</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/governance">Governance</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/mailing-list">Mailing List</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ site.baseurl }}/events">Events</a>
+		  </li>
+		  <li class="nav-item dropdown d-lg-none">
+			<a class="resources-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Resources
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+			  {% assign sections = site.data.resources.table-of-contents %}
+			  {% for section in sections %}
+			  <li class="dropdown-submenu">
+				<a class="dropdown-item" href="{{ site.baseurl }}/resources/#{{ section[0] | replace: ' ', '-' | downcase }}">{{ section[0] | replace: '-', ' ' | capitalize }}</a>
+			  </li>
+			  {% endfor %}
+			</ul>
+		  </li>
+		  <li class="nav-item d-none d-lg-block">
+			<a class="nav-link" href="{{ site.baseurl }}/resources">Resources</a>
+		  </li>
 		</ul>
-	</nav>
+	  </div>
+	</div>
+  </nav>
+  

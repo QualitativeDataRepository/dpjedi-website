@@ -1,0 +1,3 @@
+## Retraction {#retraction}
+
+Dealing with articles that need to be corrected or retracted can be challenging. [Edlund et al., 2023](https://link.springer.com/article/10.1007/s12144-022-03764-x) presents suggested best practices for handling retraction. [Ivory & Elson (2023)](https://link.springer.com/article/10.1007/s12144-023-05216-6) suggest a standardized approach based on the authors' roles, with examples.

@@ -1,41 +1,61 @@
 ---
+title: Data-PASS Journal Editors Discussion Interface
 layout: default
 ---
 
 <!-- Header -->
-	<header role="banner">
-			<div id="header">
-				<div class="container boxed">
+<header role="banner" class="bg-dark text-light">
+  <div id="header">
+    <div
+      class="container-lg g-0 boxed d-flex justify-content-between align-items-center"
+    >
+      <div class="row">
+        <div class="col-12">
+          <!-- Logo -->
+          <a href="{{ '/' | relative_url }}">
+            <img
+              src="{{ '/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png' | relative_url }}"
+              alt="Logo for JEDI: Journal Editor's Discussion Interface"
+              class="img-fluid"
+              style="max-width: 85%"
+            />
+          </a>
+        </div>
+        <div class="col-12">
+          <!-- Navigation -->
+          {% include nav.html %}
+        </div>
+      </div>
+    </div>
+    <!-- Banner -->
+    <div class="container-lg ">
+      <div id="banner" class="text-center px-5">
+        <section>
+          <header class="major">
+            <h1 class="display-4 welcome-text">Welcome to JEDI</h1>
+            <p class="lead byline-text">
+              The Journal Editors Discussion Interface (JEDI) provides the
+              community of social science journal editors a forum in which to
+              ask and answer questions, share information and expertise, and
+              build a fund of collective knowledge.
+            </p>
+          </header>
+        </section>
+      </div>
+    </div>
+    <div class="buttons text-center mt-3">
+      <a href="{{ site.baseurl }}/join" class="btn btn-jedi-primary"
+        >Join JEDI</a
+      >
+      <a
+        href="https://groups.google.com/forum/#!forum/dpjedi"
+        target="_blank"
+        class="btn btn-jedi-secondary"
+        >Post to JEDI mailing list</a
+      >
+    </div>
+  </div>
+</header>
 
-					<!-- Logo -->
-						
-				
-						<img src="/assets/images/jedi_logo_horizontal_full_for_dark_bg_cropped.png" alt="Logo for JEDI: Journal Editor's Discussion Interface">
-
-					{% include nav.html %}
-
-					<!-- Banner -->
-						<div id="banner">
-							<div class="container">
-								<section>
-									<header class="major">
-										<p style="font-size:300%; font-weight:700; line-height: 1.75em; margin: 0;">Welcome to JEDI</p>
-										<span class="byline" style="font-weight: 500;">
-											<p>The Journal Editors Discussion Interface (JEDI) provides the community of social science journal editors a forum in which to ask and answer questions, share information and expertise, and build a fund of collective knowledge.</p>
-										</span>
-									</header>
-								</section>
-							</div>
-						</div>
-				</div>
-				<div class="buttons">
-					<a href="{{ site.baseurl }}/join.html" class="button alt">Join JEDI</a>&nbsp;&nbsp;
-				<a href="https://groups.google.com/forum/#!forum/dpjedi" target="_blank" class="button alt">Post to JEDI mailing list</a>
-		</div>
-			</div>
-
-	</header>
-<main role="main">
-	{{ content }}
-	
-</main>
+<!-- Main content section -->
+<main role="main" class="container-fluid g-0">{{ content }}</main>

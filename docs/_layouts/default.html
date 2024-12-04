@@ -1,86 +1,616 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Horizons by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html lang="en">
-	<head>
-		<title>{{ page.title }}</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Homepage for the Data-PASS JEDI project" />
-		<meta name="keywords" content="scientific journals, research transparency" />
-		<!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/css/ie/html5shiv.js"></script><![endif]-->
-		<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/jquery.dropotron.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/skel-layers.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/js/init.js"></script>
-		<!--Futura PT font via Adobe -->
-		<link rel="stylesheet" href="https://use.typekit.net/jvy0vlc.css">
-		
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/images/favicon-16x16.png">
-		<link rel="manifest" href="{{ site.baseurl }}/assets/images/site.webmanifest">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
+  <head>
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="description"
+      content="Homepage for the Data-PASS JEDI project"
+    />
+    <meta
+      name="keywords"
+      content="scientific journals, research transparency"
+    />
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
+    <!-- Bootstrap JS bundle CDN inclusion -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-		
-		<noscript>
-			<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skel.css" />
-			<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie/v8.css" /><![endif]-->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TT1VGTLKX5"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'G-TT1VGTLKX5');
-		</script>
-		{% include analytics.html %}
-	</head>
-	<body>
-		<a class="skip-to-content" href="#main">Skip navigation</a>
-	{{ content }}
-		<!-- Footer -->
-		<footer role="contentinfo">
-			<div id="footer">
-				<div class="container">
-		<div>
-								<section>
-									<header class="major">
-										<img src="{{ site.baseurl }}/assets/images/datapass-logo.jpg" alt="DataPASS Logo" style="float:right;"/>
-										<h2><a href="http://www.data-pass.org" target="_blank">Data-PASS</a></h2>
-										<span class="byline">JEDI is an initative of Data-PASS, the Data Preservation Alliance for the Social Sciences</span>
-									</header>
-									<ul class="contact">
-										<li>
-											<span class="homepage">Homepage</span>
-											<span><a href="http://www.data-pass.org" target="_blank">www.data-pass.org</a></span>
-										</li>
-										<li>
-											<span class="mail">e-mail</span>
-											<span><a href="mailto:datapassjedi@gmail.com">datapassjedi@gmail.com</a></span>
-										</li>
+    <!-- Bootstrap CSS CDN inclusion -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Futura PT font via Adobe -->
+    <link rel="stylesheet" href="https://use.typekit.net/jvy0vlc.css" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/override.css' | relative_url }}"
+    />
 
-									</ul>
-								</section>
-							</div>
-						</div>
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ site.baseurl }}/assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ site.baseurl }}/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ site.baseurl }}/assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="{{ site.baseurl }}/assets/images/site.webmanifest"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-					<!-- Copyright -->
-						<div class="copyright">
-							Design: <a href="http://templated.co" target="_blank">TEMPLATED</a> Image: <a href="https://commons.wikimedia.org/wiki/File:Long_Room_Interior,_Trinity_College_Dublin,_Ireland_-_Diliff.jpg" target="_blank">David Ilifff</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC-BY-SA</a>)
-							Jekyll Template: <a href="http://cloudcannon.com" target="_blank">Cloud Cannon</a> Content: <a href="http://www.data-pass.org" target="_blank">Data-PASS</a>
-						</div>
+    <noscript>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+      />
+    </noscript>
 
-				</div>
-</footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TT1VGTLKX5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-TT1VGTLKX5");
+    </script>
+    {% include analytics.html %}
 
-	</body>
+    <style>
+      #sidebar {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <a class="skip-to-content" href="#main">Skip navigation</a> -->
+    <div class="container-fluid g-0">{{ content }}</div>
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div id="footer" class="text-light py-4">
+        <div class="container">
+          <section>
+            <div class="row align-items-center">
+              <div class="col-md-9">
+                <header class="major">
+                  <h2>
+                    <a
+                      href="http://www.data-pass.org"
+                      target="_blank"
+                      class="text-light"
+                      >Data-PASS</a
+                    >
+                  </h2>
+                  <p class="byline">
+                    JEDI is an initiative of Data-PASS, the Data Preservation
+                    Alliance for the Social Sciences
+                  </p>
+                </header>
+                <ul class="list-unstyled contact">
+                  <li>
+                    <span class="homepage">Homepage:</span>
+                    <span
+                      ><a
+                        href="http://www.data-pass.org"
+                        target="_blank"
+                        class="text-light"
+                        style="margin-left: 20px"
+                        >www.data-pass.org</a
+                      ></span
+                    >
+                  </li>
+                  <li>
+                    <span class="mail">Email:</span>
+                    <span
+                      ><a
+                        href="mailto:datapassjedi@gmail.com"
+                        class="text-light"
+                        >datapassjedi@gmail.com</a
+                      ></span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3 text-md-right text-center">
+                <img
+                  src="{{ site.baseurl }}/assets/images/datapass-logo.jpg"
+                  alt="DataPASS Logo"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright text-light text-center py-3 mt-4">
+          Design:
+          <a href="http://templated.co" target="_blank" class="text-light"
+            >TEMPLATED</a
+          >
+          | Image:
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Long_Room_Interior,_Trinity_College_Dublin,_Ireland_-_Diliff.jpg"
+            target="_blank"
+            class="text-light"
+            >David Iliff</a
+          >
+          (<a
+            href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+            target="_blank"
+            class="text-light"
+            >CC-BY-SA</a
+          >) | Jekyll Template:
+          <a href="http://cloudcannon.com" target="_blank" class="text-light"
+            >Cloud Cannon</a
+          >
+          | Content:
+          <a href="http://www.data-pass.org" target="_blank" class="text-light"
+            >Data-PASS</a
+          >
+        </div>
+      </div>
+    </footer>
+    <a href="#top" id="back-to-top" class="back-to-top"> &#8679; </a>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Navbar elements
+        const navbar = document.getElementById("nav");
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarCollapse = document.querySelector("#navbarNav");
+        const firstFocusableLink = navbarCollapse.querySelector(".nav-link");
+        let isMenuOpen = false;
+
+        // Back-to-top button
+        const backToTopButton = document.getElementById("back-to-top");
+
+        // Sidebar menu elements
+        const mainMenuLinks = document.querySelectorAll(
+          ".accordion-button.no-collapse"
+        );
+        const submenuAnchors = document.querySelectorAll(
+          "#sidebarMenu .submenu-anchor a"
+        );
+        const submenuLinks = document.querySelectorAll(
+          ".submenu-item a, .no-collapse"
+        );
+        const accordionCollapses = document.querySelectorAll(
+          ".accordion-collapse"
+        );
+
+        // Content sections
+        const contentSections = document.querySelectorAll(
+          "#contentWrapper > div"
+        );
+
+        // Navbar scroll behavior
+        function handleNavbarScroll() {
+          if (window.innerWidth <= 768) {
+            if (window.scrollY > 75) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        }
+
+        // Back-to-top button visibility
+        function handleBackToTopVisibility() {
+          if (window.scrollY > window.innerHeight) {
+            backToTopButton.classList.add("show");
+          } else {
+            backToTopButton.classList.remove("show");
+          }
+        }
+
+        // Remove 'active' classes
+        function removeActiveClasses() {
+          document
+            .querySelectorAll(
+              "#sidebarMenu a.active, .accordion-button.active, .submenu-item.active"
+            )
+            .forEach((el) => {
+              el.classList.remove("active");
+            });
+          document.querySelectorAll(".highlight").forEach((el) => {
+            el.classList.remove("highlight");
+          });
+        }
+
+        // Hide all content sections
+        function hideAllSections() {
+          contentSections.forEach((section) => {
+            section.style.display = "none";
+          });
+        }
+
+        // Display a specific content section
+        function showSection(sectionId) {
+          hideAllSections();
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.style.display = "block";
+          } else {
+            console.error("Section not found:", sectionId);
+          }
+        }
+
+        // Set the active link and highlight the heading
+        function setActiveLink(sectionId) {
+          removeActiveClasses();
+          let activeLink = document.querySelector(
+            `#sidebarMenu a[href="#${sectionId}"]`
+          );
+          let isSubmenuItem = false;
+
+          if (activeLink) {
+            activeLink.classList.add("active");
+            if (activeLink.closest(".submenu-anchor")) {
+              isSubmenuItem = true;
+              // Add 'active' class to the submenu item container
+              const submenuItem = activeLink.closest(".submenu-item");
+              if (submenuItem) {
+                submenuItem.classList.add("active");
+              }
+            }
+
+            // Ensure the parent accordion is open
+            const parentCollapse = activeLink.closest(".accordion-collapse");
+            if (parentCollapse && !parentCollapse.classList.contains("show")) {
+              new bootstrap.Collapse(parentCollapse, { toggle: true });
+            }
+
+            // Highlight the heading
+            // const targetHeading = document.getElementById(sectionId);
+            // if (targetHeading) {
+            //   const heading = targetHeading.matches("h1, h2, h3, h4, h5, h6")
+            //     ? targetHeading
+            //     : targetHeading.querySelector("h2, h3");
+            //   if (heading) {
+            //     heading.classList.add("highlight");
+            //     // setTimeout(() => heading.classList.remove("highlight"), 2000);
+            //   }
+            // }
+          }
+
+          // Set active accordion button if applicable
+          const activeButton = document.querySelector(
+            `.accordion-button[data-section-id="${sectionId}"]`
+          );
+          if (activeButton) {
+            activeButton.classList.add("active");
+
+            if (!isSubmenuItem) {
+              const firstSubmenuLink =
+                activeButton.nextElementSibling?.querySelector(
+                  ".submenu-anchor a"
+                );
+              if (firstSubmenuLink) {
+                firstSubmenuLink.classList.add("active");
+                isSubmenuItem = true;
+                activeLink = firstSubmenuLink;
+              }
+            }
+          }
+
+          // Update back-to-top button href
+          if (backToTopButton) {
+            let backToTopId = sectionId;
+            if (activeLink && activeLink.closest(".submenu-anchor")) {
+              const parentCollapse = activeLink.closest(".accordion-collapse");
+              if (parentCollapse) {
+                backToTopId = parentCollapse.getAttribute(
+                  "data-parent-section"
+                );
+              }
+            }
+            backToTopButton.setAttribute("href", `#${backToTopId}`);
+          }
+        }
+
+        // Smoothly scroll to a section
+        function scrollToSection(sectionId) {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const yOffset = window.innerWidth <= 767 ? -50 : -80;
+            const y =
+              section.getBoundingClientRect().top +
+              window.pageYOffset +
+              yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }
+
+        // Collapse other accordions
+        function collapseOtherAccordions(currentId) {
+          document.querySelectorAll(".accordion-collapse").forEach((item) => {
+            if (item.id !== currentId && item.classList.contains("show")) {
+              new bootstrap.Collapse(item, { toggle: true });
+            }
+          });
+        }
+
+        // Navbar toggler event listener
+        navbarToggler.addEventListener("click", function () {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            firstFocusableLink.focus();
+            navbarToggler.setAttribute("aria-expanded", "true");
+          } else {
+            navbarToggler.focus();
+            navbarToggler.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // Close navbar on Escape key
+        navbarCollapse.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            navbarToggler.click();
+            navbarToggler.focus();
+          }
+        });
+
+        // Set initial navbar toggler attributes
+        navbarToggler.setAttribute("aria-controls", "navbarNav");
+        navbarToggler.setAttribute("aria-expanded", "false");
+
+        // Close navbar when a link is clicked (on mobile)
+        const navLinks = document.querySelectorAll(
+          "#navbarNav .nav-link, #navbarNav .dropdown-item"
+        );
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              new bootstrap.Collapse(navbarCollapse, { toggle: true });
+            }
+          });
+        });
+
+        // Handle clicks on main menu links (non-accordion)
+        mainMenuLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const sectionId = this.getAttribute("href").substring(1);
+            showSection(sectionId);
+            scrollToSection(sectionId);
+            setActiveLink(sectionId);
+            collapseOtherAccordions("");
+            window.history.pushState(null, null, `#${sectionId}`);
+          });
+        });
+
+        // Handle clicks on submenu anchors
+        submenuAnchors.forEach((anchor) => {
+          anchor.addEventListener("click", function (event) {
+            event.preventDefault();
+            const sectionId = this.getAttribute("href").substring(1);
+            const parentCollapse = this.closest(".accordion-collapse");
+            let parentSectionId = sectionId;
+
+            if (parentCollapse) {
+              parentSectionId = parentCollapse.getAttribute(
+                "data-parent-section"
+              );
+              collapseOtherAccordions(parentCollapse.id);
+            } else {
+              collapseOtherAccordions("");
+            }
+
+            showSection(parentSectionId);
+            scrollToSection(sectionId);
+            setActiveLink(sectionId);
+            window.history.pushState(null, null, `#${sectionId}`);
+          });
+        });
+
+        // Handle accordion collapse event
+        accordionCollapses.forEach((collapse) => {
+          const parentSectionId = collapse.getAttribute("data-parent-section");
+          collapse.addEventListener("shown.bs.collapse", function () {
+            showSection(parentSectionId);
+            setActiveLink(parentSectionId);
+            collapseOtherAccordions(collapse.id);
+            window.history.pushState(null, null, `#${parentSectionId}`);
+          });
+        });
+
+        // Scroll active link into view
+        function scrollActiveLinkIntoView() {
+          const activeLink = document.querySelector(
+            "#sidebarMenu .active"
+          );
+          if (activeLink) {
+            activeLink.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+        }
+
+        // Add click event to submenu links
+        submenuLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Remove 'active' class from all submenu links and their parent items
+            submenuLinks.forEach((l) => {
+              l.classList.remove("active");
+              if (l.closest(".submenu-item")) {
+                l.closest(".submenu-item").classList.remove("active");
+              }
+            });
+
+            // Add 'active' class to the clicked link and its parent item
+            this.classList.add("active");
+            if (this.closest(".submenu-item")) {
+              this.closest(".submenu-item").classList.add("active");
+            }
+
+            // Prevent auto highlight when clicking a submenu item
+            observer.disconnect();
+
+            history.replaceState(null, null, this.getAttribute("href"));
+            scrollActiveLinkIntoView();
+
+            // Reconnect the observer after a short delay
+            setTimeout(() => {
+              headings.forEach((heading) => {
+                observer.observe(heading);
+              });
+            }, 1000);
+          });
+        });
+
+        // Handle initial hash on page load
+        function handleInitialHash() {
+          const initialHash = window.location.hash.substring(1);
+          if (initialHash) {
+            const targetElement = document.getElementById(initialHash);
+            if (targetElement) {
+              const parentSection = targetElement.closest(
+                "#contentWrapper > div"
+              );
+              if (parentSection) {
+                showSection(parentSection.id);
+                setTimeout(() => scrollToSection(initialHash), 100);
+                setActiveLink(initialHash);
+              } else {
+                console.error(
+                  "Parent section not found for initial hash:",
+                  initialHash
+                );
+                const firstSection = contentSections[0];
+                if (firstSection) {
+                  showSection(firstSection.id);
+                  setActiveLink(firstSection.id);
+                }
+              }
+            } else {
+              console.error("Element not found for initial hash:", initialHash);
+              const firstSection = contentSections[0];
+              if (firstSection) {
+                showSection(firstSection.id);
+                setActiveLink(firstSection.id);
+              }
+            }
+          } else {
+            const firstSection = contentSections[0];
+            if (firstSection) {
+              showSection(firstSection.id);
+              setActiveLink(firstSection.id);
+            }
+          }
+        }
+
+        // Listen for hash changes
+        window.addEventListener("hashchange", function () {
+          const newHash = window.location.hash.substring(1);
+          if (newHash) {
+            const targetElement = document.getElementById(newHash);
+            if (targetElement) {
+              const parentSection = targetElement.closest(
+                "#contentWrapper > div"
+              );
+              if (parentSection) {
+                showSection(parentSection.id);
+                setTimeout(() => scrollToSection(newHash), 100);
+                setActiveLink(newHash);
+              } else {
+                console.error("Parent section not found for hash:", newHash);
+                const firstSection = contentSections[0];
+                if (firstSection) {
+                  showSection(firstSection.id);
+                  setActiveLink(firstSection.id);
+                }
+              }
+            } else {
+              console.error("Element not found for hash:", newHash);
+              const firstSection = contentSections[0];
+              if (firstSection) {
+                showSection(firstSection.id);
+                setActiveLink(firstSection.id);
+              }
+            }
+          }
+        });
+
+        // Updated Intersection Observer for headings
+        const headings = document.querySelectorAll(
+          "#contentWrapper h2, #contentWrapper h3"
+        );
+        const observerOptions = {
+          rootMargin: "-40% 0px -55% 0px", // Adjusted for better triggering
+          threshold: 0,
+        };
+
+        function updateActiveHeading(id) {
+          setActiveLink(id);
+          scrollActiveLinkIntoView();
+          history.replaceState(null, null, `#${id}`);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              updateActiveHeading(entry.target.id);
+            }
+          });
+        }, observerOptions);
+
+        headings.forEach((heading) => {
+          observer.observe(heading);
+        });
+
+        // Attach scroll event listeners
+        window.addEventListener("scroll", handleNavbarScroll);
+        window.addEventListener("scroll", handleBackToTopVisibility);
+        window.addEventListener("resize", handleNavbarScroll);
+
+        // Initialize on page load
+        handleNavbarScroll();
+        handleBackToTopVisibility();
+        handleInitialHash();
+      });
+    </script>
+  </body>
 </html>

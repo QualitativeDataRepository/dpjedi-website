@@ -1,0 +1,17 @@
+{% assign items_array = include.items | newline_to_br | split: '<br />' %}
+<div class="list-group">
+    {% for item in items_array %}
+        {% assign trimmed_item = item | strip %}
+        {% unless trimmed_item == "" %}
+            {% if trimmed_item contains 'href' %}
+                <a href="{{ trimmed_item | split:'href="' | last | split:'"' | first }}" class="list-group-item list-group-item-action">
+                    {{ trimmed_item | markdownify }}
+                </a>
+            {% else %}
+                <div class="list-group-item">
+                    {{ trimmed_item | markdownify }}
+                </div>
+            {% endif %}
+        {% endunless %}
+    {% endfor %}
+</div>

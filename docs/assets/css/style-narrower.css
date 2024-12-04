@@ -95,10 +95,11 @@
 			border-top: solid 1px rgba(192, 192, 192, 0.15);
 			color: #ccc;
 			display: block;
-			height: 44px;
-			line-height: 44px;
-			padding: 0 1em 0 1em;
+			/* height: 60px; */
+			line-height: 16px;
+			padding: 1em 1em 1em 1em;
 			text-decoration: none;
+			text-align: left;
 		}
 
 			#navPanel .link:first-child {
