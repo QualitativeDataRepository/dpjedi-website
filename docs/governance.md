@@ -5,6 +5,9 @@ page_title: "JEDI Governance"
 sidebar: false
 join: true
 post: false
+permalink: /governance/
+redirect_from:
+  - /governance.html
 ---
 
 ## Sponsorship and Hosting

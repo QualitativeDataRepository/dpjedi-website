@@ -5,6 +5,9 @@ page_title: "About JEDI"
 sidebar: false
 join: true
 post: true
+permalink: /about/
+redirect_from:
+  - /about.html
 ---
 
 ## Data-PASS JEDI

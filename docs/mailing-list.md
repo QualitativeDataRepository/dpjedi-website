@@ -5,6 +5,9 @@ page_title: "JEDI Mailing List"
 sidebar: false
 join: true
 post: true
+permalink: /mailing-list/
+redirect_from:
+  - /mailing-list.html
 ---
 
 <!-- <head>

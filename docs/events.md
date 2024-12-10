@@ -2,6 +2,9 @@
 title: Data-PASS Journal Editors Discussion Interface
 layout: jedi
 page_title: "JEDI Events"
+permalink: /events/
+redirect_from:
+  - /events.html
 ---
 
 <style>

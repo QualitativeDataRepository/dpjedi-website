@@ -5,6 +5,9 @@ page_title: "Resources"
 sidebar: true
 join: true
 post: false
+permalink: /resources/
+redirect_from:
+  - /resources.html
 ---
 
 {% assign sections = site.data.resources.table-of-contents %}
