@@ -1,15 +1,14 @@
 ---
 title: Data-PASS Journal Editors Discussion Interface (JEDI)
 layout: jedi
-page_title: JEDI 2023 Annual Meeting
+page_title: Improving Published Research
 sidebar: false
 join: false
 post: false
 ---
 
-*Improving Published Research*
+### JEDI 2023 Annual Meeting events
 
-The Journal Editors Discussion Interface is pleased to announce its **2023 Annual Meeting** events:
 
 ## [Panel 1: Experiences with Correcting the Scientific Record](#panel-1)
   Join a group of experts as they delve into the practical aspects of rectifying or withdrawing publications, offering valuable experiences and perspectives on the motivations and complexities involved.

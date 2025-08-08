@@ -1,11 +1,13 @@
 ---
 title: Data-PASS Journal Editors Discussion Interface (JEDI)
-layout: main
+layout: jedi
+page_title: JEDI Annual Event 2022
+sidebar: false
+join: false
+post: false
 ---
 
-# May the force be with you {#may-the-force-be-with-you}
-
-## Resources to help journal editors advance their fields {#resources-to-help-journal-editors}
+# May The Force Be With You: Resources to help journal editors advance their fields
 
 Virtual Workshop Overview, Agenda, and Recordings  
 Friday, May 20, 2022 | 11:00am to 5:00pm EST
