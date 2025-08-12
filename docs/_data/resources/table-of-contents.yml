@@ -8,6 +8,7 @@ ethics-and-misconduct:
   - editors-publishing-in-their-own-journals
   - reviewer-editorial-collusion
   - overlap-between-submitted-and-existing-manuscripts
+  - retraction
 
 diversifying-social-science-research:
   - inclusive-language
@@ -68,9 +69,9 @@ editorial-secrets:
   - cover-letters
   - revise-and-resubmit-workflows
 
-formatting: []
-
-digital-preservation: []
+journal-management:
+  - formatting
+  - digital-preservation
 
 contributors-to-this-page: []
 

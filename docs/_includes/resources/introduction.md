@@ -17,17 +17,3 @@ The culmination of a project led by JEDI Associate Director (and previous Commun
 
 *This resource page was last updated on 2025-08-10*
 
-
-### Search the Resource Page
-
-<form method="get" id="ddgSearch" action="https://duckduckgo.com/">
-    <input type="hidden" name="sites" value="dpjedi.org/resources"/>
-    <input type="hidden" name="k7" value="#ffffff"/>
-    <input type="hidden" name="k8" value="#222222"/>
-    <input type="hidden" name="k9" value="#00278e"/>
-    <input type="hidden" name="kx" value="#20692b"/>
-    <input type="hidden" name="kj" value="#fafafa"/>
-    <input type="hidden" name="kt" value="p"/>
-    <input type="text" name="q" placeholder="Search…" aria-label="Search dpjedi.org/resources on DuckDuckGo"/>
-    <button type="submit">Search</button>
-</form>
