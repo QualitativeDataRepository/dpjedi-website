@@ -16,7 +16,7 @@ Similarly, “go-list” / “allow-list” / “green-list” and “stop-list�
 
 One step towards diversifying social science research is to have a better picture of who constitutes a journal’s authors, reviewers, and editors. Collecting demographic data may help efforts to increase diversity.
 
-Editors at [*Personal Relationships*](https://onlinelibrary.wiley.com/journal/14756811){:target="_blank"} have created a ["Diversity matrix” template](https://docs.google.com/document/d/1mIzvUz97ThJVwuVZOqE8Ab3Mw4hD1_zA/edit){:target="_blank"} that can be used and adapted to collect data from authors, reviewers, editorial board members, editors, etc.
+Editors at [*Personal Relationships*](https://onlinelibrary.wiley.com/journal/14756811){:target="_blank"} have created a ["Diversity matrix" template](https://docs.google.com/document/d/1mIzvUz97ThJVwuVZOqE8Ab3Mw4hD1_zA/edit){:target="_blank"} that can be used and adapted to collect data from authors, reviewers, editorial board members, editors, etc.
 
 However, it is important to acknowledge that collecting demographic data may not be straightforward. For example, there may be geographical differences in how (and whether) to require authors to specify the demographic characteristics of their samples or themselves. For example, see [Jugert et al. (2021)](https://doi.org/10.1002/icd.2260){:target="_blank"} and [Juang et al. (2021)](https://doi.org/10.1080/15283488.2021.1932901){:target="_blank"} for discussions of these tensions within a European context.
 
