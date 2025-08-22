@@ -1,0 +1,34 @@
+## Ethics & Misconduct {#ethics-and-misconduct}
+
+The [Committee on Publication Ethics](https://publicationethics.org/){:target="_blank"} has many resources to help journal editors deal with ethical issues, including guidelines and case studies. For example, they have [guidelines on publication manipulation](https://publicationethics.org/files/Systematic_manipulation_of_the_publication_process.pdf){:target="_blank"}.
+
+The [Council of Science Editors](https://www.councilscienceeditors.org/){:target="_blank"} has a [white paper on publication ethics](https://www.councilscienceeditors.org/resource-library/editorial-policies/white-paper-on-publication-ethics/){:target="_blank"} including a guide to [editor roles and responsibilities](https://www.councilscienceeditors.org/resource-library/editorial-policies/white-paper-on-publication-ethics/2-1-editor-roles-and-responsibilities/){:target="_blank"}.
+
+Although some ethical issues are clearly defined (e.g. that authors should not fabricate data), there are other areas where there is debate surrounding the lines of editorial responsibility. For example, *[Nature Human Behavior](https://www.nature.com/nathumbehav/){:target="_blank"}* has put in place a [new research ethics policy](https://www.nature.com/nature-portfolio/editorial-policies/ethics-and-biosecurity){:target="_blank"} that addresses potential harms for human population groups who do not participate in research but may be harmed by its publication ([see the editorial introducing the policy here](https://www.nature.com/articles/s41562-022-01443-2){:target="_blank"}). However, there have been some criticisms of the policy, suggesting that its vagueness could be open to abuse and stand in the way of “truth.” For one discussion on whether and how (identity- and ideological-based) diversity and scientific values should impact the research that gets conducted and published in psychology see [Conry-Murray & Silverstein (2022)](https://doi.org/10.31234/osf.io/cskg2){:target="_blank"}.
+
+### Editors publishing in their own journals {#editors-publishing-in-their-own-journals}
+
+There is some controversy surrounding the question of whether editors should be allowed to publish in the journals that they edit. Where this is permitted, journals should have clear processes in place to evaluate articles submitted by editors to their own journals.
+
+[Helgesson et al. (2022)](https://doi.org/10.1002/leap.1449){:target="_blank"} conducted a systematic review of the prevalence of this practice. They found large variability of self-publishing across fields, journals, and editors, but ultimately that there are some situations where levels of self-publication are very high. This is corroborated by [Bishop (2020)](http://deevybee.blogspot.com/2020/08/pepiops-prolific-editors-who-publish-in.html){:target="_blank"} who found that there are even some cases where the most prolific author in a journal is the editor-in-chief! In addition, among biomedical journals where few authors were responsible for a disproportionate number of publications, the most prolific author was part of the editorial board in over 60% of cases ([Scanff et al., 2021](https://doi.org/10.1371/journal.pbio.3001525){:target="_blank"}).
+
+### Reviewer and Editorial Collusion in Peer Review {#reviewer-editorial-collusion}
+
+Although hopefully very rare, there have been some reports of reviewer collusion and fraud. In some cases, authors set up fake accounts for suggested reviewers where they either [impersonate actual researchers](https://www.chemistryworld.com/news/imposters-hijack-journals-peer-review-process-to-publish-substandard-papers/4013050.article) or create fictional academic characters in order to review their own papers (favorably, of course). In other cases, authors form “[collusion rings](https://cacm.acm.org/magazines/2021/6/252840-collusion-rings-threaten-the-integrity-of-computer-science-research/fulltext#FNA)” whereby they agree to suggest each other as reviewers and give favorable reviews to each other.
+
+Sometimes the [editor is even in on this scheme](https://retractionwatch.com/2015/07/08/30-papers-flagged-because-editors-may-have-subverted-the-peer-review-process-with-fake-accounts/). This includes the phenomenon of paper mills ([see here for a blog post introduction](http://deevybee.blogspot.com/2022/09/we-need-to-talk-about-editors.html)) – the process by which manufactured manuscripts are submitted to a journal for a fee on behalf of researchers with the purpose of providing an easy publication for them, or to offer authorship for sale.
+
+Education of editors and reviewers to make them aware of these issues is the first step to tackling them. Publishers can also set up control systems that check for suspicious behavior such as private email addresses (although note that this is not foolproof as it will also flag innocent academics using non-institutional email addresses), as well as ensuring that papers always have at least one reviewer that has not been suggested by the authors themselves.
+
+
+### Overlap Between Submitted and Existing Manuscripts {#overlap-between-submitted-and-existing-manuscripts}
+
+It can be useful to have tools and strategies to help your journal detect when a submitted manuscript violates your originality guidelines (e.g. a significant overlap with other work by the same author/s, self-plagiarism, or text recycling).
+
+It is worth reaching out to your publisher to check whether they already offer any services to this end as part of the publishing platform and, if not, whether they would be willing to do so. For example, your journal (e.g. if you are with [Taylor & Francis](https://www.tandfonline.com/)) may already have the option to opt to activate [Crossref](https://www.crossref.org/) in Manuscript Central, which produces a report showing the sources of any overlapping text. You can also opt to send manuscripts to [iThenticate](https://www.ithenticate.com/), which is integrated into [ScholarOne](https://clarivate.com/products/scientific-and-academic-research/research-publishing-solutions/scholarone/).
+
+Sometimes authors will attempt to re-submit work that has already been rejected by your journal. [Editorial Manager](https://www.ariessys.com/solutions/editorial-manager/) runs a similarity check based on title, abstract, and authors – this can flag these cases.
+
+### Retraction {#retraction}
+
+Dealing with articles that need to be corrected or retracted can be challenging. [Edlund et al., 2023](https://link.springer.com/article/10.1007/s12144-022-03764-x) presents suggested best practices for handling retraction. [Ivory & Elson (2023)](https://link.springer.com/article/10.1007/s12144-023-05216-6) suggest a standardized approach based on the authors' roles, with examples.

@@ -1,11 +1,14 @@
 introduction: []
 
-general: []
+incoming-editors:
+  - onboarding-associate-editors
+  - publisher-guides
 
-incoming-editors: []
-
-ethics:
+ethics-and-misconduct:
   - editors-publishing-in-their-own-journals
+  - reviewer-editorial-collusion
+  - overlap-between-submitted-and-existing-manuscripts
+  - retraction
 
 diversifying-social-science-research:
   - inclusive-language
@@ -16,58 +19,61 @@ diversifying-social-science-research:
   - considering-citation-disparities
 
 open-science:
-  - resources-for-authors
-  - data-and-code
-  - data-ethics
-  - open-data
-  - open-data-and-code
-  - pre-publication-verification-of-analyses
-  - resources-for-open-research-plan-doc
-  - data-citation
-  - heterogeneous-data-and-analytic-materials
   - open-science-badges
+  - computational-research
+  - reporting-guidelines
+  - statistical-guidelines
+  - resources-for-authors
+  
+open-data:
+  - data-citation
+  - data-ethics
+  - heterogeneous-data-and-analytic-materials
+  
+computational-reproducibility:
+  - open-code
+  - pre-publication-verification-of-analyses
+  - increasing-computational-reproducibility
   - verification-reports
+  - resources-for-open-workflows
+  
+preregistration-and-registered-reports:
   - preregistration
   - registered-reports
-  - open-peer-review
-  - open-access
-  - computational-research
+  - resources-for-editors
+  - resources-for-authors-and-reviewers
+  - peer-community-in-registered-reports
+
+peer-review-process:
+  - incentivising-reviews
+  - improving-the-quality-of-reviews
+  - peer-reviewing-tools-and-guidelines
   - encouraging-authors-to-acknowledge-limitations
-  - replications-studies
-  - reporting-guidelines
+  - peer-review-innovations
+  - limitations-of-peer-review
+  
+open-peer-review:
+  - open-identities
+  - open-reviews
+
+open-access-publishing:
+  - becoming-an-independent-open-access-journal
   - preprints
-
-reconsideration-of-previously-rejected-submissions: []
-
-improving-the-quality-of-reviews: []
-
-peer-reviewing-tools-guidelines: []
-
-incentivising-reviews: []
-
-reviewer-editorial-collusion: []
-
-detecting-overlap-between-submitted-existing-manuscripts: []
-
-retraction: []
 
 submission-types:
   - publishing-scientific-criticism
-
-peer-review-innovations: []
-
-limitations-of-peer-review: []
+  - replication-studies
 
 editorial-secrets:
   - appeals
   - cover-letters
   - revise-and-resubmit-workflows
 
-formatting: []
+journal-management:
+  - formatting
+  - digital-preservation
 
-persistence-preservation: []
-
-list-of-contributors-to-this-page: []
+contributors-to-this-page: []
 
 # data-PASS: []
 
