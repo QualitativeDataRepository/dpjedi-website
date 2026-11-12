@@ -15,5 +15,5 @@ The culmination of a project led by JEDI Associate Director (and previous Commun
 **If you are a journal editor and are not yet a member, please [join JEDI]({{ site.baseurl }}/join){:target="_blank"}.**
 
 
-*This resource page was last updated on 2025-08-10*
+*This resource page was last updated on 2026-11-12*
 
