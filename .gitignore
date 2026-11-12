@@ -9,3 +9,5 @@ docs/.jekyll-cache
 .DS_Store
 docs/README.md
 .history/
+/_site/
+/.jekyll-cache/
