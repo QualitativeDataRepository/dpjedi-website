@@ -1,0 +1,23 @@
+# Display labels for the resource-page menus (sidebar + mobile nav).
+# Slugs in table-of-contents.yml stay lowercase (they are anchors and filenames);
+# labels are generated from them via _includes/resource_label.html.
+
+# Whole-label overrides, keyed by slug (checked first).
+labels:
+  peer-community-in-registered-reports: Peer Community In Registered Reports
+  post-publication-critique: Post-Publication Critique
+  pre-publication-verification-of-analyses: Pre-Publication Verification of Analyses
+
+# Word-level overrides, applied to every slug.
+# The first word of a label is always capitalized.
+words:
+  ai: AI
+  a: a
+  an: an
+  and: and
+  in: in
+  of: of
+  by: by
+  for: for
+  to: to
+  the: the
