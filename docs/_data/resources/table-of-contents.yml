@@ -9,6 +9,15 @@ ethics-and-misconduct:
   - reviewer-editorial-collusion
   - overlap-between-submitted-and-existing-manuscripts
   - retraction
+  
+ai-in-publishing:
+  - general-resources
+  - use-by-authors
+  - use-in-peer-review
+  - use-in-other-processes
+  - ai-slop
+  - ai-and-environment
+  - example-ai-policies
 
 diversifying-social-science-research:
   - inclusive-language
@@ -61,7 +70,7 @@ open-access-publishing:
   - preprints
 
 submission-types:
-  - publishing-scientific-criticism
+  - post-publication-critique
   - replication-studies
 
 editorial-secrets:

@@ -6,13 +6,7 @@
         {% assign anchors = section[1] %}
         <div class="accordion-item" style="line-height: 1.5!important;">
           <h2 class="accordion-header" id="heading{{ forloop.index }}">
-            {% assign section_name = section[0] | replace: '-', ' ' %}
-            {% assign section_name_words = section_name | split: ' ' %}
-            {% capture section_name_capitalized %}
-              {% for word in section_name_words %}
-                {{ word | capitalize }}
-              {% endfor %}
-            {% endcapture %}
+            {% capture section_name_capitalized %}{% include resource_label.html slug=section.first %}{% endcapture %}
             {% if anchors.size > 0 %}
             <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse{{ forloop.index }}" data-section-id="{{ section[0] }}" aria-expanded="false"
@@ -35,13 +29,7 @@
                 <a href="#{{ section[0] }}" class="d-block accordion-button text-start">{{ section_name_capitalized }}</a>
               </div>
               {% for anchor in anchors %}
-              {% assign anchor_name = anchor | replace: '-', ' ' %}
-              {% assign anchor_name_words = anchor_name | split: ' ' %}
-              {% capture anchor_name_capitalized %}
-                {% for word in anchor_name_words %}
-                  {{ word | capitalize }}
-                {% endfor %}
-              {% endcapture %}
+              {% capture anchor_name_capitalized %}{% include resource_label.html slug=anchor %}{% endcapture %}
               <div class="submenu-item submenu-anchor">
                 <a href="#{{ anchor }}" class="d-block w-100 accordion-button text-start">{{ anchor_name_capitalized }}</a>
               </div>

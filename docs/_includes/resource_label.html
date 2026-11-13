@@ -1,0 +1,18 @@
+{%- comment -%}
+  Renders a display label for a resource slug. Usage: {% include resource_label.html slug="ai-in-publishing" %}
+  Overrides live in _data/resources/labels.yml.
+{%- endcomment -%}
+{%- assign rl_cfg = site.data.resources.labels -%}
+{%- assign rl_label = rl_cfg.labels[include.slug] -%}
+{%- if rl_label -%}
+{{ rl_label }}
+{%- else -%}
+{%- assign rl_words = include.slug | split: '-' -%}
+{%- for rl_word in rl_words -%}
+{%- assign rl_out = rl_cfg.words[rl_word] -%}
+{%- unless rl_out -%}{%- assign rl_out = rl_word | capitalize -%}{%- endunless -%}
+{%- if forloop.first and rl_out == rl_word -%}{%- assign rl_out = rl_word | capitalize -%}{%- endif -%}
+{%- unless forloop.first -%}{%- assign rl_out = rl_out | prepend: ' ' -%}{%- endunless -%}
+{{ rl_out }}
+{%- endfor -%}
+{%- endif -%}
